@@ -84,7 +84,7 @@ You can enable 50 page rules per page. Use the drop down menus to configure the 
 
 Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. after you've selecteed the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Overview screen.
  
- ![PAGE RULES MENUS](images/page-rules-dropdown-settings.png)
+ ![PAGE RULES MENUS](images/page-rule-dropdown-settings.png)
  
  You also can enable or disable your page rules from the table displayed in the Overview screen.
  
