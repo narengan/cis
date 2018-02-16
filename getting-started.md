@@ -37,9 +37,9 @@ After you've configured your registrar or DNS provider, it may take up to 24 hou
 
 **Step 5.** In the meantime, you can go to the Overview page to begin managing additional CIS functionality.
 
-On the Overview screen, you'll see that your domain name configuration is in **Pending** status.
+On the Overview screen, you may see that your domain name configuration is in **Pending** status, or in **Active** status as shown in the following figure.
 
-![overview screen image](images/overview-screen-showing-domain.png)
+![overview screen image](images/overview-screen-configuration-summary.png)
 
 ## Configuring and managing your DNS
 
@@ -74,7 +74,7 @@ You can use the dropdown menu to select the time of cache expiration that you re
  
 Development mode is intended for use when major updates or new file uploads are required, so you do not want the end users to work from the cache at all, but to retrieve files directly from the origin servers. Development mode expires automatically after 3 hours.
 
-![IMAGE](development-mode-toggle.png)
+![IMAGE](images/development-mode-toggle.png)
 
 To begin using Development Mode, toggle the switch to "Enabled" position. To stop using Development Mode, toggle the switch to "Disabled" position.
 
@@ -102,4 +102,4 @@ When you deploy into a Zone, IBM Cloud CIS automatically deploys a universal cer
  
  IBM Cloud CIS provides global load balancing as a service.
 
-![IMAGE](glb-screen.png)
+![IMAGE](images/glb-screen.png)
