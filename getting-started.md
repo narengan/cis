@@ -37,3 +37,5 @@ After you've configured your registrar or DNS provider, it may take up to 24 hou
 
 **Step 4. In the meantime, you can go to the Overview page to begin managing other CIS functions and features.**
 
+For more details, please see the [step-by-step instructions](how-to.html)
+
