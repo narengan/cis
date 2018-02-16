@@ -31,11 +31,11 @@ Now that your domain records have been gathered, verify they are correct. You ma
 
 **Step 3. Configure your nameserver with the Registrar or DNS Provider:** 
 
-To begin receiving the benefits of CIS, you must configure your domain name provider to use the name servers listed. We've provided customized IBM nameservers right now. For more detailed instructions, see **LINK TO EVENTUAL CONFIGURING DNS TOPIC**. 
+To begin receiving the benefits of CIS, you must configure your domain name provider to use the name servers listed. We've provided customized IBM nameservers right now. For more detailed instructions, see our [How-To document](how-to.html). 
 
 After you've configured your registrar or DNS provider, it may take up to 24 hours for the changes to take effect. 
 
 **Step 4. In the meantime, you can go to the Overview page to begin managing other CIS functions and features.**
 
-For more details, please see the [step-by-step instructions](how-to.html)
+For more details about managing other functions and features, please see the [step-by-step instructions](how-to.html).
 
