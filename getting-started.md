@@ -19,7 +19,7 @@ You can start routing traffic through IBM Cloud Internet Services (CIS) with jus
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Beta release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
-![image](need an image here)
+![image](need an image here of the dashboard and selecting create)
 
 **Step 1. Add and configure your Domain:**
 
