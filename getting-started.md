@@ -41,6 +41,10 @@ On the Overview screen, you may see that your domain name configuration is in **
 
 ![overview screen image](images/overview-screen-configuration-summary.png)
 
+**Step 5.** Using the Overview screen
+
+Using the Overview screen, you can see the status of all your selections and you can change some of the settings directly from the Overview areas.
+
 ## Configuring and managing your DNS
 
 **Step 6.** Go to your DNS page and add a record (most likely an A record). Type in the information about your DNS record and then click `Add record` to implement your changes.
