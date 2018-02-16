@@ -43,7 +43,7 @@ On the Overview screen, you may see that your domain name configuration is in **
 
 **Step 5.** Using the Overview screen
 
-Using the Overview screen, you can see the status of all your selections. You can change the settings directly from the Overview screen, just click on the underlined name of the setting you'd like to change, for example, the `Load Balancer` setting.
+Using the Overview screen, you can see the status of all your selections. You can change the settings directly from the Overview screen, just click on the underlined name of the setting you'd like to change, for example, you could click on the `Load Balancers` field to add a Load Balancer.
 
 ## Configuring and managing your DNS
 
