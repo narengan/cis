@@ -39,7 +39,7 @@ After you've configured your registrar or DNS provider, it may take up to 24 hou
 
 On the Overview screen, you'll see that your domain name configuration is in **Pending** status.
 
-![overview screen image](overview-screen-showing-domain.png)
+![overview screen image](images/overview-screen-showing-domain.png)
 
 ## Configuring and managing your DNS
 
