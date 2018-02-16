@@ -7,7 +7,7 @@ Cloud Internet Services (CIS)
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    ssl-overview.md
+    ssl-options.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
