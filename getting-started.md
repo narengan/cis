@@ -9,17 +9,21 @@ lastupdated: "2018-02-16"
 
 # Getting Started
 
-You can start routing traffic through IBM Cloud Internet Services (CIS) with just a few steps. Start by adding the domain you want to manage. CIS scans the existing DNS records. Review the records and then configure your DNS provider with the provided nameservers.
+You can start routing traffic through IBM Cloud Internet Services (CIS) with just a few steps. 
+
+ * Start by adding the domain you want to manage. 
+ * IBM Cloud CIS scans the existing DNS records. 
+ * Review the records and then configure your DNS provider with the provided nameservers.
+ 
+ ## Step by step procedure:
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Beta release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
 ![image](need an image here)
 
-Here's a summary of steps:
-
 **Step 1. Add and configure your Domain:**
 
-Begin protecting and improving the performance of your web service by entering your domain. Our system then begins gathering your domain records. This process could take a few minutes.
+Begin protecting and improving the performance of your web service by entering your domain. Our system begins gathering your domain records. This process could take a few minutes.
 
 **Step 2. Review and verify your Domain's DNS Records:**
 
@@ -45,7 +49,11 @@ On the Overview screen, you'll see that your domain name configuration is in **P
 
 ## Set up and manage your caching
 
-**Step 7.** Next, you can set up caching. You have the option of 4 types of caching: 
+**Step 7.** Next, you can set up caching. 
+
+![IMAGE](caching-screen.png)
+
+You have the option of 4 types of caching, available form the caching screen dropdown menu: 
 
  * No q.s.
  * q.s. independent
@@ -90,4 +98,8 @@ By default, DDoS protection is enabled for all IBM Cloud CIS accounts. Also, IBM
 
 When you deploy into a Zone, IBM Cloud CIS automatically deploys a universal certificate for that zone. Thus, you don't need to do anything to have certificate-based protection in that zone. If you desire, you can upload your own certificate. You'll need a separate certificate for each zone, and you'll see an error message if the certificate you are uploading does not match your zone.
  
+ ## Set up and configure your load balancers
  
+ IBM Cloud CIS provides global load balancing as a service.
+
+![IMAGE](glb-screen.png)
