@@ -80,7 +80,7 @@ To begin using Development Mode, toggle the switch to "Enabled" position. To sto
 
 ## Managing your Page Rules
  
-You can enable 50 page rules per page. Use the drop down menus to configure the page rules. 
+You can enable 50 page rules per page. Use the drop down menus to configure the page rules. The Page Rules are divided into three categories: Security, Performance, and Reliability.
 
 Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. after you've selecteed the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Overview screen.
  
