@@ -40,6 +40,9 @@ IBM Cloud CIS gets you going quickly by establishing defaults for you, which you
  - **SSL**: Supports users who would like to use latest web encryption technologies (TLS 1.2).
  - **Cache Purge**: Allows you to purge the cache content to allow for instant static content update.
  - **TTL configuration**:  Defines the length of time an edge server will cache a resource before returning to the origin server for a fresh copy.
+ 
+## SSL Certificates
+Encrypt communication to and from your website using Secure Socket Layer (SSL). It may take up to 24 hours after the site becomes active for new certificates to be issued.
 
  ## Network Route Optimization
  Find the best route between visitors and origin servers by analyzing latency and packet loss data collected from each request. This optimization also works between origin and edge servers, and can significantly decrease network latency while enhancing reliability.
