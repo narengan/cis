@@ -35,7 +35,7 @@ To begin receiving the benefits of CIS, you must configure your domain name prov
 
 After you've configured your registrar or DNS provider, it may take up to 24 hours for the changes to take effect. 
 
-**Step 5.** In the meantime, you can go to the Overview page to begin managing additional CIS functionality.
+**Step 4. In the meantime, you can go to the Overview page to begin managing other CIS functions and features.**
 
 On the Overview screen, you may see that your domain name configuration is in **Pending** status, or in **Active** status as shown in the following figure.
 
