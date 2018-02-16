@@ -7,7 +7,7 @@ lastupdated: "2018-02-16"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Getting Started
+# Getting Started with IBM Cloud Internet Services (CIS)
 
 You can start routing traffic through IBM Cloud Internet Services (CIS) with just a few steps. 
 
@@ -15,21 +15,21 @@ You can start routing traffic through IBM Cloud Internet Services (CIS) with jus
  * IBM Cloud CIS scans the existing DNS records. 
  * Review the records and then configure your DNS provider with the provided nameservers.
  
- ## Step by step procedure:
+ ## Process overview:
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Beta release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
 ![image](need an image here of the dashboard and selecting create)
 
-**Step 1. Add and configure your Domain:**
+**Step 1. Add and configure your Domain.**
 
 Begin protecting and improving the performance of your web service by entering your domain. Our system begins gathering your domain records. This process could take a few minutes.
 
-**Step 2. Review and verify your Domain's DNS Records:**
+**Step 2. Review and verify your Domain's DNS Records.**
 
 Now that your domain records have been gathered, verify they are correct. You may also upload a DNS File, if you have one. When you are ready, click **Continue** to go to the next step.
 
-**Step 3. Configure your nameserver with the Registrar or DNS Provider:** 
+**Step 3. Configure your nameserver with the Registrar or DNS Provider.** 
 
 To begin receiving the benefits of CIS, you must configure your domain name provider to use the name servers listed. We've provided customized IBM nameservers right now. For more detailed instructions, see our [How-To document](how-to.html). 
 
