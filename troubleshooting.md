@@ -47,12 +47,12 @@ Also, please allow up to 15 minutes for one of our partner Certificates Authorit
 
 ## What do I do if I’m under a DDoS attack?
 
- * **Step 1:** Turn on “I’m Under Attack!” mode from your dashboard
+ * **Step 1:** Turn on "Defense Mode" from your dashboard
  * **Step 2:** Set your DNS records for maximum security
- * **Step 3:** Do not rate-limit or throttle requests from IBM CIS (CloudFlare)
+ * **Step 3:** Do not rate-limit or throttle requests from IBM CIS
  * **Step 4:** Block specific IP ranges, countries, and visitors as needed
 
-During "I'm Under Attack!" mode, each new visitor is met with a "Captcha" security challenge, which they must pass before being given a cookie for unchallenged access. That way, botnet traffic is blocked until the "I'm Under Attack!" mode is turned off. Visitors that do not meet the security challenge are added to the (bad) IP Reputation database.
+During "Defense Mode", each new visitor is met with a "Captcha" security challenge, which they must pass before being given a cookie for unchallenged access. That way, botnet traffic is blocked until the "Defense Mode" is turned off. Visitors that do not meet the security challenge are addeDefense Mode' to the (bad) IP Reputation database.
 
 ## Other problems you might encounter:
 
