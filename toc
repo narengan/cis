@@ -12,6 +12,9 @@ Cloud Internet Services (CIS)
 
     {: .navgroup id="howto"}
     how-to.md
+    managing-for-security.md
+    managing-for-reliability.md
+    managing-for-performance.md
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
