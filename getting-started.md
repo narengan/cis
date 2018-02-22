@@ -17,7 +17,7 @@ You can start routing traffic through IBM Cloud Internet Services (CIS) with jus
  * IBM Cloud CIS scans the existing DNS records. 
  * Review the records and then configure your DNS provider with the provided nameservers.
  
- ## Process overview:
+## Process overview:
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Beta release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
