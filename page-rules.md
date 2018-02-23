@@ -36,7 +36,59 @@ The following table covers the page rules that are available to all customers, t
 |Server Side Excludes| | |
 |SSL| | |
 |WAF| | |
-|Minification| |This requires a specific payload, see the following example |
+|Minification| |This requires a specific payload, see the example that follows. |
+  
+**Example:**
+
+``` 
+{
+
+      "targets": [
+
+        {
+
+          "target": "url",
+
+          "constraint": {
+
+            "operator": "matches",
+
+            "value": "https://wordpress.bossco.de/minification.html"
+
+          }
+
+        }
+
+      ],
+
+      "actions": [
+
+        {
+
+          "id": "minify",
+
+          "value": {
+
+            "html": "on",
+
+            "css": "off",
+
+            "js": "off"
+
+          }
+
+        }
+
+      ],
+
+      "priority": 1,
+
+      "status": "active"
+
+    }
+    
+```
+    
 
 ## Enterprise Only Options
 The rules in the following table are for Enterprise customers only.
