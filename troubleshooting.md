@@ -15,7 +15,16 @@ IBM Cloud CIS uses HTTP headers, which it can read, add, or modify. The header l
 
 To know whether data has passed through IBM Cloud CIS, you need to locate the “Ray ID” which will be present on every packet.
 
-![IMAGE HERE](images/basic-test-commands.png)
+**Unix command line tools:**
+
+curl for HTTP:
+`$ curl -vso /dev/null http://example.com`
+
+dig for DNS:
+`$ dig www.example.com`
+
+traceroute for network:
+`$ traceroute cloudflare.com`
 
 **For example:**
 
@@ -58,7 +67,13 @@ During "Defense Mode", each new visitor is met with a "Captcha" security challen
 
 Here are some common error messages that you or your support team might see:
 
-![IMAGE](images/common-error-messages.png)
+| Error Code    | Reason |
+| ------------- | ------------- |
+| 1001  | DNS Resolution Error. Either the customer recently signed up and DNS is not propogated, or whomever is managing the DNS has a failure. |
+| 521  | Origin web server refused connection from CIS. Either the origin web server is not running, or something is blocking IBM CIS IP addresses. |
+| 522  | Connection timeout to the origin server (30 second default). CIS may be rate limited, the web server may be consuming all resources (shared server), or there may be network connectivity issues between the web server and IBM CIS. |
+| 523  | Origin server is unreachable. Ensure that the origin IP address for the record is the same as in the CIS DNS Settings page. |
+| 524  | IBM CIS could make a TCP connection but did not receive a response from the web server. A long running application or database query is interfering. |
 
 ### Not seeing any network traffic
 
@@ -68,11 +83,40 @@ If you’re not seeing traffic, and you’re using a CNAME, make sure that there
 
 Here is what you might see:
 
+IBM CIS cannot connect to the origin server (error 521, 522, 523).
+
+**Website offline - no cached version**
+
+1. The server is online, but it is blocking the CIS request.
+2. The origin server is offline and CIS does not have a ??? website (Always Online is turned off).
+
+What you can do:
+
+* Verify that the CIS IP addresses are whitelisted.
+* Access the updated list at [www.cloudflare.com/ips](www.cloudflare.com/ips).
+* Make sure that IBM CIS IPs are not being rate limited.
+
 ![IMAGE](images/website-offline.png)
 
 ### 502 error “The dreaded 502”
 
 This error typically occurs at the start of a DDoS attack. A particular data center may be unavailable for a time. Traffic will be re-routed. Run a trace route or check the status page. 
+
+Here is what you might see:
+
+Error 502 - bad gateway error
+
+What happened:
+
+* A portion of the IBM CIS network is having an issue.
+* Usually limited to one server in one data center.
+* Affects only a portion of the site's visitors
+* CIS Technical Operations team deals with these.
+
+What you can do:
+
+* Check [cloudflarestatus.com](www.cloudflarestatus.com), ask customer to email support results from `www.YOUR_DOMAIN.com/cdn-cgi/trace` as well
+* Temporarily toggle CIS to off (gray cloud)
 
 ![IMAGE](images/bad-gateway-502.png)
 
