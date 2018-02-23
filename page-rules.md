@@ -42,51 +42,28 @@ The following table covers the page rules that are available to all customers, t
 
 ``` 
 {
-
       "targets": [
-
         {
-
           "target": "url",
-
           "constraint": {
-
             "operator": "matches",
-
             "value": "https://wordpress.bossco.de/minification.html"
-
           }
-
         }
-
       ],
-
       "actions": [
-
         {
-
           "id": "minify",
-
           "value": {
-
             "html": "on",
-
             "css": "off",
-
             "js": "off"
-
           }
-
         }
-
       ],
-
       "priority": 1,
-
       "status": "active"
-
-    }
-    
+    }   
 ```
     
 
