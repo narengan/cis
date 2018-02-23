@@ -9,7 +9,7 @@ lastupdated: "2018-02-22"
 
 # Getting Started with IBM Cloud Internet Services (CIS)
 
-IBM CIS offers three main capabilities to enhance your workflow: [security](), [reliability](), and [performance](). 
+IBM CIS offers three main capabilities to enhance your workflow: [security](managing-for-security.html), [reliability](managing-for-reliability.html), and [performance](managing-for-performance.html). 
 
 You can start routing traffic through IBM Cloud Internet Services (CIS) with just a few steps. 
 
