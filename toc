@@ -8,6 +8,7 @@ Cloud Internet Services (CIS)
     getting-started.md
     about.md
     ssl-options.md
+    dns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -18,6 +19,7 @@ Cloud Internet Services (CIS)
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
+    api-resource.md
     example-code.md
     {: .navgroup-end}
 
