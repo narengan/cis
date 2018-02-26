@@ -87,19 +87,17 @@ Here is what you might see:
 **Website offline - no cached version**
 
 1. The server is online, but it is blocking the CIS request.
-2. The origin server is offline and CIS does not have a ??? website (Always Online is turned off).
+2. The origin server is offline and CIS does not have a backup website image (Always Online is turned off).
 
 What you can do:
 
-* Verify that the CIS IP addresses are whitelisted.
-* Access the updated list at [www.cloudflare.com/ips](www.cloudflare.com/ips).
+* Verify that the CIS IP addresses are whitelisted..
 * Make sure that IBM CIS IPs are not being rate-limited.
-
-![IMAGE](images/website-offline.png)
+* Here is the list of IPs to whitelist: [www.cloudflare.com/ips](www.cloudflare.com/ips)
 
 ### 502 error “The dreaded 502”
 
-This error typically occurs at the start of a DDoS attack. A particular data center may be unavailable for a time. Traffic will be re-routed. Run a trace route or check the status page. 
+This error is one of the most common ones you may see. It typically occurs when a portion of a network is unavailable, for example, at the start of a DDoS attack. A particular data center may be unavailable for a time. Traffic will be re-routed. Run a trace route or check the IBM CIS status page. 
 
 Here is what you might see: `Error 502 - bad gateway error`
 
@@ -112,8 +110,6 @@ What happened:
 
 What you can do:
 
-* Check [cloudflarestatus.com](www.cloudflarestatus.com), and email the results from `www.YOUR_DOMAIN.com/cdn-cgi/trace` to the CIS support team
-* Temporarily toggle CIS to off (No proxy)
-
-![IMAGE](images/bad-gateway-502.png)
+* Email the results from `www.YOUR_DOMAIN.com/cdn-cgi/trace` to the CIS support team
+* Temporarily toggle your CIS services to off (No proxy)
 
