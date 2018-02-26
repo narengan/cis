@@ -12,9 +12,12 @@ IBM Cloud Internet Services (CIS) provides a fast, highly performant, reliable a
 
 IBM Cloud CIS allows you to tune most of its features to suit your needs, including:
 
- * IP firewall sensitivity and range blocking
- * Cache and page rules
- * Use of SSL certificates
+ * Authoritative DNS servers
+ * Global and Local Load Balancing
+ * Web Application Firewall (WAF)
+ * Caching and page rules
+ * DDoS Protection
+
 
 IBM Cloud CIS gets you going quickly by establishing defaults for you, which you can change easily from the API or UI interfaces. Here are some comonly changed parameters:
 
@@ -29,9 +32,9 @@ IBM Cloud CIS gets you going quickly by establishing defaults for you, which you
  Caching stores static web content closest to the visitor, thus significantly enhancing the performance of the website.  A globally distributed delivery environment enables web content owners to provide a seamless experience.  
 
  ### Origin and Edge Servers
- An **origin** server is a computer running one or more programs that are designed to listen for and process incoming Internet requests. An origin server can take on all the responsibility of serving up the content for an Internet property such as a website.  
+ An **origin** server is a computer running one or more programs that are designed to listen for and process incoming Internet requests. An origin server can take on all the responsibility of serving up the content for an Internet property such as a website. The origin server is represented as an IP address or a DNS name at which the application is exposed on the Internet. This could be a virtual or physical server, or even a local load balancer that is proxying multiple backend servers that the application runs on.
 
- Static content is stored on an **edge** server that is hosted by a caching service provider.  Caching uses a variety of technologies to optimize the website experience such as Automatic static content caching, quick cache purge, and edge cache expire TTL.  
+ Static content is stored on an **edge** server that is hosted by a caching service provider.  Caching uses a variety of technologies to optimize the website experience such as Automatic static content caching, quick cache purge, and edge cache expire TTL. The edge servers also implement WAF (if enabled) and DDoS mitigation functions when the proxy mode is in effect.
 
  ### Caching Options
  Caching options include:
@@ -46,8 +49,6 @@ Encrypt communication to and from your website using Secure Socket Layer (SSL). 
 
 You can find more information about SSL in our [FAQ file](faq.html).
 
- ## Network Route Optimization
- Find the best route between visitors and origin servers by analyzing latency and packet loss data collected from each request. This optimization also works between origin and edge servers, and can significantly decrease network latency while enhancing reliability.
 
  ## Web Application Firewall (WAF)
  IBM CIS provides Web Application Firewall (WAF), which examines web traffic looking for suspicious activity. It can automatically filter out illegitimate traffic based on rule sets that you apply to look at both GET and POST-based web requests. You can use various rule sets to determine what traffic to block, challenge, or let pass. WAF can block comment spam, cross-site scripting attacks, and SQL injections.
@@ -58,11 +59,13 @@ You can find more information about SSL in our [FAQ file](faq.html).
  ### CIS DDoS Protection
  CIS DDoS stands between your website and attackers, regardless of the attack size or duration.
 
- ## Global Load Balancing (GLB)
- Load Balancing automatically reduces latency by directing visitors to the infrastructure closest to them. By keeping visitors close to your infrastructure, Load Balancing provides quick delivery of content. It operates at the DNS level, and supports any protocol, from HTTP(S) through TCP- and UDP-based services. This lets you use Load Balancing with existing services, or in conjunction with other cloud providers.
-
- ### Geo Policies
- Geo Policies allow you to direct visitors to datacenters located in the same region. For instance, visitors in Europe are sent to a European datacenter, U.S. visitors are sent to a North American datacenter, and so forth.
+ ## Load Balancing
+ CIS Load Balancing operates at the Authoritative DNS level. It incorporates advanced health checks to monitor the health of the origins, and dynamically adjusts DNS responses. Additionally, you can configure Geo policies for Global Load Balancing (GLB).
 
  ### Health checks
  Load Balancing Health Checks are performed on specific URLs through periodic HTTP/HTTPS requests, and are configured with customizable intervals, timeouts, and status codes. When an origin server is marked as unhealthy, visitors are routed away from failures using fast failover routes.
+ 
+ ### Geo Policies and Global Load Balancing (GLB)
+ Geo Policies allow you to control which origins a given client is directed to, based on the geo location of the client. For instance, you could configure your Geo policies such that visitors in Europe are sent to the nearest European origin for your website or application, U.S. visitors are sent to a North American origin, and so forth.
+
+
