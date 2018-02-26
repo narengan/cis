@@ -11,7 +11,7 @@ lastupdated: "2018-02-22"
 
 IBM CIS offers three main capabilities to enhance your workflow: [security](managing-for-security.html), [reliability](managing-for-reliability.html), and [performance](managing-for-performance.html). 
 
-You can start using the capabilities of IBM Cloud Internet Services (CIS) with just a few steps. 
+You can start using IBM Cloud Internet Services (CIS) for your internet traffic with just a few steps. 
 
  * Start by adding the domain you want to manage. 
  * IBM Cloud CIS scans the existing DNS records. 
@@ -19,7 +19,7 @@ You can start using the capabilities of IBM Cloud Internet Services (CIS) with j
  
 ## Process overview:
 
-To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Eary Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
+To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
 ![image](need an image here of the dashboard and selecting create)
 
@@ -33,7 +33,7 @@ Now that your domain records have been gathered, verify they are correct. You ma
 
 **Step 3. Configure your nameserver with the Registrar or DNS Provider.** 
 
-To begin receiving the benefits of CIS, you must configure your registrar or domain name provider to use the name servers listed. If you are delegating a domain (e.g., example.com), configure the listed name servers in your domain's settings managed by your registrar (for example, on the registrar's web portal). If you are delegating a subdomain (e.g., subdomain.example.com) from another DNS provider, you must add a Name Server (NS) record for each of the listed name servers.
+To begin receiving the benefits of IBM CIS, configure your registrar or domain name provider to use the name servers listed. If you're delegating a domain (something like `example.com`), configure the listed name servers in your domain's settings managed by your registrar (for example, on the registrar's web portal). If you are delegating a subdomain (for instance, `subdomain.example.com`) from another DNS provider, you must add a Name Server (ns) record for each of the listed name servers.
 
 After you've configured your registrar or DNS provider, it may take up to 24 hours for the changes to take effect.
 
