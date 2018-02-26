@@ -8,7 +8,7 @@ lastupdated: "2018-02-14"
 {:new_window: target="_blank"}
 
 # About IBM Cloud Internet Services
-IBM Cloud Internet Services (CIS), powered by Cloudflare, provides a fast, highly performant, reliable and secure internet service for enterprise customers running their business on IBM Cloud.   
+IBM Cloud Internet Services (CIS) provides a fast, highly performant, reliable and secure internet service for enterprise customers running their business on IBM Cloud.   
 
 IBM Cloud CIS allows you to tune most of its features to suit your needs, including:
 
