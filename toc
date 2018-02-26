@@ -18,6 +18,7 @@ Cloud Internet Services (CIS)
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
+    [Searchable Swagger API Spec](https://pages.github.ibm.com/NetworkTribe/cis-api-spec/#/)
     example-code.md
     {: .navgroup-end}
 
