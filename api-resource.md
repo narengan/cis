@@ -16,10 +16,17 @@ lastupdated: "2018-02-26"
 
 # API Specs
 
-To view CIS APIs, navigate to the [CIS API Spec](https://pages.github.ibm.com/NetworkTribe/cis-api-spec/#/) page. Copy and paste the name of the API into the text box, making sure `spec/` is in front of the name. Press **Enter** to view the selected API.
+Here's how to view the CIS API specifications: 
+
+1. To view CIS APIs, navigate to the [CIS API Spec](https://pages.github.ibm.com/NetworkTribe/cis-api-spec/#/) page. 
+
+2. Copy and paste the name of the API into the text box, making sure `spec/` is in front of the name. For example, you would type `spec/CIS_Frontend_API_Spec-Cache.yaml` to see the spec called `CIS_Frontend_API_Spec-Cache.yaml`
+
+3. Press **Enter** to view the selected API.
 
 ## Available APIs 
 
+Here is the list of CIS API specs available to view.
 
 - CIS_Frontend_API_Spec-Cache.yaml
 - CIS_Frontend_API_Spec-DNSRecords.yaml
