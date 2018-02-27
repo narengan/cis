@@ -20,25 +20,15 @@ Here's how to view the CIS API specifications:
 
 1. To view CIS APIs, navigate to the [CIS API Spec](https://pages.github.ibm.com/NetworkTribe/cis-api-spec/#/) page. 
 
-2. Copy and paste the name of the API into the text box, making sure `spec/` is in front of the name. For example, you would type `spec/CIS_Frontend_API_Spec-Cache.yaml` to see the spec called `CIS_Frontend_API_Spec-Cache.yaml`
+2. Select an API category from the dropdown list near the top right corner of this page to view the details.
 
-3. Press **Enter** to view the selected API.
 
-## Available APIs 
+# Notes
 
-Here is the list of CIS API specs available to view.
+1. API endpoints: https://api.cis.cloud.ibm.com (Production), https://api.stage.cis.cloud.ibm.com (Staging).
 
-- CIS_Frontend_API_Spec-Cache.yaml
-- CIS_Frontend_API_Spec-DNSRecords.yaml
-- CIS_Frontend_API_Spec-Firewall.yaml
-- CIS_Frontend_API_Spec-FirewallEvents.yaml
-- CIS_Frontend_API_Spec-GLB.yaml
-- CIS_Frontend_API_Spec-GLB_Monitor.yaml
-- CIS_Frontend_API_Spec-GLB_Pool.yaml
-- CIS_Frontend_API_Spec-Metric.yaml
-- CIS_Frontend_API_Spec-Overview.yaml
-- CIS_Frontend_API_Spec-Page_Rules.yaml
-- CIS_Frontend_API_Spec-SSL.yaml
-- CIS_Frontend_API_Spec-WAF.yaml
-- CIS_Frontend_API_Spec-ZoneSettings.yaml
-- CIS_Frontend_API_Spec-Zones.yaml
+2. **X-Auth-User-Token** header is required for each API call. This is the bearer token for the user that can be retrieved from IAM (for example, using the "bx iam oauth-tokens" command).
+
+3. The **crn** field is also required in the path for each API call. This is the full Cloud Resource Name (CRN) for a CIS resource instance that is being configured (for example, the CRN for a resource instance can be retrieved from its name using the command "bx resource service-instance <instance-name>"). The CRN must be URL encoded in the API call.
+
+4. API calls are rate limited. A total of 100 API calls can be made in 1 minute. If this rate is exceeded, subsequent calls will be blocked for a period of time.
