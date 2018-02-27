@@ -7,9 +7,9 @@ lastupdated: "2018-02-27"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Administrating your IBM CIS
+# Administrating your IBM CIS account
 
-IBM CIS provides many ways to administer your brand presence, your account security, and your support process. We recommend working through each of our administrative best practices to ensure that your customers and your content are best served by the CIS network.
+IBM CIS provides many ways you can administer your brand presence, your account security, and your support process. We recommend working through each of the administrative best practices listed in this document, to ensure that your customers and your content are best served by your CIS network.
 
 **Recommendations and best practices:**
 
@@ -18,7 +18,7 @@ IBM CIS provides many ways to administer your brand presence, your account secur
 * Submit a test support ticket
 
 ## Manage your brand by customizing CIS pages
-CIS has to show content to your end-users occasionally. This content can include security challenge pages, block pages, and error pages. You can customize any of this content to create a consistent branding experience for your customers.
+CIS must show content to your end-users occasionally. This content can include security challenge pages, block pages, and error pages. You can customize any of this content to create a consistent branding experience for your customers.
 
 Here are two ways to customize your CIS pages:
 
