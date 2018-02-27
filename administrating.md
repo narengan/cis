@@ -9,7 +9,7 @@ lastupdated: "2018-02-22"
 
 # Administrating your IBM CIS
 
-IBM CIS provides many ways to properly administer your brand presence, your account security, and your support process. We recommend working through each of our administrative best practices to ensure your customers and content are best served by the CIS network.
+IBM CIS provides many ways to administer your brand presence, your account security, and your support process. We recommend working through each of our administrative best practices to ensure that your customers and your content are best served by the CIS network.
 
 **Recommendations:**
 
@@ -18,16 +18,16 @@ IBM CIS provides many ways to properly administer your brand presence, your acco
 * Submit a test support ticket
 
 ## Manage your brand by customizing CIS pages
-CIS has to occasionally show content to your end-users. This can include security challenge pages, block pages, and error pages. All of this content can be customized by you to ensure a consistent branding experience for your customers.
+CIS has to show content to your end-users occasionally. This content can include security challenge pages, block pages, and error pages. You can customize any of this content to create a consistent branding experience for your customers.
 
-There are two ways to customize CIS pages:
+Here are two ways to customize your CIS pages:
 
-1. **Domain-Wide:** Within the settings of each domain, you can go to the **Customize** application to change the default pages for each and every page we could potentially show your users.
+1. **Domain-Wide:** Within the settings of each domain, you can go to the **Customize** application to change the default pages for any page we could potentially show your users.
 
-2. **Organization-Wide:** If you have many domains within your CIS account and would like to create Custom pages for all of them, you can do so within your **Organization** settings.
+2. **Organization-Wide:** If you have many domains within your CIS account and you'd like to create Custom pages for all of them, you can do so within your **Organization** settings.
 
 ## Enforce 2-factor authentication across your entire organization
-CIS allows you to enforce 2-Factor Authentication. This extra element of security can prevent unauthorized access of your CIS console.
+CIS allows you to enforce 2-Factor Authentication. This extra element of security can prevent unauthorized access to your CIS console.
 
 1. First, go to the upper right hand corner and select your **Organization Settings**. 
 2. From the main Organization Page, you’ll see Enforce 2-Factor Authentication. Select it to engage the new level of security.
@@ -35,7 +35,7 @@ CIS allows you to enforce 2-Factor Authentication. This extra element of securit
 ## Submit a test ticket with our support team
 Feel free to write a quick note to our support team to test our support workflow. 
 
-There are two easy ways to submit a ticket.
+Here are two easy ways to submit a ticket:
 
 1. Email entsupport@CIS.com.
 2. Search our knowledge base and create a ticket at support.CIS.com.
