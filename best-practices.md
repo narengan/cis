@@ -45,9 +45,9 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 
   * Alternatively, you can turn off **Browser Integrity Check** globally.
 
-*What does the Browser Integrity Check do?*
-
-*The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).*
+| *What does the Browser Integrity Check do?* | 
+|------------------------------------------------|
+| *The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).* |
 
 **Step 4: Configure your SSL settings**
 
