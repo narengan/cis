@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-22"
+lastupdated: "2018-02-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,7 +11,7 @@ lastupdated: "2018-02-22"
 
 IBM CIS provides many ways to administer your brand presence, your account security, and your support process. We recommend working through each of our administrative best practices to ensure that your customers and your content are best served by the CIS network.
 
-**Recommendations:**
+**Recommendations and best practices:**
 
 * Manage your brand by customizing CIS pages
 * Enforce 2-Factor Authentication for your entire organization 
