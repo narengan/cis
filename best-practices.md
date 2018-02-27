@@ -73,9 +73,11 @@ CIS provides some options for encrypting your traffic. As a reverse proxy, we cl
  
  * Alternatively, utilize a certificate provisioned by CIS
  
- CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers.
+CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
  
  * Explore a keyless SSL configuration
+ 
+Using a keyless SSL configuration, our customers can maintain their own private key whiel still allowing CIS to complete TLS connections. Keyless SSL gives you increased security around private keys and identification, while still letting you use the CIS services. Many financial clients use this setting.
  
  
  * Change your SSL setting to **Full** (Strict)
