@@ -65,8 +65,18 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 
 **Step 4: Configure your SSL settings**
 
+CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
+
  * Upload a custom SSL certificate
+ 
+ You can upload your public and private key when you create an Enterprise domain. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
+ 
  * Alternatively, utilize a certificate provisioned by CIS
+ 
+ CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers.
+ 
  * Explore a keyless SSL configuration
+ 
+ 
  * Change your SSL setting to **Full** (Strict)
 
