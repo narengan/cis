@@ -19,9 +19,11 @@ By default, CIS’s security settings have safe defaults designed to avoid false
 
 ## Best practice 1: Secure Your Origin IP Addresses
 
+When a subdomain is proxied within our DNS application, CIS actively protects that traffic by responding with CIS IP addresses (proxies). Thus, all client traffic connects to CIS first, and your origin IP addresses are obscured.
+
 ### Use CIS proxies for all DNS Records for HTTP(S) traffic from your origin
 
-When a subdomain is proxied within our DNS application, CIS actively protects that traffic by responding with CIS IP addresses (proxies). Thus, all client traffic connects to CIS first, and your origin IP addresses are obscured. To improve the security of your origin IP address, all HTTP(s) traffic should be oproxied.
+To improve the security of your origin IP address, all HTTP(s) traffic should be proxied.
 
 See the difference yourself - Query a non-proxied and a proxied record:
 
@@ -92,11 +94,11 @@ Selecting CIS Specials and any application-specific groups allow you to take an 
 
 | Group  | Description | Mode |
 | ------------- | ------------- | ------------- |
-| CIS Specials  | CIS Specials contains a number of rules that have been created to deal with specific attack types.  | ON |
-| CIS Drupal  | This ruleset should only be enabled if the Drupal CMS is used for this domain. It contains additional rules that compliment the technology-specific protections provided by similar rules in the OWASP ruleset. | ON |
-| CIS Flash  | This ruleset should only be enabled if Adobe Flash content is used for this domain. It contains additional rules that compliment the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
-| CIS Joomla  | This ruleset should only be enabled if the Joomla CMS is used for this domain. It contains additional rules that compliment the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
-| CIS Magento  | This ruleset should only be enabled if the Magento CMS is used for this domain. It contains additional rules that compliment the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
+| CIS Specials  | CIS Specials contains a number of rules that have been created to handle specific attack types.  | ON |
+| CIS Drupal  | This ruleset should be enabled only if the Drupal CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | ON |
+| CIS Flash  | This ruleset should be enabled o nlyif Adobe Flash content is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
+| CIS Joomla  | This ruleset should be enabled only if the Joomla CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
+| CIS Magento  | This ruleset should be enabled only if the Magento CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
 
 ### Finally, turn your Web Application Firewall On with the Global Setting
-Now that your Package-level settings are configured safely, you can turn on the global, domain-wide WAF. Specific Paths, such as API endpoints, can turn the WAF off completely by stting up a **Page Rule**, which can ensure that you're protected while not interfering with legimate requests.
+Now that your Package-level settings are configured safely, you can turn on the global, domain-wide WAF. Specific paths, such as API endpoints, can turn off the WAF completely by setting up a **Page Rule**, which ensures that you're protected while not interfering with legimate requests.
