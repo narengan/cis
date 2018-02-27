@@ -9,6 +9,7 @@ Cloud Internet Services (CIS)
     about.md
     ssl-options.md
     dns.md
+    best-practices.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
