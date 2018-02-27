@@ -39,15 +39,15 @@ You can find the updated list of IP ranges for IBM CIS [at this location](need t
 
 **Step 3: Review your security settings to make sure they don’t interfere with API traffic**
 
-IBM CIS usually accelerates API traffic by removing connection overhead. However, the default security stance can interfere with many API calls. WE recommend that you take a few actions to prevent interference with your API traffic once proxying is active.
+IBM CIS usually accelerates API traffic by removing connection overhead. However, the default security stance can interfere with many API calls. We recommend that you take a few actions to prevent interference with your API traffic once proxying is active.
 
- * Turn security features off selectively, using the Page Rules application.
+ * Turn security features off selectively, using the **Page Rules** features.
 
-  * Alternatively, turn off **Browser Integrity Check** globally
+  * Alternatively, you can turn off **Browser Integrity Check** globally.
 
 *What does the Browser Integrity Check do?*
 
-The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).
+*The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).*
 
 **Step 4: Configure your SSL settings**
 
