@@ -7,7 +7,7 @@ lastupdated: "2018-02-27"
 ---
 
 
-# Best practices
+# Best practices for CIS setup
 
 Because IBM Cloud CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. Here are some recommended best practices for integrating CIS with your origin servers. 
 
