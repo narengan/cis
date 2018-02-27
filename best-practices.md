@@ -79,4 +79,6 @@ CIS provides some options for encrypting your traffic. As a reverse proxy, we cl
  
  
  * Change your SSL setting to **Full** (Strict)
+ 
+Most of our Enterprise customer utilize the Full (Strict) security setting. A Full (Strict) setting requires a valid, CA-signed SSL certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
 
