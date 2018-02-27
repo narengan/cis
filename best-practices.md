@@ -7,9 +7,11 @@ lastupdated: "2018-02-27"
 ---
 
 
-# Best practices for integrating CIS with your origin servers
+# Best practices
 
-IBM Cloud CIS is positioned at the edge of your network. You’ll need to take a few steps to guarantee a smooth integration with your CIS services. You can do these steps either before or after you change your DNS and activate our proxy service. These recommendations allow CIS to connect to your origin servers properly. They’ll help you prevent any issues with API or HTTPS traffic, and help your logs capture the correct IP addresses of your customers, rather than the protective CIS IP addresses.
+Here are some recommended best practices for integrating CIS with your origin servers. Because IBM Cloud CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. 
+
+You can do these steps either before or after you change your DNS and activate our proxy service. These recommendations allow CIS to connect to your origin servers properly. They’ll help you prevent any issues with API or HTTPS traffic, and help your logs capture the correct IP addresses of your customers, rather than the protective CIS IP addresses.
 
 Here’s what you’ll need to set up:
 
@@ -18,7 +20,7 @@ Here’s what you’ll need to set up:
  * Step 3: Integrate API traffic with appropriate security settings
  * Step 4: Configure your SSL with a custom certificate and a Full (Strict) setting
 
-**Step 1: Know how to restore the originating IPs of your customers**
+## Step 1: Know how to restore the originating IPs of your customers
 
 As a reverse proxy, we provide the origination IP in these headers:
 
@@ -28,7 +30,7 @@ As a reverse proxy, we provide the origination IP in these headers:
 
 You can restore user IP addresses using a variety of tools, for infrastructures such as Apache, Windows IIS, and NGINX.
 
-**Step 2: Incorporate CIS IP addresses to make integration smoother**
+## Step 2: Incorporate CIS IP addresses to make integration smoother
 
 Here are the two steps to take:
 
@@ -37,7 +39,7 @@ Here are the two steps to take:
 
 You can find the updated list of IP ranges for IBM CIS [at this location](need this link).
 
-**Step 3: Review your security settings to make sure they don’t interfere with API traffic**
+## Step 3: Review your security settings to make sure they don’t interfere with API traffic
 
 IBM CIS usually accelerates API traffic by removing connection overhead. However, the default security stance can interfere with many API calls. We recommend that you take a few actions to prevent interference with your API traffic once proxying is active.
 
@@ -63,24 +65,24 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 |------------------------------------------------|
 | *The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).* |
 
-**Step 4: Configure your SSL settings**
+## Step 4: Configure your SSL settings
 
 CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
 
- * Upload a custom SSL certificate
+### Upload a custom SSL certificate
  
  You can upload your public and private key when you create an Enterprise domain. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
  
- * Alternatively, utilize a certificate provisioned by CIS
+### Alternatively, utilize a certificate provisioned by CIS
  
 CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
  
- * Explore a keyless SSL configuration
+### Explore a keyless SSL configuration
  
 Using a keyless SSL configuration, our customers can maintain their own private key whiel still allowing CIS to complete TLS connections. Keyless SSL gives you increased security around private keys and identification, while still letting you use the CIS services. Many financial clients use this setting.
  
  
- * Change your SSL setting to **Full** (Strict)
+### Change your SSL setting to **Full** (Strict)
  
 Most of our Enterprise customer utilize the Full (Strict) security setting. A Full (Strict) setting requires a valid, CA-signed SSL certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
 
