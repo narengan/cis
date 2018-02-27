@@ -9,18 +9,18 @@ lastupdated: "2018-02-27"
 
 # Best practices
 
-Here are some recommended best practices for integrating CIS with your origin servers. Because IBM Cloud CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. 
+Because IBM Cloud CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. Here are some recommended best practices for integrating CIS with your origin servers. 
 
 You can do these steps either before or after you change your DNS and activate our proxy service. These recommendations allow CIS to connect to your origin servers properly. They’ll help you prevent any issues with API or HTTPS traffic, and help your logs capture the correct IP addresses of your customers, rather than the protective CIS IP addresses.
 
 Here’s what you’ll need to set up:
 
- * Step 1: Restore the originating IPs of your customers
- * Step 2: Incorporate CIS IP addresses
- * Step 3: Integrate API traffic with appropriate security settings
- * Step 4: Configure your SSL with a custom certificate and a Full (Strict) setting
+ * Best practice 1: Restore the originating IPs of your customers
+ * Best practice 2: Incorporate CIS IP addresses
+ * Best practice 3: Integrate API traffic with appropriate security settings
+ * Best practice 4: Configure your SSL with a custom certificate and a Full (Strict) setting
 
-## Step 1: Know how to restore the originating IPs of your customers
+## Best practice 1: Know how to restore the originating IPs of your customers
 
 As a reverse proxy, we provide the origination IP in these headers:
 
@@ -30,7 +30,7 @@ As a reverse proxy, we provide the origination IP in these headers:
 
 You can restore user IP addresses using a variety of tools, for infrastructures such as Apache, Windows IIS, and NGINX.
 
-## Step 2: Incorporate CIS IP addresses to make integration smoother
+## Best practice 2: Incorporate CIS IP addresses to make integration smoother
 
 Here are the two steps to take:
 
@@ -39,7 +39,7 @@ Here are the two steps to take:
 
 You can find the updated list of IP ranges for IBM CIS [at this location](need this link).
 
-## Step 3: Review your security settings to make sure they don’t interfere with API traffic
+## Best practice 3: Review your security settings to make sure they don’t interfere with API traffic
 
 IBM CIS usually accelerates API traffic by removing connection overhead. However, the default security stance can interfere with many API calls. We recommend that you take a few actions to prevent interference with your API traffic once proxying is active.
 
@@ -65,7 +65,7 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 |------------------------------------------------|
 | *The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).* |
 
-## Step 4: Configure your SSL settings
+## Best practice 4: Configure your SSL settings
 
 CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
 
@@ -84,5 +84,5 @@ Using a keyless SSL configuration, our customers can maintain their own private 
  
 ### Change your SSL setting to **Full** (Strict)
  
-Most of our Enterprise customer utilize the Full (Strict) security setting. A Full (Strict) setting requires a valid, CA-signed SSL certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
+Most of our Enterprise customers utilize the Full (Strict) security setting. A **Full (Strict)** setting requires a valid, CA-signed SSL certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
 
