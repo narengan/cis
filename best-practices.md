@@ -24,9 +24,9 @@ Here’s what you’ll need to set up:
 
 As a reverse proxy, we provide the origination IP in these headers:
 
-  * CF-Connecting-IP
-  *  X-Forwarded-For
-  * True-Client-IP (optional)
+  * `CF-Connecting-IP`
+  * `X-Forwarded-For`
+  * `True-Client-IP` (optional)
 
 You can restore user IP addresses using a variety of tools, for infrastructures such as Apache, Windows IIS, and NGINX.
 
