@@ -28,7 +28,7 @@ With IBM Cloud CIS, your site's performance is enhanced by speeding up the loadi
 
 ## Best practice 2: Cache as much static and semi-static content as possible
 
-  * Enable *8cache Everything** for static HTML web pages
+  * Enable **Cache Everything** for static HTML web pages
   * Use conservative **Time to Live (TTL)** for your content that changes occasionally
 
 
