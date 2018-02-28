@@ -10,7 +10,7 @@ lastupdated: "2018-02-27”
 
 # Best practices for performance
 
-With IBM CLoud CIS, your system's performance is enhanced by speedin up the loading of your web content, as well as becuase your conetnt is being loaded from proxied edge servers. Here are some specific best practices for enhancing the performance of your web content within CIS.
+With IBM CLoud CIS, your site's performance is enhanced by speeding up the loading of your web content, as well as becuase your conetnt is being loaded from proxied edge servers. Here are some specific best practices for enhancing the performance of your web content within CIS.
 
  * Activate Web Content Optimization (WCO) features wherever possible
  * Cache as much of your static and semi-static web content as possible
