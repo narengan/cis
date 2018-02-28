@@ -11,9 +11,9 @@ lastupdated: "2018-02-27”
 
 # Best practices for performance
 
-IBM Cloud Internet Services can provide the fastest experience for your customers because it optimizes your images, and it stores your web content as near as possible to your end-users.
+IBM Cloud Internet Services can provide the fastest experience for your customers because it optimizes your images, and it stores your web content as near as possible to your end-users. Your content is loaded from proxied edge servers (which reduces latency).
 
-With IBM Cloud CIS, your site's performance is enhanced by speeding up the loading of your web content, as well as because your content is loaded from proxied edge servers (which reduces latency). Here are some specific best practices for enhancing the performance of your web content within CIS.
+With IBM Cloud CIS, you can enhance your site's performance further by using some best practices to speed up the loading of your web content. Here are some specific best practices for enhancing the performance of your web content within CIS.
 
 **Recommended and best practices**
 
