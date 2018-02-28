@@ -1,5 +1,4 @@
 ---
-
 copyright:
   years: 2018
 lastupdated: "2018-02-27”
@@ -12,7 +11,7 @@ lastupdated: "2018-02-27”
 
 # Best practices for performance
 
-With IBM Cloud CIS, your site's performance is enhanced by speeding up the loading of your web content, as well as because your content is being loaded from proxied edge servers. Here are some specific best practices for enhancing the performance of your web content within CIS.
+With IBM Cloud CIS, your site's performance is enhanced by speeding up the loading of your web content, as well as because your content is loaded from proxied edge servers (which reduces latency). Here are some specific best practices for enhancing the performance of your web content within CIS.
 
 **Recommended and best practices**
 
