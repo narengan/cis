@@ -1,8 +1,9 @@
 ---
+  
 copyright:
-  years: 2018
-lastupdated: "2018-02-27”
-
+   years: 2018
+lastupdated: "2018-02-27"
+ 
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,36 +27,36 @@ With IBM Cloud CIS, you can enhance your site's performance further by using bes
   * Use conservative **Time to Live (TTL)** for your content that changes occasionally
 
 ### Utilize conservative TTLs (Time-to-Lives) for content that changes occasionally
-If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. A good way to tell if your TTLs may need to be adjusted is by watching your Status Codes in our Analytics App for an abundance of 304 requests. If you have a high percetange of re-validation requests, you could likely increase the TTLs of your content without negatively impacting your customers. This will use our cache more effectively and increase performance since you’’ll revalidate less often.
+If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. A good way to tell if your TTLs may need to be adjusted is by watching your Status Codes in our Analytics App for an abundance of `304` requests. If you have a high percetange of re-validation requests, you could increase the TTLs of your content without negatively affecting your customers. By using thecache more effectively, you'll increase performance because you'll revalidate less often.
 
 ### How do I tell if items are being cached?
-CIS adds the response header `CF-Cache-Status` if attempting to cache the object. If successful, the value of this header indicates:
+CIS adds the response header `CF-Cache-Status` when it attemps to cache an object. If caching is successful, the value of this header indicates:
 
-* **MISS:** Not yet in the cache or the TTL expired (i.e. cache-control max age of 0).
-* **HIT:** Asset delivered from cache.
-* **EXPIRED:** Delivered from cache, but the next request will require revalidation.
-* **REVALIDATED:** Delivered from cache. The TTL was expired, but a `If-Modified-Since` request to the origin indicated the asset has not changed so the version in cache is considered valid again.
+* **MISS:** The asset was not yet in the cache or the TTL had expired (that is, it had reached the cache-control maximum age of 0).
+* **HIT:** The asset was delivered from the cache.
+* **EXPIRED:** This asset was delivered from cache, but the next request will require revalidation.
+* **REVALIDATED:** The asset was elivered from cache. The TTL was expired, but an `If-Modified-Since` request to the origin indicated that the asset had not changed. Therefore, the version in cache is considered valid again.
 
 ## Best practice 2: For event-driven content, use the API to purge your cache
-For example, everytime a new post is added to your blog, you could easily purge the CIS cache using an API command. It is very common to see event-driven content, and we make it easy to ensure no stale content is reaching your users. The necessary commands are listed below to purge the cache immediately across our entire global network either via our Caching Application or via the API.
+For example, every time a new post is added to your blog, you could easily purge the CIS cache using an API command. It is common to see event-driven content, and we make it easy to guarantee that no stale content is reaching your users. The  commands to purge the cache immediately across our entire global network are listed next. You can use our caching application or you can use the API.
 
   * Purge the cache by using a Cache-Tag
   * Purge the cache globally
   * Purge the cache by Page Rule
 
 ### Purge the cache by Cache-Tag
-Cache-Tags allow you to define buckets of content that you wish to purge. This is an excellent way to combine objects that are commonly changed together. So an HTML blog post, for example, and all of its image content could be tagged together. Mobile-only content could also be bundled using cache-tags to purge everything when you push a new update to your mobile domain.
+Cache-Tags let you define buckets of content that you wish to purge. It is an excellent way to combine objects that are commonly changed together. So an HTML blog post, for example, and all of its image content could be tagged together. Mobile-only content also could be bundled using cache-tags, so that you can purge everything when you push a new update to your mobile domain.
 
 ### Purge the cache globally
-You also have the option to force our entire cache to revalidate. This allows you to reset all of the objects stored in our cache to ensure every request will return to the origin.
+You also have the option to force our entire cache to revalidate. You can reset all of the objects stored in our cache so that every request is routed to the origin server.
 
 ### Purge the cache by Page Rule
-Page Rules allow you to effectively purge the entire cache by a basic regular expression. These let you utilize a pre-defined Page Rule and re-validate all hits against that Page Rule.
+Page Rules let you purge the entire cache based upon a regular expression. You can utilize a pre-defined Page Rule and re-validate all hits against that Page Rule. You can create up to 50 Page Rules per page, and the first one is free.
 
 ### Use advanced caching features for Enterprise customers
 
-**Bypass Cache Cookie -** The ability, configured in a page rule, to serve a cached object unless we see a cookie of a specific name, e.g., serve a cached version of the homepage unless we see a SessionID cookie indicating the customer is logged in and therefore should be presented personalized content.
+**Bypass Cache Cookie:** Configured in a Page Rule, this feature allows you to serve a cached object unless a cookie of a specific name exists. For example, you can serve a cached version of the homepage unless you find a `SessionID` cookie indicating that the customer is logged in, and therefore should be presented with personalized content.
 
-**Cache on Cookie -** Presents a cached page when only when we see a specific cookie, for instance, only serves a cached page once a device type cookie has been set by the origin server.
+**Cache on Cookie:** Presents a cached page when only when a specific cookie is present, for instance, it only serves a cached page once a "device-type" cookie has been set by the origin server.
 
-**Custom Cache Keys -** Generally, objects in CIS’s cache are referenced by only their URI, for example, `https:// www.example.com/logo.png`. We offer the ability to create custom cache keys so that a different object is served for the same URI based on any arbitrary request header or cookie, e.g., `https://www.example.com/logo.png` with a device type cookie set to desktop would be a different object in our cache than `https://www.example.com/logo.png` with device type cookie set to tablet.
+**Custom Cache Keys:** Generally, objects in the CIS cache are referenced by only their URI, for example, `https:// www.example.com/logo.png`. You can create custom cache keys so that a different object is served for the same URI based on any arbitrary request header or cookie, for example, `https://www.example.com/logo.png` with a device-type cookie set to "desktop" would be a different object in our cache than `https://www.example.com/logo.png` with device-type cookie set to "tablet."
