@@ -18,6 +18,7 @@ Cloud Internet Services (CIS)
     managing-for-reliability.md
     managing-for-performance.md
     administrating.md
+    using-page-rules.md
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
