@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-22"
+lastupdated: "2018-02-28"
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +21,7 @@ You can start using IBM Cloud Internet Services (CIS) for your internet traffic 
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon. For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
-![image](need an image here of the dashboard and selecting create)
+![Getting Started](images/getting-started-add-domain.md)
 
 **Step 1. Add and configure your Domain.**
 
