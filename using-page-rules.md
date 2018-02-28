@@ -1,0 +1,50 @@
+---
+copyright:
+  years: 2018
+lastupdated: "2018-02-28"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+# Using Page Rules
+
+A page rule specifies some settings and values tha you can apply to a specific URL. Page rules help you manage security and performance, based on each indidivual URL in your site. The following table describes the page rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
+
+| Rule Settings | Behavior | Considerations |
+|-----------|----------|----------------|
+|Always Online| | |
+|Always Use HTTPS| |Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
+|Browser Cache TTL | ||
+|Browser Integrity Check|Looks for common HTTP headers abused by spammers and denies access to your page. It also blocks visitors that do not have a user agent or add a non standard user agent (also commonly used by abuse bots, crawlers, or APIs). | |
+|Bypass Cache Cookie|Serve a cached object unless we see a cookie of a specific name, for example, serve a cached version of the homepage unless we see a SessionID cookie indicating the customer is logged in and therefore should be presented personalized content. | |
+|Cache Deception Armor| | |
+|Cache Level| | |
+|Disable Security|Disables the following features: <ul><li>Email Obfuscation</li> <li>Server Side Excludes</li> <li>WAF</li> <li>Rate Limiting</li> <li>Scrape Shield</li>|If a rule is set to disable security, and another rule is set to enable the WAF, the WAF rule takes precedence regardless of the order in which they appear.|
+|Edge Cache TTL| | |
+|Email Obfuscation| | |
+|Forwarding URL | | Using this disables configuring all other settings because you are forwarding the request somewhere else.|
+|Automatic HTTPS Rewrites| | |
+|IP Geolocation Header| | |
+|Opportunistic Encryption| | |
+|Origin Cache Control| | |
+|Security Level| | |
+|Server Side Excludes| | |
+|SSL| | |
+|WAF| | |
+    
+
+### Enterprise Only Options
+The rules in the following table are for Enterprise customers only.
+
+| Page Rule | Behavior | Considerations |
+|-----------|----------|----------------|
+|Cache On Cookie| | |
+|Host Header Override | | |
+|Resolve Override | | |
+|Custom Cache Key| | |
+|Query String Sort | | |
+|Origin Error Page Pass Through| | |
+|True Client IP Header| | |
+|Max Upload Size||CIS limits the maximum amount of data a visitor can upload per request. The limit is determined by the plan level. Enterprise: 500MB (default)|
+|Response Buffering| | |
