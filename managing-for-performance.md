@@ -16,7 +16,7 @@ IBM Cloud Internet Services can provide the fastest experience for your customer
 
 With IBM Cloud CIS, you can enhance your site's performance further by using best practices to speed up the loading of your web content. Here are some specific best practices for enhancing the performance of your web content within CIS.
 
-**Recommended and best practices**
+**Recommended and best practices:**
 
  * Cache as much of your static and semi-static web content as possible
  * For event-driven content, purge your cache using the API
@@ -30,7 +30,7 @@ With IBM Cloud CIS, you can enhance your site's performance further by using bes
 If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. A good way to tell if your TTLs may need to be adjusted is by watching your Status Codes in our Analytics App for an abundance of `304` requests. If you have a high percetange of re-validation requests, you could increase the TTLs of your content without negatively affecting your customers. By using thecache more effectively, you'll increase performance because you'll revalidate less often.
 
 ### How do I tell if items are being cached?
-CIS adds the response header `CF-Cache-Status` when it attemps to cache an object. If caching is successful, the value of this header indicates:
+CIS adds the response header `CF-Cache-Status` when it attemps to cache an object. If caching is successful, the value of this header indicates its status with one of these ketywords:
 
 * **MISS:** The asset was not yet in the cache or the TTL had expired (that is, it had reached the cache-control maximum age of 0).
 * **HIT:** The asset was delivered from the cache.
