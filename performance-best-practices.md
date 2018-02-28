@@ -9,11 +9,11 @@ lastupdated: "2018-02-27”
 {:new_window: target="_blank"}
 
 
-# Best practices for performance
+# Managing your CIS deployment for best performance
 
 IBM Cloud Internet Services can provide the fastest experience for your customers because it optimizes your images, and it stores your web content as near as possible to your end-users. Your content is loaded from proxied edge servers (which reduces latency).
 
-With IBM Cloud CIS, you can enhance your site's performance further by using some best practices to speed up the loading of your web content. Here are some specific best practices for enhancing the performance of your web content within CIS.
+With IBM Cloud CIS, you can enhance your site's performance further by using best practices to speed up the loading of your web content. Here are some specific best practices for enhancing the performance of your web content within CIS.
 
 **Recommended and best practices**
 
@@ -45,7 +45,8 @@ CIS can accellerate content using client-side tools such as Mirage and Rocket Lo
 ### Utilize conservative TTLs (Time-to-Lives) for content that changes occasionally
 If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. A good way to tell if your TTLs may need to be adjusted is by watching your Status Codes in our Analytics App for an abundance of 304 requests. If you have a high percetange of re-validation requests, you could likely increase the TTLs of your content without negatively impacting your customers. This will use our cache more effectively and increase performance since you’’ll revalidate less often.
 
-### How do I tell if items are being cached?CIS adds the response header `CF-Cache-Status` if attempting to cache the object. If successful, the value of this header indicates:
+### How do I tell if items are being cached?
+CIS adds the response header `CF-Cache-Status` if attempting to cache the object. If successful, the value of this header indicates:
 
 * **MISS:** Not yet in the cache or the TTL expired (i.e. cache-control max age of 0).
 * **HIT:** Asset delivered from cache.
