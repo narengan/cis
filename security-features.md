@@ -1,9 +1,11 @@
 ---
 copyright:
-   years: 2018
-lastupdated: "2018-03-01”
- 
+  years: 2018
+lastupdated: "2018-03-01"
 ---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
 # How IBM Cloud CIS keeps your work secure
 
