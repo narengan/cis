@@ -1,5 +1,4 @@
 ---
-  
 copyright:
    years: 2018
 lastupdated: "2018-03-01”
@@ -38,8 +37,8 @@ Generally, we see attacks that fall into two categories
 
 | Layer 3 or Layer 4 attacks | Layer 7 attacks |
 |------------------------------|-----------------|
-|These attacks consist of a flood of traffic at ISO Layer 3 (the network layer), such as ICMP floods) or at Layer 4 (the transport layer), such as TCP SYN floods or reflected UDP floods) | Automatically blocked at our edge |
-| These are attacks that send malicious ISO Layer 7 requests (the application layer), such as GET floods. | We handle these with “Defense Mode,” IP firewalls, WAF, Security level settings, and Rate Limiting |
+|These attacks consist of a flood of traffic at ISO Layer 3 (the network layer), such as ICMP floods) or at Layer 4 (the transport layer), such as TCP SYN floods or reflected UDP floods) |These are attacks that send malicious ISO Layer 7 requests (the application layer), such as GET floods.  |
+| Automatically blocked at our edge | We handle these with “Defense Mode,” IP firewalls, WAF, Security level settings, and Rate Limiting |
 
 **Summary**
 
