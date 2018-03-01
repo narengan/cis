@@ -1,9 +1,11 @@
 ---
-
 copyright:
-   years: 2018
-lastupdated: "2018-03-01”
+  years: 2018
+lastupdated: "2018-03-01"
 ---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
 # Helpful tools for managing your CIS deployment
 
@@ -11,11 +13,11 @@ Some public-domain unix system administration tools exist that can help you mana
 
 ## Sysadmin tools
 
- * whois (domain identifactiont ool)
+ * whois (domain identification tool)
  * dig (DNS tool)
  * curl (HTTP and HTTPS tool)
- * nectar (IP and port tool)
- * tracerouts (network tool)
+ * netcat (IP and port tool)
+ * traceroute (network tool)
 
 ## Commercial tools for external and remote testing:
 
