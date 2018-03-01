@@ -7,9 +7,9 @@ lastupdated: "2018-02-27"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Administrating your IBM CIS account
+# Administrative best practices
 
-IBM CIS provides many ways you can administer your brand presence, your account security, and your support process. We recommend working through each of the administrative best practices listed in this document, to ensure that your customers and your content are best served by your CIS network.
+IBM Cloud CIS provides many ways you can administer your brand presence, your account security, and your support process. We recommend working through each of the administrative best practices listed in this document, to ensure that your customers and your content are best served by your CIS network.
 
 **Recommendations and best practices:**
 
