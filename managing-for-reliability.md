@@ -116,3 +116,79 @@ any        0s;
 To ensure that your content is always available (HA), you can set up a forwarding URL to be used in case your site is unavailable. 
  
  **Note:** When you enable a **Forwarding URL**, all of your other settings are disabled becuase you are sending all your traffic to another URL.
+
+### How to set up a forwarding URL
+
+ * Log into your IBM CIS account.
+ * From the dropdown menu on the top left, select your domain.
+ * Select the **Page Rules** app.
+ * Add a new page rule, and select enable Forwarding.
+ * Enter the destination URL and select the forwarding type.
+ 
+### Forwarding examples:
+
+Imagine you want to make it easy for anyone coming to reach a URL such as:
+
+    *www.example.com/+
+
+    *example.com/+
+
+This pattern will match:
+
+    http://example.com/+
+    http://www.example.com/+
+    https://www.example.com/+
+    https://blog.example.com/+
+    https://www.blog.example.com/+
+    Etc...
+
+It will not match:
+
+    http://www.example.com/blog/+  [extra directory before the +]
+    http://www.example.com+  [no trailing slash]
+
+
+Once you've created the pattern that matches what you want, click the **Forwarding** toggle to expose a field in which you can enter the forwarding address. For example:
+
+    https://plus.google.com/yourid 
+
+Enter that URL in the **Forwarding** field and click the **Add Rule** button. Within a few seconds any requests that match the pattern will be forwarded to the new URL with a 302 Redirect. 
+
+### Advanced forwarding options:
+
+If you use a basic redirect, such as forwarding the root domain to www.yourdomain.com, you lose anything else in the URL. For example, you could set up the pattern:
+
+    example.com
+
+And have it forward to:
+
+    http://www.example.com
+
+But then if someone entered:
+
+    example.com/some-particular-page.html
+
+Then they'd be redirected to:
+
+    www.example.com
+
+instead of
+
+    www.example.com/some-particular-page.html
+
+The solution is to use variables. Each wildcard corresponds to a variable that can be referenced in the forwarding address. The variables are represented by a `$` followed by a number. To refer to the first wildcard you'd use `$1`, to refer to the second wildcard you'd use `$2`, and so on. To fix the forwarding from the root to `www` in the previous example, you could use the same pattern:
+
+    example.com/*
+
+You'd then set up the following URL for traffic to forward to:
+
+    http://www.example.com/$1
+
+In this case, if someone went to:
+
+    example.com/some-particular-page.html
+
+They'd be redirected to:
+
+    http://www.example.com/some-particular-page.html
+
