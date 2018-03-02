@@ -42,3 +42,23 @@ A page rule specifies some settings and values tha you can apply to a specific U
 |Always Online| | |
 |Origin Cache Control| | |
 |Forwarding URL | | Using this disables configuring all other settings because you are forwarding the request somewhere else.|
+
+## Page Rule URL patterns
+
+A Page Rule will take effect on a given URL pattern, matching the following format:
+
+`<scheme>://<hostname><:port>/<path>`
+
+An example using each component would be:
+
+`https://www.example.com:80/image.png`
+
+The *scheme* and *port* components are optional. If the scheme is omitted, it will cover both `http://` and `https://` protocols. If the port is not specified, then the rule will match all ports. You can perform basic wildcard matches by using a ‘*’ symbol in your rule pattern, allowing it to match a series of similar patterns rather than just one.
+
+There are two important things to remember with Page Rules:
+
+ * Only one Page Rule will take effect on any given request
+ * Page Rules are given priority in an order from top to bottom
+ * Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has already triggered on a request, any subsequent rules that also match the URL pattern will not take effect. As a general rule, we recommend ordering your rules from most specific to least specific.
+
+Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The *Save as Draft* option will create a page rule that is paused initially.
