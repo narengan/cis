@@ -38,7 +38,7 @@ To enable **Always Online**, follow these steps:
  
  * Only content hosted on the domain that has **Always Online** enabled will be cached in the **Always Online** cache.
  
- * **Always Online** cachces the first 10 links from your root HTML, then just the first links from each of those pages, and finally the first links from each of those subsequent pages. This means that only some pages on your site will be viewable when your origin server goes down.
+ * **Always Online** caches the first 10 links from your root HTML, then just the first links from each of those pages, and finally the first links from each of those subsequent pages. This means that only some pages on your site will be viewable when your origin server goes down.
   
  * Recently added sites won't have a large cache of their site available, which means that **Always Online** may not work if you only added the site a few days ago.
  
@@ -46,7 +46,9 @@ To enable **Always Online**, follow these steps:
  
  * To trigger **Always Online**, your web server must be returning a standard HTTP Error code of 502 or 504 timeout. Always Online also works when we encounter issues contacting your origin (Errors 521 & 523), timeouts (522 & 524), SSL errors (525 & 526) or an unknown error (520). Always Online will not be triggered for other HTTP response codes, such as 404s, 500, 503, database connection errors, internal server error, or empty replies from server.
  
- * 
+ * **Always Online** will not work if a "Cache Everything" page rule is enabled with the "Edge Cache Expire TTL" lower than the caching frequency (Free customers: 7 days, Pro customers: 3 days, and Business and Enterprise customers: 1 day), because the "Edge Cache Expire TTL" causes the **Always Online** cache to be purged in the corresponding interval.
+ 
+ * **Always Online** will not function if you have the United States listed as a country on your Threat Control block list. If the US is listed as a block, the **Always Online** crawler will not be able to crawl your site.
  
  ## Origin Cache Control
  
