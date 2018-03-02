@@ -34,12 +34,11 @@ Next, you can set up caching.
 
 ![IMAGE](caching-screen.png)
 
-You have the option of 4 types of caching, available form the caching screen dropdown menu: 
+You have the option of 3 types of caching, available form the caching screen dropdown menu: 
 
- * No q.s.
- * q.s. independent
- * q.s
- * ??
+ * No query string
+ * Query string independent
+ * Query string dependent
  
  ### Purge Cache
  
@@ -67,7 +66,7 @@ Notice that when certain rules are enabled, other options become grayed out, if 
  
  ![PAGE RULES MENUS](images/page-rule-dropdown-settings.png)
  
- You also can enable or disable your page rules from the table displayed in the Overview screen.
+ You also can enable or disable your page rules from the table displayed in the Overview screen. See [Using Page Rules](using-page-rules.html) for more information.
  
  ## Security settings
  
