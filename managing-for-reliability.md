@@ -52,7 +52,7 @@ To enable **Always Online**, follow these steps:
  
  ## Origin Cache Control
  
-   * placeholder
+Not all caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** invokes a newer set of caching rules that seeks to adhere closely to RFCs, primarily with respect to revalidation--for example, the CIS default behavior with max-age=0 is to not cache at all, whereas setting **Origin Cache Control** caches but always revalidates.
  
  ## Forwarding URL
  
