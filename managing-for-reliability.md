@@ -50,9 +50,13 @@ To enable **Always Online**, follow these steps:
  
  * **Always Online** will not function if you have the United States listed as a country on your Threat Control block list. If the US is listed as a block, the **Always Online** crawler will not be able to crawl your site.
  
- ## Origin Cache Control
+## Origin Cache Control
  
-Not all caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** invokes caching rules that seek to adhere closely to RFCs, primarily with respect to revalidation. For example, the CIS default behavior with `max-age=0` is not to cache at all, whereas setting **Origin Cache Control** caches, but it always revalidates.
+You can use the *Origin Cache Control* Page Rule to control what content is cached from your origin and how often the content is updated.
+ 
+By default, if no settings are changed and no headers that prevent caching are sent from your the origin server, IBM CIS caches all static content with certain extensions. These types of content include images, CSS, and JavaScript. 
+
+Setting **Origin Cache Control** invokes caching rules that seek to adhere closely to internet best practices and RFCs, primarily with respect to revalidation. For example, the CIS default behavior with `max-age=0` is not to cache at all, whereas setting **Origin Cache Control** caches, but it always revalidates.
  
  ## Forwarding URL
  
