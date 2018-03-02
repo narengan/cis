@@ -25,12 +25,28 @@ With **Always Online**, your server goes down, IBM CIS will serve pages from our
 
 If IBM CIS does not have the requested page in its cache, your visitor sees an error page letting them know that the website page they are requesting is offline.
 
+### How to set up Always Online
+
 To enable **Always Online**, follow these steps:
 
  * Log in to your CIS account.
  * Select the domain you wish to modify.
  * Choose the "Caching" link on the menu at the top of the page.
  * Scroll to the "Always Online" section and toggle it on or off as needed.
+ 
+ ### Limitations of Always Online
+ 
+ * Only content hosted on the domain that has **Always Online** enabled will be cached in the **Always Online** cache.
+ 
+ * **Always Online** cachces the first 10 links from your root HTML, then just the first links from each of those pages, and finally the first links from each of those subsequent pages. This means that only some pages on your site will be viewable when your origin server goes down.
+  
+ * Recently added sites won't have a large cache of their site available, which means that **Always Online** may not work if you only added the site a few days ago.
+ 
+ * CIS won't be able to show private content or handle form submission (POSTs) if your server is down. Visitors will be shown an error on checkout pages or items requiring a login to view.
+ 
+ * To trigger **Always Online**, your web server must be returning a standard HTTP Error code of 502 or 504 timeout. Always Online also works when we encounter issues contacting your origin (Errors 521 & 523), timeouts (522 & 524), SSL errors (525 & 526) or an unknown error (520). Always Online will not be triggered for other HTTP response codes, such as 404s, 500, 503, database connection errors, internal server error, or empty replies from server.
+ 
+ * 
  
  ## Origin Cache Control
  
