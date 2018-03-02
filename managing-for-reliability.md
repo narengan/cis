@@ -9,7 +9,7 @@ lastupdated: "2018-03-02"
 
 # Managing your CIS deployment for optimal reliability
 
-To achieve optimal reliability for your IBM Cloud CIS deployment, use our Page Rules to be sure that your web content wil be delivered to your customers, even if your origin server or the cache has a problem.
+To achieve optimal reliability for your IBM Cloud CIS deployment, use our Page Rules to be sure that your web content will be delivered to your customers, even if your origin server or the cache has a problem.
 
 Here are some recommended Page Rule settings to give your site maximum reliability:
 
@@ -44,7 +44,7 @@ To enable **Always Online**, follow these steps:
  
  * CIS won't be able to show private content or handle form submission (POSTs) if your server is down. Visitors will be shown an error on checkout pages or items requiring a login to view.
  
- * To trigger **Always Online**, your web server must be returning a standard HTTP Error code of 502 or 504 timeout. Always Online also works when we encounter issues contacting your origin (Errors 521 & 523), timeouts (522 & 524), SSL errors (525 & 526) or an unknown error (520). Always Online will not be triggered for other HTTP response codes, such as 404s, 500, 503, database connection errors, internal server error, or empty replies from server.
+ * To trigger **Always Online**, your web server must be returning a standard HTTP Error code of 502 or 504 timeout. Always Online also works when we encounter issues contacting your origin (Errors 521 & 523), timeouts (522 & 524), SSL errors (525 & 526) or an unknown error (520). **Always Online** will not be triggered for other HTTP response codes, such as 404s, 500, 503, database connection errors, internal server error, or empty replies from server.
  
  * **Always Online** will not work if a "Cache Everything" page rule is enabled with the "Edge Cache Expire TTL" lower than the caching frequency (Free customers: 7 days, Pro customers: 3 days, and Business and Enterprise customers: 1 day), because the "Edge Cache Expire TTL" causes the **Always Online** cache to be purged in the corresponding interval.
  
@@ -52,27 +52,31 @@ To enable **Always Online**, follow these steps:
  
 ## Origin Cache Control
  
-You can use the *Origin Cache Control* Page Rule to determine what content is cached from your origin and how often the content is updated.
- 
-By default, if no settings are changed and no headers that prevent caching are sent from your the origin server, IBM CIS caches all static content with certain extensions. These types of content include images, CSS, and JavaScript. 
+You can use the *Origin Cache Control* Page Rule to determine what content is cached from your origin and how often the content is updated, which has an effect on reliability and on performance. By default, if no settings are changed and no headers that prevent caching are sent from your origin server, IBM CIS caches all static content with certain extensions. These types of content include images, CSS, and JavaScript. This caching is primarily for performance reasons. 
 
 Setting **Origin Cache Control** invokes caching rules that seek to adhere closely to internet best practices and RFCs, primarily with respect to revalidation. For example, the CIS default behavior with `max-age=0` is not to cache at all, whereas setting **Origin Cache Control** caches, but it always revalidates.
 
-Two specific Page Rules take precedence:
+### Page Rule precedence
+
+Two specific Page Rules take precedence for caching overall:
 
  * If a Page Rule is set to "Bypass Cache", the resources that match that Page Rule are not cached. CIS still acts as a proxy, and our other performance features remain active. However, your content won't be served from our cache, it will be fetched from your origin server directly.
 
  * If a Page Rule is set to "Cache Everything", resources that match the Page Rule are cached. Using this Page Rule setting is the only way to tell us to cache resources beyond what we consider static, including HTML.
  
- * If no Page Rule is set, we will use the Standard caching mode, which is based the extension of the resource. We will cache static resources only.
+ * If no Page Rule is set, we will use the Standard caching mode, which is based the extension of the resource. We will cache static resources only (as mentioned previously).
  
-The second way to alter what IBM CIS will cache is through caching headers sent from the origin. CIS will respect these settings, but you can override them by specifying an "Edge Cache TTL". Here are the caching headers we consider:
+### Origin cache-control headers
+ 
+The second way to alter what IBM CIS will cache is through caching headers sent from the origin. CIS will respect these settings, but you can override them by specifying an "Edge Cache TTL". Here are the headers we consider when deciding what resources to cache from your origin:
 
- * If the Cache-Control header is set to "private", "no-store", "no-cache",  or "max-age=0", or if there is a cookie in the response, then CIS will not cache the resource.
+ * If the Cache-Control header is set to `private`, `no-store`, `no-cache`,  or `max-age=0`, or if there is a cookie in the response, then CIS will not cache the resource. Note that all sensitive material should not be cached, so you might consider using one of these headers in that case.
  
- * If the Cache-Control header is set to "public" and the "max-age" is greater than 0, or if the Expires headers are set any time in the future, we will cache the resource.
+ * If the Cache-Control header is set to `public` and the `max-age` is greater than 0, or if the `Expires` headers are set any time in the future, we will cache the resource.
  
-**Note:** As per RFC rules, "Cache-Control: max-age" trumps "Expires" headers. If we see both and they do not agree, `max-age` wins.
+**Note:** As per RFC rules, `Cache-Control: max-age` trumps `Expires` headers. If we see both and they do not agree, `max-age` wins.
+
+### Using the 's-maxage' header
 
 The third way to control caching behavior and browser caching behavior together is by using the `s-maxage` Cache-Control header.
 
@@ -86,6 +90,8 @@ But if you would like to specify a cache timeout that's different from the brows
 
 Basically `s-maxage` is intended to be followed ONLY by reverse proxies (so the browser should ignore it) whilst on the other hand we (IBM CIS) give priority to `s-maxage` if it is present. We will respect whichever value is higher: the browser cache setting or the `max-age` header.
 
+### Summary on cache control headers and Page Rules for reliability
+
 To sum up, here are some main areas to consider for reliability with regard to caching:
 
  * Check your origin's caching headers to make sure there are no overriding headers for cacheable resources (`Cache-Control` and `Expires`).
@@ -95,7 +101,7 @@ To sum up, here are some main areas to consider for reliability with regard to c
 ```
 200 301    120m;
 302 303    20m;
-403        5m;
+403        5m; for reliability
 404        5m;
 any        0s;
 ```
