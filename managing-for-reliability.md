@@ -19,7 +19,9 @@ Here are the best Page Rule settings to give your site maximum reliability:
  
  ## Always Online
  
-  * placeholder
+**Always Online** keeps a limited version of your site online if your server goes down.
+
+With **Always Online**, your server goes down, IBM CIS will serve pages from our cache, so your visitors still see some of the pages they are trying to visit. Your visitors will see a message at the top of the page telling them that they are in offline browsing mode. Always Online returns an HTTP status 503, however, 503 is also used by many other web applications. When your server comes back online, IBBM CIS will bump users back to regular browsing seamlessly.
  
  ## Origin Cache Control
  
