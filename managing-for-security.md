@@ -105,6 +105,8 @@ Now that your Package-level settings are configured safely, you can turn on the 
 
 ## Performance next steps
 
+If your system performance does not meet your expectations, here are some tips you can try, based on the specific problems you are seeing.
+
 | Symptom | Next Step |
 |---------|------------|
 |High TTFB on uncached resources | (1) Check your origin's overall health for misconfiguration, excessive load, or long-running database queries (2) Use Page Rules to move your origin's redirects to IBM CIS |
