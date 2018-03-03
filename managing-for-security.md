@@ -109,9 +109,9 @@ If your system performance does not meet your expectations, here are some tips y
 
 | Symptom | Next Step |
 |---------|------------|
-|High TTFB on uncached resources | (1) Check your origin's overall health for misconfiguration, excessive load, or long-running database queries (2) Use Page Rules to move your origin's redirects to IBM CIS |
-| No change in performance when using IBM CIS | (1) Check your caching ratio, for example your cached or uncached assets (2) Be sure that the IBM CIS proxy is enabled |
-| Network slowness, timeouts, or errors | (1) Perform a `traceroute` from your origin server to CIS (2) Perform a `traceroute` to your domain server |
-| Site slowness, unstyled or console errors | (1) If HTTPS, check for mixed content (2) Purge your cache |
+|High TTFB on uncached resources | (1) Check your origin's overall health for misconfiguration, excessive load, or long-running database queries; (2) Use Page Rules to move your origin's redirects to IBM CIS |
+| No change in performance when using IBM CIS | (1) Check your caching ratio, for example your cached or uncached assets; (2) Be sure that the IBM CIS proxy is enabled |
+| Network slowness, timeouts, or errors | (1) Perform a `traceroute` from your origin server to CIS; (2) Perform a `traceroute` to your domain server |
+| Site slowness, unstyled or console errors | (1) If you're using HTTPS, check for mixed content; (2) Purge your cache |
 
 
