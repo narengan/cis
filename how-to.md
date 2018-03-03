@@ -32,7 +32,7 @@ Go to your DNS page and add a record (most likely an A record). Type in the info
 
 Next, you can set up caching. 
 
-![IMAGE](caching-screen.png)
+![IMAGE](images/caching-screen.png)
 
 You have the option of 3 types of caching, available from the caching screen dropdown menu: 
 
