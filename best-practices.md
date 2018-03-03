@@ -18,7 +18,7 @@ Here’s what you’ll need to set up:
  * Best practice 1: Restore the originating IPs of your customers
  * Best practice 2: Incorporate CIS IP addresses
  * Best practice 3: Integrate API traffic with appropriate security settings
- * Best practice 4: Configure your SSL with a custom certificate and a Full (Strict) setting
+ * Best practice 4: Configure your TLS with a custom certificate and a Full (Strict) setting
 
 ## Best practice 1: Know how to restore the originating IPs of your customers
 
@@ -77,12 +77,12 @@ CIS provides some options for encrypting your traffic. As a reverse proxy, we cl
  
 CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
  
-### Consider a keyless SSL configuration
+### Consider a keyless TLS configuration
  
-Using a keyless SSL configuration, our customers can maintain their own private key whiel still allowing CIS to complete TLS connections. Keyless SSL gives you increased security around private keys and identification, while still letting you use the CIS services. Many financial clients use this setting.
+Using a keyless TLS configuration, our customers can maintain their own private key while still allowing CIS to complete TLS connections. Keyless TLS gives you increased security around private keys and identification, while still letting you use the CIS services. Many financial clients use this setting.
  
  
-### Change your SSL setting to **Full** (Strict)
+### Change your TLS setting to **Full** (Strict)
  
-Most of our Enterprise customers utilize the Full (Strict) security setting. A **Full (Strict)** setting requires a valid, CA-signed SSL certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
+Most of our Enterprise customers utilize the Full (Strict) security setting. A **Full (Strict)** setting requires a valid, CA-signed certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
 
