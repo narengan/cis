@@ -102,3 +102,14 @@ Selecting CIS Specials and any application-specific groups allow you to take an 
 
 ### Finally, turn your Web Application Firewall On with the Global Setting
 Now that your Package-level settings are configured safely, you can turn on the global, domain-wide WAF. Specific paths, such as API endpoints, can turn off the WAF completely by setting up a **Page Rule**, which ensures that you're protected while not interfering with legimate requests.
+
+## Performance next steps
+
+| Symptom | Next Step |
+|---------|------------|
+|High TTFB on uncached resources | (1) Check your origin's overall health for misconfiguration, excessive load, or long-running database queries (2) Use Page Rules to move your origin's redirects to IBM CIS |
+| No change in performance when using IBM CIS | (1) Check your caching ratio, for example your cached or uncached assets (2) Be sure that the IBM CIS proxy is enabled |
+| Network slowness, timeouts, or errors | Perform a `traceroute` to and from your origin server|
+| Site slowness, unstyled or console errors | (1) If HTTPS, check for mixed content (2) Purge your cache |
+
+
