@@ -13,7 +13,7 @@ lastupdated: "2018-03-02"
 TLS is a standard security protocol for establishing encrypted links between a web server and a browser in an online communication. Aa TLS certificate is necessary to create a TLS connection with a website, and comprises of the domain name, the name of the company, and additional data such as company address, city, state, and country. It also shows the expiration date of the TLS certificate, and details of the issuing Certificate Authority (CA).
 
 ## How Does TLS Work?
-Whenever a browser initiates a connection with a TLS secured website, it first retrieves the site's TLS Certificate to check if it's still valid. It verifies that the CA is one that the browser trusts, and that the certificate is being used by the website for which it has been issued. If any of these checks fail, you'll get a warning indicating that the website is not secured by a valid TLS certificate.
+When a browser initiates a connection with a TLS secured website, it first retrieves the site's TLS Certificate to check whether ther certificate is still valid. It verifies that the CA is one that the browser trusts, and that the certificate is being used by the website for which it has been issued. If any of these checks fail, you'll get a warning indicating that the website is not secured by a valid certificate.
 
 When a TLS certificate is installed on a web server, it enables a secure connection between the web server and the browser that connects to it. The website's URL is prefixed with "https" instead of "http" and a padlock is shown on the address bar. If the website uses an extended validation (EV) certificate, the browser may also show a green address bar.
 
@@ -54,7 +54,7 @@ If after taking the above steps you still receive errors, please contact IBM CIS
 * You've whitelisted our IP ranges
 * Your server/network is online and generally healthy
 
-Please also provide a ray ID from a recent 522 error. We can use this to determine which CIS Datacenter you were hitting and run further tests.
+If you contact our support team, please provide a ray ID from a recent 522 error. We can use this to determine which CIS Datacenter you were hitting and run further tests.
 
 ## What is a proxied record and why do I need them?
 
@@ -69,4 +69,4 @@ If you would rather bypass CIS on a domain (we will still resolve DNS), then non
 
 ## I got a DNS Validation error: 1004; now what can I do?
 
-In order for page rules to work, DNS needs to resolve for your zone. As a result, you must have a proxied DNS record for your zone. 
+For page rules to work, DNS needs to resolve for your zone. As a result, you must have a proxied DNS record for your zone. 
