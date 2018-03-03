@@ -52,9 +52,18 @@ To enable **Always Online**, follow these steps:
  
 ## Origin Cache Control
  
-You can use the *Origin Cache Control* Page Rule to determine what content is cached from your origin and how often the content is updated, which has an effect on reliability and on performance. By default, if no settings are changed and no headers that prevent caching are sent from your origin server, IBM CIS caches all static content with certain extensions. These types of content include images, CSS, and JavaScript. This caching is primarily for performance reasons. 
+You can use the *Origin Cache Control* Page Rule settings to determine what content is cached from your origin and how often the content is updated, which has an effect on reliability and on performance. By default, if no settings are changed and no headers that prevent caching are sent from your origin server, IBM CIS caches all static content with certain extensions. These types of content include images, CSS, and JavaScript. This caching is primarily for performance reasons. 
+
+To set up **Origin Cache Control** you would use Page Rules to turn on specific headers that give the desired behavior with respect to each resource of your content. To understand how to use **Origin Caache Conrol**, some more general explanation of Page Rules and overall caching behavior for CIS is required to provide context, which you'll see in the next several sections. Three methods exist that you can use to control caching in general, and **Origin Cache Control** is the second one.
 
 Setting **Origin Cache Control** invokes caching rules that seek to adhere closely to internet best practices and RFCs, primarily with respect to revalidation. For example, the CIS default behavior with `max-age=0` is not to cache at all, whereas setting **Origin Cache Control** caches, but it always revalidates.
+
+### How to set up Origin Cache Control
+
+ * Log into your IBM CIS account.
+ * From the dropdown menu on the top left, select your domain.
+ * Select the **Page Rules** app.
+ * Apply the Page Rules Origin Cache Control settings that best meet your requirements, as described in the following sections.
 
 ### Page Rule precedence
 
