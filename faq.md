@@ -18,7 +18,7 @@ Whenever a browser initiates a connection with a TLS secured website, it first r
 When a TLS certificate is installed on a web server, it enables a secure connection between the web server and the browser that connects to it. The website's URL is prefixed with "https" instead of "http" and a padlock is shown on the address bar. If the website uses an extended validation (EV) certificate, the browser may also show a green address bar.
 
 ## Why do I see a privacy warning?
-The TLS certificates issued by IBM Cloud CIS cover the root domain (example.com) and one level of subdomain (*.example.com). If you’re trying to reach a second-level subdomain (*.*.example.com) you will see a privacy warning in your browser, because these host names are not added to the SAN.
+The TLS certificates issued by IBM Cloud CIS cover the root domain (`example.com`) and one level of subdomain (`*.example.com`). If you’re trying to reach a second-level subdomain (`*.*.example.com`) you will see a privacy warning in your browser, because these host names are not added to the SAN.
 
 Also, please allow up to 15 minutes for one of our partner Certificates Authorities (CAs) to issue a new certificate. You’ll see a privacy warning in your browser if your new certificate has not yet been issued.
 
@@ -39,9 +39,9 @@ The flood of incoming messages, connection requests, or malformed packets to the
 
 ## I got a 522 error, what do I do now?
 
-A 522 error indicates we weren't able to establish a connetion with your origin server (ie, your host). After about 15 seconds of failing to connect, we close the connection and display a 522 error page.
+A 522 error indicates we weren't able to establish a connetion with your origin server (that is, your host). After about 15 seconds of failing to connect, we close the connection and display a 522 error page.
 
-This issue is usually caused by firewall or security software that accidentally blocks our IP addresses. Because CIS acts as a reverse proxy, connections to your site will appear to come from a range of CIS IPs. This behaviour can sometimes cause certain firewalls to block these connections, which prevents us from serving content to your site visitors properly.
+This issue usually is caused by firewall or security software that accidentally blocks our IP addresses. Because CIS acts as a reverse proxy, connections to your site will appear to come from a range of CIS IPs. This behavior can cause certain firewalls to block these connections, which prevents us from serving content to your site visitors properly.
 
 To fix this issue, ask your host to whitelist all of the CIS IP ranges, which are listed [here](whitelisted-ips.html).
 
