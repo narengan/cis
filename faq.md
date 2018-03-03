@@ -43,7 +43,7 @@ A 522 error indicates we weren't able to establish a connetion with your origin 
 
 This issue is usually caused by firewall or security software that accidentally blocks our IP addresses. Because CIS acts as a reverse proxy, connections to your site will appear to come from a range of CIS IPs. This behaviour can sometimes cause certain firewalls to block these connections, which prevents us from serving content to your site visitors properly.
 
-To fix this issue, ask your host to whitelist all of the CIS IP ranges, which are listed [here](http://www.cloudflare.com/ips).
+To fix this issue, ask your host to whitelist all of the CIS IP ranges, which are listed [here](whitelisted-ips.html).
 
 All of these IPs must be whitelisted to avoid 522 errors. It's also worth checking to see if any IPs in these ranges are blocked.
 
