@@ -114,4 +114,9 @@ If your system performance does not meet your expectations, here are some tips y
 | Network slowness, timeouts, or errors | (1) Perform a `traceroute` from your origin server to CIS; (2) Perform a `traceroute` to your domain server |
 | Site slowness, unstyled or console errors | (1) If you're using HTTPS, check for mixed content; (2) Purge your cache |
 
+In this situation, it is a good practice to capture two HAR files:
 
+1. When your traffic is moving through IBM CIS proxy, and
+2. Straight to your origin server without proxy.
+
+By having these two files, you can narrow down the place that is causing the performance degradation.
