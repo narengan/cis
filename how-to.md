@@ -34,11 +34,11 @@ Next, you can set up caching.
 
 ![IMAGE](caching-screen.png)
 
-You have the option of 3 types of caching, available form the caching screen dropdown menu: 
+You have the option of 3 types of caching, available from the caching screen dropdown menu: 
 
- * No query string
- * Query string independent
- * Query string dependent
+ * No query string :  Only delivers resources from cache when there is no query string.
+ * Query string independent : Delivers the same resource to everyone independent of the query string. (Note: The Ignore Query String setting applies only to static file extensions. This setting removes the query string when generating the cache key, so that a request for `style.css?something` is normalized to `style.css` when serving from the cache.)
+ * Query string dependent : Delivers a different resource each time the query string changes.
  
  ### Purge Cache
  
