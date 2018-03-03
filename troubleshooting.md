@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-03-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -24,7 +24,7 @@ To know whether data has passed through IBM Cloud CIS, you need to locate the �
 `$ dig www.example.com`
 
  * traceroute for network:
-`$ traceroute cloudflare.com`
+`$ traceroute example.com`
 
 **For example:**
 
@@ -45,7 +45,7 @@ The support team makes use of these commands to assist you.
 
 ## How can I check the network status of IBM Cloud CIS overall?
 
-You can check the overall network status at  www.cloudflarestatus.com.
+You can check the overall network status at [need link]().
 
 ## If you see a privacy warning:
 
@@ -93,7 +93,7 @@ What you can do:
 
 * Verify that the CIS IP addresses are whitelisted..
 * Make sure that IBM CIS IPs are not being rate-limited.
-* Here is the list of IPs to whitelist: [www.cloudflare.com/ips](www.cloudflare.com/ips)
+* Here is the list of [IPs to whitelist](whitelisted-ips.html)
 
 ### 502 error “The dreaded 502”
 
