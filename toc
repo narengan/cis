@@ -8,7 +8,7 @@ Cloud Internet Services (CIS)
     getting-started.md
     about.md
     security-features.md
-    ssl-options.md
+    tls-options.md
     dns.md
     best-practices.md
     {: .navgroup-end}
