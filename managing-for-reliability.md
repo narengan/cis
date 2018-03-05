@@ -9,23 +9,33 @@ lastupdated: "2018-03-02"
 
 # Managing your CIS deployment for optimal reliability
 
-To achieve optimal reliability for your IBM Cloud CIS deployment, use our Page Rules to be sure that your web content will be delivered to your customers, even if your origin server or the cache has a problem.
+To achieve optimal reliability for your IBM Cloud CIS deployment, set up a helpful DNS configuration and you can set up Global Load Balancers. For additional reliability, you can use our Page Rules to be sure that your web content will be delivered to your customers, even if your origin server or the cache has a problem. This document gives details about some best practices for making your CIS deployment optimally reliable.
 
-## Using the Reliability tab
+Generally, our recommended best practices are these:
 
-Under the Reliability tab in your UI, you'll see two items:
+ * Set up your DNS to take advantage of IBM CIS proxy servers
+ * Use a Global Load Balancer to distribute traffic evenly
+ * Set up approproate Page Rules to manage your caching and other options
 
- * DNS
- * GLB
+Each of these items provides certain functionality you can use to create a more reliable CIS deployment.
+
+Notice that the CIS interface is organized into sections for security, reliability, and perfomance. The main navigation menu is shown in the following figure:
 
 ![Left navigation DNS ](images/cis-left-navigation.png)
 
-These items provide functionality you can use to create a more reliable CIS deployment.
+
+## Setting up DNS
+
+ * DNS
+ 
+ For more information about settng up and managing your DNS for reliability, please [refer to this document]().
+
 
 ## DNS
 
-## GLB
+## Setting up Global Load Balancing
 
+ For more information about settng up and managing your Load Balancers, please [refer to this document]().
 
 ## Using Page Rules to increase reliability
 
