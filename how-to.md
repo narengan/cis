@@ -99,7 +99,7 @@ There will be three lists that contain the load balancers, pools, and health che
   ![IMAGE](images/glb-pool-list.png)
     * **Health**: Status of the pool.
     * **Name**: User provided name.
-    * **Origins**: Count of origins in the pool
+    * **Origins**: Count of healthy origins in the pool.
     * **Health Check**: Path of the attached health check, if any.
 
 3) Create a load balancer, click "Create load balancer".
@@ -184,6 +184,6 @@ When creating a load balancer, the required fields are:
 
 Optionally, the following can also be configured:
  * **Proxy**: Route traffic through IBM's performance and metrics service.
- * **Session Affinity**: Always route through the same performance and metrics instance.
- * **TTL**: Time to live (TTL) of the DNS entry for the IP address returned by this load balancer. This only applies to unproxied load balancers.
+ * **Session Affinity**: Always route through the same performance and metrics instance. This is only available if proxy is enabled.
+ * **TTL**: Time to live (TTL) of the DNS entry for the IP address returned by this load balancer. This only applies to unproxied load balancers, otherwise it defaults to Automatic.
  * **Region Pools**: A mapping of region/country codes to a list of pools (ordered by their failover priority) for the given region. Any regions not explicitly defined will fall back to using default pools.
