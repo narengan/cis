@@ -24,8 +24,11 @@ The Domain Name System (DNS) underpins the web we use every day. It works transp
 
 The DNS system looks up this IP address and host name information on a network of linked DNS servers across the internet, similarly to how people might look for someplace using a phone book or a map.
 
-## DNSSec
+## Secure DNS
+
 **DNSSec** is a technology to digitally 'sign' DNS data so you can be assured it is valid. To eliminate vulnerability from the internet, DNSSec must be deployed at each step in the lookup, from root zone to final domain name (for example, www.icann.org).
+
+![Secure DNS](images/dns/secure-dns.png)
 
 ## Name Servers
 A **name server** implements services that provide responses to queries against a directory service. It translates meaningful, text-based web or host identifiers into IP addresses.
