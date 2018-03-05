@@ -9,7 +9,7 @@ lastupdated: "2018-02-27"
 
 # Managing your IBM CIS for optimal Security
 
-CIS's security settings have safe defaults to avoid false positives and any negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. The following steps will ensure your CIS account is configured in a safe and secure manner.
+The Cloud Internet Services (CIS) security settings include safe defaults designed to avoid false positives and negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. Take the following steps to be sure that your CIS account is configured in a safe and secure way.
 
 **Recommendations and best practices:**
 
@@ -19,13 +19,13 @@ CIS's security settings have safe defaults to avoid false positives and any nega
 
 ## Best practice 1: Secure Your Origin IP Addresses
 
-When a subdomain is proxied using CIS all traffic is actively protected by responding with CIS-specific IP addresses (e.g., all of your clients connect to CIS proxies first and your origin IP addresses are obscured).
+When a subdomain is proxied using IBM CIS, all traffic is actively protected by responding with CIS-specific IP addresses (e.g., all of your clients connect to CIS proxies first and your origin IP addresses are obscured).
 
 ### Use CIS proxies for all DNS Records for HTTP(S) traffic from your origin
 
 To improve the security of your origin IP address, all HTTP(S) traffic should be proxied.
 
-See the difference yourself - Query a non-proxied and a proxied record:
+**See the difference yourself - Query a non-proxied and a proxied record:**
 
 ```
 $ dig greycloud.theburritobot.com +short
@@ -36,16 +36,16 @@ $ dig orangecloud.theburritobot.com +short
 ```
 
 ### Obscure non-proxied origin records with non-standard names
-Any records that cannot be proxied through CIS and still utilize your origin IP — such as FTP — can be secured with additional obfuscation. If you require a record to your origin that cannot be proxied by CIS, use a non-standard name for this record. For example, instead of `ftp.example.com` use `[random word or-random characters].example.com` — this obfuscation makes dictionary scans of your DNS records less likely to expose your origin IP addreses.
+Any records that cannot be proxied through IBM CIS and still utilize your origin IP — such as FTP — can be secured with additional obfuscation. If you require a record to your origin that cannot be proxied by IBM CIS, use a non-standard name for this record. For example, instead of `ftp.example.com` use `[random word or-random characters].example.com` — this obfuscation makes dictionary scans of your DNS records less likely to expose your origin IP addreses.
 
 ### Use separate IP ranges for HTTP and non-HTTP traffic if possible
-Some customers will use separate IP ranges for HTTP and non-HTTP traffic, allowing them to orange-cloud all records pointing to their HTTP IP range and obscuring all non-HTTP traffic with a different IP subnet.
+Some customers will use separate IP ranges for HTTP and non-HTTP traffic, allowing them to proxy all records pointing to their HTTP IP range and obscure all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
-Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. CIS sees over 1 billion unique IP addresses every month from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary and to decrease it where appropriate.
+Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
 
-### Increase the Security Level for Sensitive Areas to High
-This setting can be increased for administration pages or login pages to reduce brute-force attempts by adding a **Page Rule**.
+### Increase the Security Level for Sensitive Areas to 'High'
+You can increase this setting by adding a **Page Rule** for administration pages or login pages, to reduce brute-force attempts:
 
 1. Select the domain you'd like to modify.
 2. Create a **Page Rule** with the URL pattern of your API (for example, `www.example.com/wp-login`). 
@@ -72,13 +72,13 @@ Our Security Level settings are aligned with threat scores that certain IP addre
 * **OFF** - Enterprise customers can remove this security feature entirely.
 
 ## Best practice 3: Activate your Web Application Firewall (WAF) safely
-Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. The goal of these initial settings is to reduce false positives and to populate the Traffic Application with WAF events for further tuning. WAF is automatically updated with new vulnerabilities as they are identified.
+Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. WAF is updated automatically to handle new vulnerabilities as they are identified.
 
-WAF protects against the following:
+WAF protects against the following attacks:
 * SQL injection attack
 * Cross-site scripting
 * Cross-site forgery
 
-WAF also contains the CIS Rule Set which contains rules to stop attacks most commonly seen on our network. Also included are OWASP Top 10 vulnerabilities. WAF will also before a browser integrity check.
+WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. WAF also will perform a browser integrity check.
 
 
