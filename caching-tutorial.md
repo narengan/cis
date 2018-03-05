@@ -26,7 +26,7 @@ The `scheme` and `port` components are optional. If the `scheme` component is om
  * Only one Page Rule takes effect on any given request
  * Page Rules are given priority in an order from top to bottom' Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has triggered already on a request, any subsequent rules that also match the URL pattern will not take effect. 
  * As a general rule, we recommend ordering your rules from most specific to least specific.
- * Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The **Save as Draft** option creates a Page Rule that is paused initially.
+ * Page Rules can be disabled, in which case they will take no action but can still be seen in the list and edited. Setting the *Enabled* toggle to "Off" creates a Page Rule that is disabled initially.
 
 
 ## Forwarding (URL Redirection)
@@ -48,13 +48,13 @@ If you want to redirect your visitors to use HTTPS, use the **Always Use HTTPS**
 
 
 ## Custom Caching
-Sets caching behavior for any URL matching the page rule pattern, using any of our standard cache levels. The **Cache Everything** setting caches any content, even if it is not one of our default static file types. The **Bypass** setting prevents caching on that URL.
+Sets caching behavior for any URL matching the Page Rule pattern, using any of our standard cache levels. The **Cache Everything** setting caches any content, even if it is not one of our default static file types. The **Bypass** setting prevents caching on that URL.
 
 When specifying cache level using Page Rules, you can set an edge cache TTL, which controls how long CIS will retain files in our cache. By default, this setting respects all existing headers, which uses standard HTTP caching headers to control cache age. You may set other cache lifetimes directly.
 
 **Browser Cache TTL** controls how long resources cached by client browsers remain valid. If a browser requests a resource again and the TTL has not expired, it will receive an HTTP 304 (Not Modified) response. If you send a `max-age` header that is longer than this TTL, that value will take precedence. Customers can set TTLs ranging from 30 minutes to 1 year.
 
-Not all default caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** by means of page rules uses a newer set of caching rules that seeks to adhere more closely to RFCs, primarily with respect to revalidation--for example, our default behavior with `max-age=0` is to not cache at all, whereas setting **Origin Cache Control** caches but always revalidates.
+Not all default caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** by means of Page Rules uses a newer set of caching rules that seeks to adhere more closely to RFCs, primarily with respect to revalidation--for example, our default behavior with `max-age=0` is to not cache at all, whereas setting **Origin Cache Control** caches but always revalidates.
 
 The following example sets a Rule to cache everything found in the "/images" folder. Cached resources will expire in 5 minutes in the user's browser, and will expire after one day in the IBM CIS datacenters:
 

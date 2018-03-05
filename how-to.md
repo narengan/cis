@@ -39,10 +39,10 @@ You have the option of 3 types of caching, available from the caching screen dro
  * No query string :  Only delivers resources from cache when there is no query string.
  * Query string independent : Delivers the same resource to everyone independent of the query string. (Note: The Ignore Query String setting applies only to static file extensions. This setting removes the query string when generating the cache key, so that a request for `style.css?something` is normalized to `style.css` when serving from the cache.)
  * Query string dependent : Delivers a different resource each time the query string changes.
+  
+## Purge Cache
  
- ### Purge Cache
- 
-At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge individual files or up to 30 files at once.
+At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge a single file or multiple files (upto 30 at once).
  
  ## Cache expiration
  
@@ -60,13 +60,13 @@ To begin using Development Mode, toggle the switch to "Enabled" position. To sto
 
 ## Managing your Page Rules
  
-You can enable 50 page rules per page. Use the drop down menus to configure the page rules. The Page Rules are divided into three categories: Security, Performance, and Reliability.
+You can enable 50 Page Rules per page. Use the drop down menus to configure the Page Rules. The Page Rules are divided into three categories: Security, Performance, and Reliability.
 
-Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. after you've selecteed the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Overview screen.
+Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. After you've selected the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Overview screen.
  
  ![PAGE RULES MENUS](images/page-rule-dropdown-settings.png)
  
- You also can enable or disable your page rules from the table displayed in the Overview screen. See [Using Page Rules](using-page-rules.html) for more information.
+ You also can enable or disable your Page Rules from the table displayed in the Overview screen. See [Using Page Rules](using-page-rules.html) for more information.
  
  ## Security settings
  

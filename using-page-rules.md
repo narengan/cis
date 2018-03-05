@@ -9,7 +9,7 @@ lastupdated: "2018-03-05"
 
 # Using Page Rules
 
-A page rule specifies some settings and values tha you can apply to a specific URL. Page rules help you manage security and performance, based on each indidivual URL in your site. The following table describes the page rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
+A Page Rule specifies some settings and values that you can apply to a specific URL. Page Rules help you manage security and performance, based on each individual URL in your site. The following table describes the Page Rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
 
 ## Security
 
@@ -17,31 +17,30 @@ A page rule specifies some settings and values tha you can apply to a specific U
 |-----------|----------|----------------|
 |Browser Integrity Check|Looks for common HTTP headers abused by spammers and denies access to your page. It also blocks visitors that do not have a user agent or add a non standard user agent (also commonly used by abuse bots, crawlers, or APIs). | |
 |Disable Security|Disables the following features: <ul><li>Email Obfuscation</li> <li>Server Side Excludes</li> <li>WAF</li> <li>Rate Limiting</li> <li>Scrape Shield</li>|If a rule is set to disable security, and another rule is set to enable the WAF, the WAF rule takes precedence regardless of the order in which they appear.|
-|Email Obfuscation| | |
-|IP Geolocation Header| | |  
-|Security Level| | |
-|Server Side Excludes| | |
-|SSL| | |
-|WAF| | |  
-|Automatic HTTPS Rewrites| | |
-|Opportunistic Encryption| | |
-|Cache Deception Armor| | |
-|Always Use HTTPS| |Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
+|Email Obfuscation|Toggles Email Obfuscation on or off. | |
+|IP Geolocation Header|Includes the country code of the visitor location with all requests to your website. The information will be found in the CF-IPCountry HTTP header. | |  
+|Security Level|Controls how high a client threat score must be for a client will encounter a challenge page, and can be used to set part of your site to always present visitors with the Under Attack mode challenge before they can visit your site. | |
+|Server Side Excludes|Toggles SSE on or off.  | |
+|SSL|Controls which of the SSL modes is used. | |
+|WAF|Toggles WAF on or off. | |  
+|Automatic HTTPS Rewrites|Toggles Automatic HTTPS Rewrites on or off.  | |
+|Opportunistic Encryption|Toggles Opportunistic Encryption on or off.  | |
+|Always Use HTTPS|Convert any http:// URL to an https:// URL by creating a 301 redirect.|Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
 
 ## Performance
 | Rule Settings | Behavior | Considerations |
 |-----------|----------|----------------|
-|Browser Cache TTL | ||
+|Browser Cache TTL|Controls how long resources cached by client browsers remain valid. | |
 |Bypass Cache Cookie|Serve a cached object unless we see a cookie of a specific name, for example, serve a cached version of the homepage unless we see a SessionID cookie indicating the customer is logged in and therefore should be presented personalized content. | |
-|Cache Level| | |
-|Edge Cache TTL| | |
+|Cache Level|No Query String / Basic - Only delivers resources from cache when there is no query string<br>Ignore Query String / Simple - Delivers the same resource to everyone independent of the query string<br>Standard / Aggressive - Delivers a different resource each time the query string changes. |By default, HTML content is not cached. A Page Rule to cache static HTML content will need to be written. |
+|Edge Cache TTL|Controls how long IBM will retain files in our cache. |This is an optional setting when specifying cache level. |
 
 ## Reliability
 | Rule Settings | Behavior | Considerations |
 |-----------|----------|----------------|
-|Always Online| | |
-|Origin Cache Control| | |
-|Forwarding URL | | Using this disables configuring all other settings because you are forwarding the request somewhere else.|
+|Always Online|Keeps a limited version of the site online if the server goes down. |For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html) |
+|Origin Cache Control|Determine what content is cached from the origin and how often the content is updated |For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html) |
+|Forwarding URL |URL to be used in case the site is unavailable. | Using this disables configuring all other settings because you are forwarding the request somewhere else. For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html)|
 
 ## Page Rule URL patterns
 
@@ -61,6 +60,7 @@ There are two important things to remember with Page Rules:
  * Page Rules are given priority in an order from top to bottom
  * Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has already triggered on a request, any subsequent rules that also match the URL pattern will not take effect. As a general rule, we recommend ordering your rules from most specific to least specific.
 
-Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The *Save as Draft* option will create a page rule that is paused initially.
+Page Rules can be disabled in which case they will take no action but can still be seen in the list and edited. Setting the *Enabled* toggle to "Off" will create a Page Rule that is disabled initially.
 
 For more information, please refer to the [Caching and Page Rules tutorial](caching-tutorial.html).
+

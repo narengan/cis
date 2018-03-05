@@ -27,15 +27,15 @@ With IBM Cloud CIS, you can enhance your site's performance further by using bes
   * Use conservative **Time to Live (TTL)** for your content that changes occasionally
 
 ### Utilize conservative TTLs (Time-to-Lives) for content that changes occasionally
-If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. A good way to tell if your TTLs may need to be adjusted is by watching your Status Codes in our Analytics App for an abundance of `304` requests. If you have a high percetange of re-validation requests, you could increase the TTLs of your content without negatively affecting your customers. By using thecache more effectively, you'll increase performance because you'll revalidate less often.
+If content rarely changes, you can set a conservative TTL to utilize our cache as much as possible. If you have a high percentage of re-validation requests, you could increase the TTLs of your content without negatively affecting your customers. By using the cache more effectively, you'll increase performance because you'll revalidate less often.
 
 ### How do I tell if items are being cached?
-CIS adds the response header `CF-Cache-Status` when it attemps to cache an object. If caching is successful, the value of this header indicates its status with one of these ketywords:
+CIS adds the response header `CF-Cache-Status` when it attempts to cache an object. If caching is successful, the value of this header indicates its status with one of these keywords:
 
 * **MISS:** The asset was not yet in the cache or the TTL had expired (that is, it had reached the cache-control maximum age of 0).
 * **HIT:** The asset was delivered from the cache.
 * **EXPIRED:** This asset was delivered from cache, but the next request will require revalidation.
-* **REVALIDATED:** The asset was elivered from cache. The TTL was expired, but an `If-Modified-Since` request to the origin indicated that the asset had not changed. Therefore, the version in cache is considered valid again.
+* **REVALIDATED:** The asset was delivered from cache. The TTL was expired, but an `If-Modified-Since` request to the origin indicated that the asset had not changed. Therefore, the version in cache is considered valid again.
 
 ## Best practice 2: For event-driven content, use the API to purge your cache
 For example, every time a new post is added to your blog, you could easily purge the CIS cache using an API command. It is common to see event-driven content, and we make it easy to guarantee that no stale content is reaching your users. The  commands to purge the cache immediately across our entire global network are listed next. You can use our caching application or you can use the API.
@@ -51,7 +51,7 @@ Cache-Tags let you define buckets of content that you wish to purge. It is an ex
 You also have the option to force our entire cache to revalidate. You can reset all of the objects stored in our cache so that every request is routed to the origin server.
 
 ### Purge the cache by Page Rule
-Page Rules let you purge the entire cache based upon a regular expression. You can utilize a pre-defined Page Rule and re-validate all hits against that Page Rule. You can create up to 50 Page Rules per page, and the first one is free.
+Page Rules let you purge the entire cache based upon a regular expression. You can utilize a pre-defined Page Rule and re-validate all hits against that Page Rule. You can create up to 50 Page Rules per page.
 
 ### Use advanced caching features for Enterprise customers
 
