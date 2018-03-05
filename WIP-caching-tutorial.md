@@ -34,23 +34,21 @@ Redirects one URL to another using an HTTP 301/302 redirect. The contents of any
 
 For example, suppose you set the following rule:
 
-
+![image]()
 
 Here, a request to "www.example.com/stuff/things" will be redirected to "http://example.com/stuff/things".
 
-Be careful not to create a redirect in which the domain points to itself as a destination. This mistake can cause an infinite redirect error, and the affected URLs will not be able to resolve.
+**Note:** Be careful not to create a redirect in which the domain points to itself as a destination. This mistake can cause an infinite redirect error, and the affected URLs will not be able to resolve.
 
 
 ## Redirecting to HTTPS
 If you want to redirect your visitors to use HTTPS, use the **Always Use HTTPS** setting instead:
 
-Screenshot_from_2017-06-16_10-50-27.png
+![Screenshot_from_2017-06-16_10-50-27.png]()
 
-
- 
 
 ## Custom Caching
-Sets caching behavior for any URL matching the page rule pattern, using any of our standard cache levels. The **Cache Everything** setting caches any content, even if it is not one of our normal static file types. The **Bypass** setting prevents caching on that URL.
+Sets caching behavior for any URL matching the page rule pattern, using any of our standard cache levels. The **Cache Everything** setting caches any content, even if it is not one of our default static file types. The **Bypass** setting prevents caching on that URL.
 
 When specifying cache level using Page Rules, you can set an edge cache TTL, which controls how long CIS will retain files in our cache. By default, this setting respects all existing headers, which uses standard HTTP caching headers to control cache age. You may set other cache lifetimes directly.
 
