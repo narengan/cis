@@ -45,11 +45,13 @@ You can click **View DS records** button which will open up a dialog. It explain
 
 ## Adding DNS records
 
-You can use the **Type** dropdown to select the type of record you may want to create. Each DNS record type will have a Name and Time-To-Live (TTL) associated with it. Whatever is entered into the Name field will have domain name appended to it unless domain name is manually appended in the field already (e.g. if `www` or `www.example.com` is typed into the field, the API will handle both as `www.example.com`). If the exact domain name is typed into the name field, then it won't be appended on itself (e.g. `example.com` will be handled as `example.com`). However, the list of DNS records will only show the names without the domain name being tacked on, so `www.example.com` is shown as `www` and `example.com` will be shown as `example.com`. The TTL will have a default value of `Automatic`, but can be changed by the user. A proxied DNS record will always have a TTL of `Automatic`, so a newly proxied record will change to this configuration during this change.
+You can use the **Type** dropdown to select the type of record you want to create. Each DNS record type has a Name and Time-To-Live (TTL) associated with it. 
+
+Whatever is entered into the Name field will have domain name appended to it unless domain name is manually appended in the field already (e.g. if `www` or `www.example.com` is typed into the field, the API will handle both as `www.example.com`). If the exact domain name is typed into the name field, then it won't be appended on itself (e.g. `example.com` will be handled as `example.com`). However, the list of DNS records will only show the names without the domain name being tacked on, so `www.example.com` is shown as `www` and `example.com` will be shown as `example.com`. The TTL will have a default value of `Automatic`, but can be changed by the user. A proxied DNS record will always have a TTL of `Automatic`, so a newly proxied record will change to this configuration during this change.
 
 ### A Type record
 
-To add this record type, there must be valid values in the **Name** and **IPv4 Address** fields. A **TTL** can also be specified from the dropdown, with the default value for this being 'Automatic'.
+To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. A **TTL** also can be specified from the dropdown, with a default value of 'Automatic'.
 
 ![Create A Type record](images/dns/create-a-type-record.png)
 
@@ -58,7 +60,7 @@ To add this record type, there must be valid values in the **Name** and **IPv4 A
 
 ### AAAA Type record
 
-To add this record type, there must be valid values in the **Name** and **IPv6 Address** fields. A **TTL** can also be specified from the dropdown, with the default value for this being 'Automatic'.
+To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. A **TTL** also can be specified from the dropdown, with the default value of 'Automatic'.
 
 ![Create AAAA Type record](images/dns/create-aaaa-type-record.png)
 
@@ -67,7 +69,7 @@ To add this record type, there must be valid values in the **Name** and **IPv6 A
 
 ### CNAME Type record
 
-To add this record type, there must be a valid value in the **Name** field and a fully qualified domain in the **Domain Name** field. A **TTL** can also be specified from the dropdown, with the default value for this being 'Automatic'.
+To add this record type, a valid value must exist in the **Name** field and a fully qualified domain in the **Domain Name** (FQDN) field. A **TTL** also can be specified from the dropdown, with the default value of 'Automatic'.
 
 
 ![Create CNAME Type record](images/dns/create-cname-type-record.png)
