@@ -9,7 +9,7 @@ lastupdated: "2018-02-28"
 
 # Using Page Rules
 
-A page rule specifies some settings and values that you can apply to a specific URL. Page rules help you manage security and performance, based on each indidivual URL in your site. The following table describes the page rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
+A Page Rule specifies some settings and values that you can apply to a specific URL. Page Rules help you manage security and performance, based on each individual URL in your site. The following table describes the Page Rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
 
 ## Security
 
@@ -38,9 +38,9 @@ A page rule specifies some settings and values that you can apply to a specific 
 ## Reliability
 | Rule Settings | Behavior | Considerations |
 |-----------|----------|----------------|
-|Always Online| | |
-|Origin Cache Control| | |
-|Forwarding URL | | Using this disables configuring all other settings because you are forwarding the request somewhere else.|
+|Always Online|Keeps a limited version of the site online if the server goes down. |For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html) |
+|Origin Cache Control|Determine what content is cached from the origin and how often the content is updated |For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html) |
+|Forwarding URL |URL to be used in case the site is unavailable. | Using this disables configuring all other settings because you are forwarding the request somewhere else. For more information view [Managing your CIS deployment for optimal reliability](managing-for-reliability.html)|
 
 ## Page Rule URL patterns
 
