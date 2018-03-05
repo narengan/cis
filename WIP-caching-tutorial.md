@@ -19,11 +19,11 @@ For example:
 
 `https://www.example.com:80/image.png`
 
-The `scheme` and `port` components are optional. If the scheme is omitted, it will cover both `http://` and `https://` protocols. If the `port` is not specified, the rule will match all ports. You can perform basic wildcard matches by using a `*` symbol in your rule pattern, allowing it to match a series of similar patterns.
+The `scheme` and `port` components are optional. If the `scheme` component is omitted, the format accepts `http://` and `https://` protocols. If the `port` is not specified, the rule matches all ports. You can perform basic wildcard matches by using a `*` symbol in your rule pattern, allowing it to match a series of similar patterns.
 
 **Important things to remember with Page Rules:**
 
- * Only one Page Rule will take effect on any given request
+ * Only one Page Rule takes effect on any given request
  * Page Rules are given priority in an order from top to bottom' Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has triggered already on a request, any subsequent rules that also match the URL pattern will not take effect. 
  * As a general rule, we recommend ordering your rules from most specific to least specific.
  * Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The **Save as Draft** option creates a Page Rule that is paused initially.
