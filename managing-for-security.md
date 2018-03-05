@@ -9,29 +9,29 @@ lastupdated: "2018-02-27"
 
 # Managing your IBM CIS for optimal Security
 
-By default, CIS’s security settings have safe defaults designed to avoid false positives and negative influences on your traffic. However, these default settings are not necessarily the best security posture for every Enterprise customer. The following steps will ensure the your CIS account is configured in a secure and safe manner.
+CIS's security settings have safe defaults to avoid false positives and any negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. The following steps will ensure your CIS account is configured in a safe and secure manner.
 
 **Recommendations and best practices:**
 
-* Secure origin IP addresses by proxying and increasing obfuscation 
+* Secure origin IP addresses by proxying and increasing obfuscation
 * Configure your Security Level selectively
-* Activate your Web Application Firewall (WAF)safely
+* Activate your Web Application Firewall (WAF) safely
 
 ## Best practice 1: Secure Your Origin IP Addresses
 
-When a subdomain is proxied within our DNS application, CIS actively protects that traffic by responding with CIS IP addresses (proxies). Thus, all client traffic connects to CIS first, and your origin IP addresses are obscured.
+When a subdomain is proxied using CIS all traffic is actively protected by responding with CIS-specific IP addresses (e.g., all of your clients connect to CIS proxies first and your origin IP addresses are obscured).
 
 ### Use CIS proxies for all DNS Records for HTTP(S) traffic from your origin
 
-To improve the security of your origin IP address, all HTTP(s) traffic should be proxied.
+To improve the security of your origin IP address, all HTTP(S) traffic should be proxied.
 
 See the difference yourself - Query a non-proxied and a proxied record:
 
 ```
-$ dig greycloud.theburritobot.com @woz.ns.cloud are.com +short
+$ dig greycloud.theburritobot.com +short
 1.2.3.4 (The origin IP address)
 
-$ dig orangecloud.theburritobot.com @woz.ns.cloud are.com +short
+$ dig orangecloud.theburritobot.com +short
 104.16.22.6 , 104.16.23.6 (CIS IP addresses)
 ```
 
@@ -42,7 +42,7 @@ Any records that cannot be proxied through CIS and still utilize your origin IP 
 Some customers will use separate IP ranges for HTTP and non-HTTP traffic, allowing them to orange-cloud all records pointing to their HTTP IP range and obscuring all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
-Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. CIS sees over 1 billion unique IP addresses every month from more than 4 million websites, which allows our system to identify malicious actors quickly and automatically, and to prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by URI to heighten security where necessary and to decrease it where appropriate.
+Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. CIS sees over 1 billion unique IP addresses every month from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary and to decrease it where appropriate.
 
 ### Increase the Security Level for Sensitive Areas to High
 This setting can be increased for administration pages or login pages to reduce brute-force attempts by adding a **Page Rule**.
@@ -62,14 +62,6 @@ This setting can be decreased for general pages and API traffic:
 4. Turn Security Level to **Low**, **O** , or **Essentially O**.
 5. Select **Save and Deploy**.
 
-### Alternatively, globally utilize the Medium Security Level setting
-The Medium security setting has a very low false positive rate (1 in 50 million). It is recommended as a starting point for all customers. The global setting is available in the Firewall Application.
-
-1. Select the domain you'd like to modify.
-2. Select the **FireWall** application.
-3. Choose the **Options** within the **Security Level** module. 
-4. Select **Medium**.
-
 ### What do Security Level settings mean?
 Our Security Level settings are aligned with threat scores that certain IP addresses acquire from malicious behavior on our network. A threat score above 10 is considered high.
 
@@ -80,43 +72,13 @@ Our Security Level settings are aligned with threat scores that certain IP addre
 * **OFF** - Enterprise customers can remove this security feature entirely.
 
 ## Best practice 3: Activate your Web Application Firewall (WAF) safely
-Your WAF is available in the Firewall Application in the Web Application Firewall section. We will walk through these settings in reverse order to ensure that the WAF is configured as safely as possible before turning it on for your entire domain. The goal of these initial settings is to reduce false positives and to populate the Traffic Application with WAF events for further tuning.
+Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. The goal of these initial settings is to reduce false positives and to populate the Traffic Application with WAF events for further tuning. WAF is automatically updated with new vulnerabilities as they are identified.
 
-### First, set the OWASP ModSecurity sensitivity to High with an action of Simulate
-The OWASP package is based on an anomaly score to help reduce false positives while still catching attacks. The goal of these settings is to tune your OWASP settings by logging any false positives.
+WAF protects against the following:
+* SQL injection attack
+* Cross-site scripting
+* Cross-site forgery
 
-A **Simulat**e action logs an event within our **Traffic** application.
+WAF also contains the CIS Rule Set which contains rules to stop attacks most commonly seen on our network. Also included are OWASP Top 10 vulnerabilities. WAF will also before a browser integrity check.
 
-### Second, activate CIS Specials and any platform-specific groups you use
-The CIS Rulesets are focused on novel, zero-day and application-specific exploits. They are more specific and do not lend themselves to false positives. 
 
-Selecting CIS Specials and any application-specific groups allow you to take an adequate security posture with very few false positives. For example, if you use a Drupal application, that group should be activated while Joomla and Magento groups are turned OFF.
-
-| Group  | Description | Mode |
-| ------------- | ------------- | ------------- |
-| CIS Specials  | CIS Specials contains a number of rules that have been created to handle specific attack types.  | ON |
-| CIS Drupal  | This ruleset should be enabled only if the Drupal CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | ON |
-| CIS Flash  | This ruleset should be enabled o nlyif Adobe Flash content is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
-| CIS Joomla  | This ruleset should be enabled only if the Joomla CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
-| CIS Magento  | This ruleset should be enabled only if the Magento CMS is used for this domain. It contains additional rules that complement the technology-specific protections provided by similar rules in the OWASP ruleset. | OFF |
-
-### Finally, turn your Web Application Firewall On with the Global Setting
-Now that your Package-level settings are configured safely, you can turn on the global, domain-wide WAF. Specific paths, such as API endpoints, can turn off the WAF completely by setting up a **Page Rule**, which ensures that you're protected while not interfering with legimate requests.
-
-## Performance next steps
-
-If your system performance does not meet your expectations, here are some tips you can try, based on the specific problems you are seeing.
-
-| Symptom | Next Step |
-|---------|------------|
-|High TTFB on uncached resources | (1) Check your origin's overall health for misconfiguration, excessive load, or long-running database queries; (2) Use Page Rules to move your origin's redirects to IBM CIS |
-| No change in performance when using IBM CIS | (1) Check your caching ratio, for example your cached or uncached assets; (2) Be sure that the IBM CIS proxy is enabled |
-| Network slowness, timeouts, or errors | (1) Perform a `traceroute` from your origin server to CIS; (2) Perform a `traceroute` to your domain server |
-| Site slowness, unstyled or console errors | (1) If you're using HTTPS, check for mixed content; (2) Purge your cache |
-
-In this situation, it is a good practice to capture two HAR files:
-
-1. When your traffic is moving through IBM CIS proxy, and
-2. Straight to your origin server without proxy.
-
-By having these two files, you can narrow down the place that is causing the performance degradation.
