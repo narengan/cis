@@ -9,7 +9,7 @@ lastupdated: "2018-02-28"
 
 # Using Page Rules
 
-A page rule specifies some settings and values tha you can apply to a specific URL. Page rules help you manage security and performance, based on each indidivual URL in your site. The following table describes the page rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
+A page rule specifies some settings and values that you can apply to a specific URL. Page rules help you manage security and performance, based on each indidivual URL in your site. The following table describes the page rules that are available to all customers, the behaviors they produce, and any special considerations you should keep in mind before using them.
 
 ## Security
 
