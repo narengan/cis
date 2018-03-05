@@ -13,27 +13,28 @@ To achieve optimal reliability for your IBM Cloud CIS deployment, set up a helpf
 
 Generally, our recommended best practices are these:
 
- * Set up your DNS to take advantage of IBM CIS proxy servers
- * Use a Global Load Balancer to distribute traffic evenly
- * Set up approproate Page Rules to manage your caching and other options
+ * Set up your DNS to take advantage of IBM CIS proxy servers and other features
+ * Use a Global Load Balancer to distribute your site traffic evenly
+ * Set up appropriate Page Rules to manage your caching and other options
 
 Each of these items provides certain functionality you can use to create a more reliable CIS deployment.
 
-Notice that the CIS interface is organized into sections for security, reliability, and perfomance. The main navigation menu is shown in the following figure:
+Notice that the CIS interface is organized into sections for security, reliability, and perfomance. The main navigation menu is shown in the following figure, in which DNS and Global Load Balancing are revealed:
 
 ![Left navigation DNS ](images/cis-left-navigation.png)
 
 
 ## Setting up DNS
-
- * DNS
+ 
+ To get started setting up your DNS configuration, select **DNS** from the navigation menu, as shown previously.
  
  For more information about settng up and managing your DNS for reliability, please [refer to this document]().
 
 
-## DNS
-
 ## Setting up Global Load Balancing
+
+
+To get started setting up your Global Load Balancer, select **Global Load Balancer** from the navigation menu, as shown previously.
 
  For more information about settng up and managing your Load Balancers, please [refer to this document]().
 
