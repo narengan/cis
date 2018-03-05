@@ -14,32 +14,36 @@ lastupdated: "2018-02-26"
 {:tip: .tip}
 {:download: .download}
 
-# Domain Name System (DNS) Concepts
+# Setting up your Domain Name System (DNS) for IBM CIS
 
-This document contains some concepts and definitions related to the internet's domain name system (DNS) and how it affects your IBM CIS deployment
+This document contains some concepts and definitions related to the internet's domain name system (DNS) and how it affects your IBM Cloud Internet Sservices (CIS) deployment. You'll find specific instructions about how to configure your IBM CIS DNS records, including how to configure Secure DNS.
 
-## DNS.
+## DNS concepts
 
 The Domain Name System (DNS) underpins the web we use every day. It works transparently in the background, converting human-readable website names into computer-readable, numerical IP addresses that follow the [internet's RFC 1918 guidelines for IPv4 and RFC 4193 for IPv6](https://en.wikipedia.org/wiki/Private_network). In short, DNS servers match domain names, such as 'ibm.com', to their associated IP addresses, which most people do not need to know.
 
 The DNS system looks up this IP address and host name information on a network of linked DNS servers across the internet, similarly to how people might look for someplace using a phone book or a map.
 
-## Secure DNS
-
-**DNSSec** is a technology to digitally 'sign' DNS data so you can be assured it is valid. To eliminate vulnerability from the internet, DNSSec must be deployed at each step in the lookup, from root zone to final domain name (for example, www.icann.org).
-
-![Secure DNS](images/dns/secure-dns.png)
-
-## Name Servers
+### Name Servers
 A **name server** implements services that provide responses to queries against a directory service. It translates meaningful, text-based web or host identifiers into IP addresses.
 
 **Name server delegation** takes place when a name server for a domain receives a request for a subdomain's records and responds with the name server's reference to the delegate server. This capability allows you to decentralize the management of a large domain (such as `ibm.com`).
 
 A **custom domain name server** allows you to utilize the DNS provider's servers with the customized reference name of your own domain. For example, you can define your name server to be `ns1.cloud.ibm.com` instead of `ns1.acme.com`.
 
----
+## Secure DNS
 
-# Adding records
+**DNSSec** is a technology to digitally 'sign' DNS data so you can be assured it is valid. To eliminate vulnerability from the internet, DNSSec must be deployed at each step in the lookup, from root zone to final domain name (for example, www.icann.org).
+
+## Configuring and managing your secure DNS 
+
+DNSSec adds a layer of authentication to the internet's DNS infrastructure, which otherwise is not secure. Secure DNS guarantees that visitors are directed to **your** web server when they type your domain name into a web browser.  All you need to do is enable DNSSec in your DNS page from your IBM CIS account and add the DS record to your registrar.
+
+![Secure DNS](images/dns/secure-dns.png)
+
+You can click **View DS records** button which will open up a dialog. It explains how to add the DS record to your registrar. You will need to copy parts of the DS record and paste them into your registrar’s dashboard. Every registrar is different, and your registrar may only require you to enter information for some of the available fields.
+
+## Adding DNS records
 
 You can use the **Type** dropdown to select the type of record you may want to create.
 
@@ -137,7 +141,7 @@ To add this record type, there must be valid values in the **Name** and **Name S
     Required Fields: Name, Name Server
     Optional Field: TTL (Default value is Automatic)
 
-# Updating records
+## Updating DNS records
 
 In each record row, you can click the **Edit record** option from the menu, which will open a dialog and you can use it to update the record.
 
@@ -147,7 +151,7 @@ For example, this is the update dialog for **A** type record. Once you are done 
 
 ![Edit DNS record Dialog](images/dns/update-dns-dialog.png)
 
-# Deleting records
+## Deleting records
 
 In each record row, you can click the **Delete record** option from the menu, which will open a dialog to confirm the delete process.
 
@@ -156,11 +160,3 @@ In each record row, you can click the **Delete record** option from the menu, wh
 You can click the **Delete** button to confirm your delete action. You can click **Cancel** if you don't want to delete.
 
 ![Delete DNS record Dialog](images/dns/delete-record-dialog.png)
-
-# Secure DNS Configuration and Management
-
-DNSSec adds a layer of authentication to an otherwise insecure DNS infrastructure. It ensures that visitors are directed to your web server when they type your domain into a web browser, which isn’t necessarily the case in DNS. All you need to do is enable DNSSec in your DNS page from your IBM CIS account and add the DS record to your registrar.
-
-![Secure DNS](images/dns/secure-dns.png)
-
-You can click **View DS records** button which will open up a dialog. It explains how to add the DS record to your registrar. You will need to copy parts of the DS record and paste them into your registrar’s dashboard. Every registrar is different, and your registrar may only require you to enter in some of the available fields.
