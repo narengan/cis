@@ -14,12 +14,12 @@ To achieve optimal reliability for your IBM Cloud CIS deployment, set up a helpf
 Generally, our recommended best practices are these:
 
  * Set up your DNS to take advantage of IBM CIS proxy servers and other features
- * Use a Global Load Balancer to distribute your site traffic evenly
+ * Use one or more Global Load Balancers to distribute your site traffic evenly
  * Set up appropriate Page Rules to manage your caching and other options
 
 Each of these items provides certain functionality you can use to create a more reliable CIS deployment.
 
-Notice that the CIS interface is organized into sections for security, reliability, and perfomance. The main navigation menu is shown in the following figure, in which DNS and Global Load Balancing are revealed:
+Notice that the CIS interface is organized into sections for *security*, *reliability*, and *perfomance*. The main navigation menu is shown in the following figure, with the Global Load Balancers and DNS menu items are revealed:
 
 ![Left navigation DNS ](images/cis-left-navigation.png)
 
@@ -28,15 +28,15 @@ Notice that the CIS interface is organized into sections for security, reliabili
  
  To get started setting up your DNS configuration, select **DNS** from the navigation menu, as shown previously.
  
- For more information about settng up and managing your DNS for reliability, please [refer to this document]().
+ For detailed information about settng up and managing your DNS for reliability, please [refer to this document]().
 
 
-## Setting up Global Load Balancing
+## Setting up Global Load Balancers
 
 
-To get started setting up your Global Load Balancer, select **Global Load Balancer** from the navigation menu, as shown previously.
+To get started setting up your Global Load Balancers, select **Global Load Balancers** from the navigation menu, as shown previously.
 
- For more information about settng up and managing your Load Balancers, please [refer to this document]().
+ For detailed information about settng up and managing your Global Load Balancers, please [refer to this document]().
 
 ## Using Page Rules to increase reliability
 
