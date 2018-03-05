@@ -9,14 +9,25 @@ lastupdated: "2018-03-05"
 
 # Getting Started with IBM Cloud Internet Services (CIS)
 
-IBM CIS offers three main capabilities to enhance your workflow: [security](managing-for-security.html), [reliability](managing-for-reliability.html), and [performance](managing-for-performance.html).
+IBM Cloud Internet Services (CIS) offers three main capabilities to enhance your workflow: [security](managing-for-security.html), [reliability](managing-for-reliability.html), and [performance](managing-for-performance.html).
+
+For each capability, IBM CIS helps you tune its features to suit your specific needs, including:
+
+ * Authoritative DNS servers
+ * Global and Local Load Balancing
+ * Web Application Firewall (WAF)
+ * Caching and page rules
+ * DDoS Protection
+
+## Process overview:
 
 You can start using IBM Cloud Internet Services (CIS) for your internet traffic with just a few steps.
 
- * Open the CIS application from your IBM Cloud dashboard
- * Add the domain you want to manage.
- * IBM Cloud CIS scans the existing DNS records.
+ * Open the CIS application from your IBM Cloud dashboard.
+ * Add the domain you want to manage. IBM CIS scans the existing DNS records.
+ * Optionally review and verify your domain records.
  * Review the records and then configure your DNS provider with the provided Name Servers.
+ * Continue getting started with a tutorial or by setting up other features.
 
 **Step 1: Open the CIS application 
 
@@ -54,4 +65,4 @@ After you've configured your registrar or DNS provider, it may require up to 24 
 
 **Step 5. In the meantime, you can begin managing other CIS functions and features.**
 
-For more details about managing other functions and features, please see our [tutorial]() or the [step-by-step instructions](how-to.html).
+For more details about managing other functions and features, please see our [tutorial](caching-tutorial.html) or the [step-by-step instructions](how-to.html).
