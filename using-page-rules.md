@@ -25,7 +25,7 @@ A Page Rule specifies some settings and values that you can apply to a specific 
 |WAF|Toggles WAF on or off. | |  
 |Automatic HTTPS Rewrites|Toggles Automatic HTTPS Rewrites on or off.  | |
 |Opportunistic Encryption|Toggles Opportunistic Encryption on or off.  | |
-|Always Use HTTPS| |Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
+|Always Use HTTPS|Convert any http:// URL to an https:// URL by creating a 301 redirect.|Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
 
 ## Performance
 | Rule Settings | Behavior | Considerations |

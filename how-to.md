@@ -39,8 +39,8 @@ You have the option of 3 types of caching, available from the caching screen dro
  * No query string :  Only delivers resources from cache when there is no query string.
  * Query string independent : Delivers the same resource to everyone independent of the query string. (Note: The Ignore Query String setting applies only to static file extensions. This setting removes the query string when generating the cache key, so that a request for `style.css?something` is normalized to `style.css` when serving from the cache.)
  * Query string dependent : Delivers a different resource each time the query string changes.
- 
- ### Purge Cache
+  
+## Purge Cache
  
 At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge individual files or up to 30 files at once.
  
