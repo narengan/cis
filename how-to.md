@@ -85,8 +85,9 @@ When you deploy into a Zone, IBM Cloud CIS automatically deploys a universal cer
 ![IMAGE](images/glb-screen.png)
 
 ### GLB Dashboard
-There will be three lists that contain the load balancers, pools, and health checks. Initially they are empty, but before creating a load balancer there are a few actions that must be taken.
+There will be three lists that contain the load balancers, pools, and health checks. The lists will display the new or updated global load balancer or one of it's components after provisioning or updating. Initially they are empty, but before creating a load balancer there are a few actions that must be taken.
 
+#### Create
 >Note: <sup>`*`</sup> indicates this step is optional
 1) <sup>`*`</sup>Create a health check, click "Create health check".
   ![IMAGE](images/glb-health-check-list.png)
@@ -110,7 +111,34 @@ There will be three lists that contain the load balancers, pools, and health che
     * **Proxy**: Enable or disable proxy traffic flow.
     * **Status**: Enable or disable the load balancer.
 
-The lists will display the new or updated global load balancer or one of it's components after provisioning or updating.
+#### Edit/Delete
+To edit or delete a load balancer or one of it's components click the overflow menu button located on the far right of each row.
+
+Overflow menu button:
+
+![IMAGE](images/overflow.png)
+
+The following options will be provided for each list.
+
+* Health Check
+
+  ![IMAGE](images/health-check-overflow.png)
+    * **Edit health check**: This will redirect the user to the edit flow. 
+    * **Delete health check**: This will bring up the confirmation dialog for the deletion flow.
+
+* Pool
+
+  ![IMAGE](images/pool-overflow.png)
+    * **View pool details**: This will bring up a modal with information about the pool.
+    * **Edit pool**: Redirects the user to the edit flow.
+    * **Delete pool**: Brings up the confirmation dialog for the deletion flow.
+
+* Load Balancer
+
+  ![IMAGE](images/load-balancer-overflow.png)
+    * **Disable/Enable**: Enable or disable a load balancer.
+    * **Edit load balancer**: Redirects to the edit flow. 
+    * **Delete load balancer**: Brings up the confirmation dialog for the deletion flow.
 
 ### Add a Health Check
 
