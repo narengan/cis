@@ -30,10 +30,10 @@ A Page Rule specifies some settings and values that you can apply to a specific 
 ## Performance
 | Rule Settings | Behavior | Considerations |
 |-----------|----------|----------------|
-|Browser Cache TTL | ||
+|Browser Cache TTL|Controls how long resources cached by client browsers remain valid. | |
 |Bypass Cache Cookie|Serve a cached object unless we see a cookie of a specific name, for example, serve a cached version of the homepage unless we see a SessionID cookie indicating the customer is logged in and therefore should be presented personalized content. | |
-|Cache Level| | |
-|Edge Cache TTL| | |
+|Cache Level|No Query String / Basic - Only delivers resources from cache when there is no query string<br>Ignore Query String / Simple - Delivers the same resource to everyone independent of the query string<br>Standard / Aggressive - Delivers a different resource each time the query string changes. |By default, HTML content is not cached. A Page Rule to cache static HTML content will need to be written. |
+|Edge Cache TTL|Controls how long IBM will retain files in our cache. |This is an optional setting when specifying cache level. |
 
 ## Reliability
 | Rule Settings | Behavior | Considerations |
@@ -60,4 +60,4 @@ There are two important things to remember with Page Rules:
  * Page Rules are given priority in an order from top to bottom
  * Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has already triggered on a request, any subsequent rules that also match the URL pattern will not take effect. As a general rule, we recommend ordering your rules from most specific to least specific.
 
-Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The *Save as Draft* option will create a page rule that is paused initially.
+Page Rules can be disabled in which case they will take no action but can still be seen in the list and edited. Setting the *Enabled* toggle to "Off" will create a Page Rule that is paused initially.
