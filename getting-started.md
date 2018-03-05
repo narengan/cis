@@ -26,10 +26,10 @@ You can start using IBM Cloud Internet Services (CIS) for your internet traffic 
  * Open the CIS application from your IBM Cloud dashboard.
  * Add the domain you want to manage. IBM CIS scans the existing DNS records.
  * Optionally review and verify your domain records.
- * Review the records and then configure your DNS provider with the provided Name Servers.
- * Continue getting started with a tutorial or by setting up other features.
+ * Configure your DNS information with the Name Servers we've provided.
+ * Continue getting started with CIS, by following a tutorial or by setting up other features.
 
-**Step 1: Open the CIS application 
+**Step 1: Open the CIS application**
 
 To begin, open your IBM Cloud dashboard and find the CIS application icon under the **Platform -> Network** category.
 
