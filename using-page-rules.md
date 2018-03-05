@@ -17,15 +17,14 @@ A page rule specifies some settings and values tha you can apply to a specific U
 |-----------|----------|----------------|
 |Browser Integrity Check|Looks for common HTTP headers abused by spammers and denies access to your page. It also blocks visitors that do not have a user agent or add a non standard user agent (also commonly used by abuse bots, crawlers, or APIs). | |
 |Disable Security|Disables the following features: <ul><li>Email Obfuscation</li> <li>Server Side Excludes</li> <li>WAF</li> <li>Rate Limiting</li> <li>Scrape Shield</li>|If a rule is set to disable security, and another rule is set to enable the WAF, the WAF rule takes precedence regardless of the order in which they appear.|
-|Email Obfuscation| | |
-|IP Geolocation Header| | |  
-|Security Level| | |
-|Server Side Excludes| | |
-|SSL| | |
-|WAF| | |  
-|Automatic HTTPS Rewrites| | |
-|Opportunistic Encryption| | |
-|Cache Deception Armor| | |
+|Email Obfuscation|Toggles Email Obfuscation on or off. | |
+|IP Geolocation Header|Includes the country code of the visitor location with all requests to your website. The information will be found in the CF-IPCountry HTTP header. | |  
+|Security Level|Controls how high a client threat score must be for a client will encounter a challenge page, and can be used to set part of your site to always present visitors with the Under Attack mode challenge before they can visit your site. | |
+|Server Side Excludes|Toggles SSE on or off.  | |
+|SSL|Controls which of the SSL modes is used. | |
+|WAF|Toggles WAF on or off. | |  
+|Automatic HTTPS Rewrites|Toggles Automatic HTTPS Rewrites on or off.  | |
+|Opportunistic Encryption|Toggles Opportunistic Encryption on or off.  | |
 |Always Use HTTPS| |Using this disables configuring all other settings for the rule. This is because CIS forces a redirect to HTTPS for the request, which becomes a new request that is then evaluated against page rules |
 
 ## Performance
