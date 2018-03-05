@@ -63,4 +63,4 @@ There are two important things to remember with Page Rules:
 
 Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The *Save as Draft* option will create a page rule that is paused initially.
 
-FOr more information, please refer to the [Caching and Page Rules tutorial](caching-tutorial.html).
+For more information, please refer to the [Caching and Page Rules tutorial](caching-tutorial.html).
