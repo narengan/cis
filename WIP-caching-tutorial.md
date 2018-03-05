@@ -57,3 +57,5 @@ When specifying cache level using Page Rules, you can set an edge cache TTL, whi
 Not all default caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** by means of page rules uses a newer set of caching rules that seeks to adhere more closely to RFCs, primarily with respect to revalidation--for example, our default behavior with `max-age=0` is to not cache at all, whereas setting **Origin Cache Control** caches but always revalidates.
 
 The following example sets a Rule to cache everything found in the "/images" folder. Cached resources will expire in 5 minutes in the user's browser, and will expire after one day in the IBM CIS datacenters:
+
+![image]()
