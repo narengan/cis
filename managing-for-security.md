@@ -9,7 +9,7 @@ lastupdated: "2018-02-27"
 
 # Managing your IBM CIS for optimal Security
 
-The Cloud Internet Services (CIS) security settings include safe defaults designed to avoid false positives and negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. Take the following steps to be sure that your CIS account is configured in a safe and secure way.
+The Cloud Internet Services (CIS) security settings include safe defaults designed to avoid false positives and negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. Take the following steps to be sure that your CIS account is configured in a safe and secure way:
 
 **Recommendations and best practices:**
 
@@ -19,7 +19,7 @@ The Cloud Internet Services (CIS) security settings include safe defaults design
 
 ## Best practice 1: Secure Your Origin IP Addresses
 
-When a subdomain is proxied using IBM CIS, all traffic is actively protected by responding with CIS-specific IP addresses (e.g., all of your clients connect to CIS proxies first and your origin IP addresses are obscured).
+When a subdomain is proxied using IBM CIS, all traffic is protected because we actively respond with IP addresses specific to IBM CIS (for example, all of your clients connect to CIS proxies first, and your origin IP addresses are obscured).
 
 ### Use CIS proxies for all DNS Records for HTTP(S) traffic from your origin
 
@@ -36,10 +36,10 @@ $ dig orangecloud.theburritobot.com +short
 ```
 
 ### Obscure non-proxied origin records with non-standard names
-Any records that cannot be proxied through IBM CIS and still utilize your origin IP — such as FTP — can be secured with additional obfuscation. If you require a record to your origin that cannot be proxied by IBM CIS, use a non-standard name for this record. For example, instead of `ftp.example.com` use `[random word or-random characters].example.com` — this obfuscation makes dictionary scans of your DNS records less likely to expose your origin IP addreses.
+Any records that cannot be proxied through IBM CIS, and that still use your origin IP, such as FTP, can be secured by creating additional obfuscation. In particular, if you require a record for your origin that cannot be proxied by IBM CIS, use a non-standard name. For example, instead of `ftp.example.com` use `[random word or-random characters].example.com.` This obfuscation makes dictionary scans of your DNS records less likely to expose your origin IP addreses.
 
 ### Use separate IP ranges for HTTP and non-HTTP traffic if possible
-Some customers will use separate IP ranges for HTTP and non-HTTP traffic, allowing them to proxy all records pointing to their HTTP IP range and obscure all non-HTTP traffic with a different IP subnet.
+Some customers use separate IP ranges for HTTP and non-HTTP traffic, thereby allowing them to proxy all records pointing to their HTTP IP range, and to obscure all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
 Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
