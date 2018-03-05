@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-28"
+lastupdated: "2018-03-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -62,3 +62,5 @@ There are two important things to remember with Page Rules:
  * Once a URL matches a rule, only that rule only will be applied; that is, if a Page Rule has already triggered on a request, any subsequent rules that also match the URL pattern will not take effect. As a general rule, we recommend ordering your rules from most specific to least specific.
 
 Page rules can be paused, in which case they will take no action but can still be seen in the list and edited. The *Save as Draft* option will create a page rule that is paused initially.
+
+For more information, please refer to the [Caching and Page Rules tutorial](caching-tutorial.html).
