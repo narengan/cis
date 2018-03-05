@@ -42,7 +42,7 @@ You have the option of 3 types of caching, available from the caching screen dro
   
 ## Purge Cache
  
-At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge a single file or multiple files (upto 30 at once).
+At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge a single file or multiple files (up to 30 at a time).
  
  ## Cache expiration
  
