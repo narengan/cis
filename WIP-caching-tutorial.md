@@ -58,4 +58,4 @@ Not all default caching behaviors are strictly RFC-compliant. Setting **Origin C
 
 The following example sets a Rule to cache everything found in the "/images" folder. Cached resources will expire in 5 minutes in the user's browser, and will expire after one day in the IBM CIS datacenters:
 
-![image3](url-example.png)
+![image3](images/url-example.png)
