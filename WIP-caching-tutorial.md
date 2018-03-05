@@ -30,11 +30,11 @@ The `scheme` and `port` components are optional. If the scheme is omitted, it wi
 
 
 ## Forwarding (URL Redirection)
-Redirects one URL to another using an HTTP 301/302 redirect. The contents of any section of a URL that a wildcard matches can later be referenced using $X syntax. X indicates the index of a glob in the pattern: $1 will be replaced with the first wildcard match, $2 with the second wildcard match, and so on.
+Redirects one URL to another using an HTTP 301 or 302 redirect. The contents of any section of a URL that a wildcard matches can be referenced using `$X` syntax. The `X` indicates the index of a glob in the pattern: `$1` is replaced with the first wildcard match,  `$2` with the second wildcard match, and so on.
 
 For example, suppose you set the following rule:
 
-![image]()
+![image](images/url-redirection-example.png)
 
 Here, a request to "www.example.com/stuff/things" will be redirected to "http://example.com/stuff/things".
 
@@ -44,7 +44,7 @@ Here, a request to "www.example.com/stuff/things" will be redirected to "http://
 ## Redirecting to HTTPS
 If you want to redirect your visitors to use HTTPS, use the **Always Use HTTPS** setting instead:
 
-![Screenshot_from_2017-06-16_10-50-27.png]()
+![image2](images/url-matching-patterns.png)
 
 
 ## Custom Caching
@@ -58,4 +58,4 @@ Not all default caching behaviors are strictly RFC-compliant. Setting **Origin C
 
 The following example sets a Rule to cache everything found in the "/images" folder. Cached resources will expire in 5 minutes in the user's browser, and will expire after one day in the IBM CIS datacenters:
 
-![image]()
+![image3](url-example.png)
