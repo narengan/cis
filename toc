@@ -11,6 +11,7 @@ Cloud Internet Services (CIS)
     tls-options.md
     caching-tutorial.md
     dns.md
+    glb.md
     best-practices.md
     {: .navgroup-end}
 
