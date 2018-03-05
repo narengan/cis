@@ -12,6 +12,7 @@ Cloud Internet Services (CIS)
     caching-tutorial.md
     dns.md
     glb.md
+    cache.md
     best-practices.md
     {: .navgroup-end}
 
@@ -24,7 +25,7 @@ Cloud Internet Services (CIS)
     helpful-tools.md
     using-page-rules.md
     {: .navgroup-end}
-    
+
     {: .navgroup id="reference"}
     api-resource.md
     example-code.md
