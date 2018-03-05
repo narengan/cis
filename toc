@@ -9,6 +9,7 @@ Cloud Internet Services (CIS)
     about.md
     security-features.md
     tls-options.md
+    caching-tutorial.md
     dns.md
     best-practices.md
     {: .navgroup-end}
