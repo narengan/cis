@@ -27,7 +27,7 @@ You'll see the first screen of the CIS application, where you'll select the "Add
 
 Begin protecting and improving the performance of your web service by entering your domain or a subdomain. When you select "Add Domain" our system begins gathering your domain records, if any. It could take a few minutes for your domain to be created.
 
-![Getting Started](images/getting-started-add-domain.png)
+![Getting Started](images/overview-add-domain.png)
 
 Meanwhile, the Overview screen will show your domain in "Pending" status.
 
