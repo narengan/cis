@@ -10,15 +10,6 @@ lastupdated: "2018-02-14"
 # About IBM Cloud Internet Services
 IBM Cloud Internet Services (CIS) provides a fast, highly performant, reliable and secure internet service for enterprise customers running their business on IBM Cloud.   
 
-IBM Cloud CIS allows you to tune most of its features to suit your needs, including:
-
- * Authoritative DNS servers
- * Global and Local Load Balancing
- * Web Application Firewall (WAF)
- * Caching and page rules
- * DDoS Protection
-
-
 IBM Cloud CIS gets you going quickly by establishing defaults for you, which you can change easily from the API or UI interfaces. Here are some comonly changed parameters:
 
  * DNS settings : you can use CIS to host your DNS or you can create CNAME records.
