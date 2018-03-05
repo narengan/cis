@@ -97,5 +97,7 @@ CIS also allows use of custom certificates or you can use a wildcard certificate
 ### Upload a custom certificate
 You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (e.g., Extended Validation (EV) certificate). Remember that you will be responsible for managing your certificate.
 
+![custom-certificate](images/upload-custom-certificate.png)
+
 ### Utilize a provisioned certificate
 CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can hep you perform these additional steps.
