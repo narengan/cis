@@ -79,6 +79,23 @@ WAF protects against the following attacks:
 * Cross-site scripting
 * Cross-site forgery
 
-WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. WAF also will perform a browser integrity check.
+WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. 
 
+WAF also will perform a browser integrity check. The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have user agent or who add a non-standard user-agent (this tactic is commonly used by abuse bots, crawlers, or APIs).
 
+## Best practice 4: Configure your TLS settings
+CIS provides some options for encrypting your traffic. As a reverse proxy we close TLS conections at our datacenters and open a new TLS connection to your origin server(s).
+
+There are four modes of operation for TLS:
+* **Off** -- TLS is disabled in this mode, this is not recommended.
+* **Client-to-edge** -- Encrypts traffic from CIS to your clients, but not from CIS to your origin server(s).
+* **End-to-end flexible** -- Encrypts all traffic, however, a self-signed certificate can be used to secure traffic between CIS and your origin server(s).
+* **End-to-end CA signed** -- Encrypts all traffic, however, a CA signed certificate must be used.
+
+CIS also allows use of custom certificates or you can use a wildcard certificate provisioned for you by CIS.
+
+### Upload a custom certificate
+You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (e.g., Extended Validation (EV) certificate). Remember that you will be responsible for managing your certificate.
+
+### Utilize a provisioned certificate
+CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can hep you perform these additional steps.
