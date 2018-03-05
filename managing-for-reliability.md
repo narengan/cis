@@ -11,6 +11,23 @@ lastupdated: "2018-03-02"
 
 To achieve optimal reliability for your IBM Cloud CIS deployment, use our Page Rules to be sure that your web content will be delivered to your customers, even if your origin server or the cache has a problem.
 
+## Using the Reliability tab
+
+UNder the Relibaility tab in your UI, you'll see two items:
+
+ * DNS
+ * GLB
+ 
+These items provide functionality you can use to create a more reliable CIS deployment.
+
+## DNS
+
+
+## GLB
+
+
+## Using Page Rules to increase reliability
+
 Here are some recommended Page Rule settings to give your site maximum reliability:
 
  * Always Online
