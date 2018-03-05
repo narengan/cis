@@ -34,7 +34,7 @@ Notice that the CIS interface is organized into sections for *security*, *reliab
 ## Setting up Global Load Balancers
 
 
-To get started setting up your Global Load Balancers, select **Global Load Balancers** from the navigation menu, as shown previously.
+To get started setting up your Global Load Balancers, select **Global Load Balancers** from the navigation menu.
 
  For detailed information about settng up and managing your Global Load Balancers, please [refer to this document]().
 
