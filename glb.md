@@ -8,7 +8,7 @@ lastupdated: "2018-03-05"
 
 # Global Load Balancer (GLB) Concepts
 
-This document contains some concepts and definitions related to the Global Load Balancer (GLBD) and how it affects your IBM CIS deployment.
+This document contains some concepts and definitions related to the Global Load Balancer (GLB) and how it affects your IBM CIS deployment.
 
 ## Global Load Balancer
 
