@@ -37,7 +37,7 @@ Here are the two steps to take:
   * Remove any rate limiting of CIS IP addresses
   * Set up your ACLs to allow only CIS IP addresses and other trusted parties
 
-You can find the updated list of IP ranges for IBM CIS [at this location](need this link).
+You can find the updated list of IP ranges for IBM CIS [at this location](whitelisted-ips.html).
 
 ## Best practice 3: Review your security settings to make sure they don’t interfere with API traffic
 
@@ -65,11 +65,11 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 |------------------------------------------------|
 | *The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).* |
 
-## Best practice 4: Configure your SSL settings
+## Best practice 4: Configure your security settings
 
-CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
+CIS provides some options for encrypting your traffic. As a reverse proxy, we close SSL connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
 
-### Upload a custom SSL certificate
+### Upload a custom certificate
  
  You can upload your public and private key when you create an Enterprise domain. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
  
