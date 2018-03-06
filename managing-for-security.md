@@ -42,7 +42,7 @@ Any records that cannot be proxied through IBM CIS, and that still use your orig
 Some customers use separate IP ranges for HTTP and non-HTTP traffic, thereby allowing them to proxy all records pointing to their HTTP IP range, and to obscure all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
-Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
+Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
 
 ### Increase the Security Level for Sensitive Areas to 'High'
 You can increase this setting by adding a **Page Rule** for administration pages or login pages, to reduce brute-force attempts:
@@ -65,10 +65,10 @@ This setting can be decreased for general pages and API traffic:
 ### What do Security Level settings mean?
 Our Security Level settings are aligned with threat scores that certain IP addresses acquire from malicious behavior on our network. A threat score above 10 is considered high.
 
-* **HIGH** -- Threat scores greater than 0 will be challenged.
-* **MEDIUM** -- Treat scores greater than 14 will be challenged.
-* **LOW** -- Threat scores greater than 24 will be challenged.
-* **ESSENTIALLY OFF** -- Threat scores greater than 49 will be challenged.
+* **HIGH**: Threat scores greater than 0 are challenged.
+* **MEDIUM**: Treat scores greater than 14 are challenged.
+* **LOW**: Threat scores greater than 24 are challenged.
+* **ESSENTIALLY OFF**: Threat scores greater than 49 are challenged.
 * **OFF** - Enterprise customers can remove this security feature entirely.
 
 We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for Setup document](best-practices.html#best-practice-3-review-your-security-settings-to-make-sure-they-dont-interfere-with-api-traffic)
@@ -96,12 +96,12 @@ TLS offers four modes of operation:
 
 For more detail about your TLS options, please refer to [this document](tls-options.html).
 
-CIS also allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
+CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
 
 ### Upload a custom certificate
-You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (e.g., Extended Validation (EV) certificate). Remember that you will be responsible for managing your certificate.
+You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
 
 ![custom-certificate](images/upload-custom-certificate.png)
 
 ### Utilize a provisioned certificate
-CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can hep you perform these additional steps.
+CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can help you perform these additional steps.
