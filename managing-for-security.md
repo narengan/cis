@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-03-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -71,28 +71,32 @@ Our Security Level settings are aligned with threat scores that certain IP addre
 * **ESSENTIALLY OFF** -- Threat scores greater than 49 will be challenged.
 * **OFF** - Enterprise customers can remove this security feature entirely.
 
-## Best practice 3: Activate your Web Application Firewall (WAF) safely
-Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. WAF is updated automatically to handle new vulnerabilities as they are identified.
+We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for Setup document](best-practices.html#best-practice-3-review-your-security-settings-to-make-sure-they-dont-interfere-with-api-traffic)
 
-WAF protects against the following attacks:
+## Best practice 3: Activate your Web Application Firewall (WAF) safely
+Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. Your WAF is updated automatically to handle new vulnerabilities as they are identified.
+
+The WAF protects you against the following types of attacks:
 * SQL injection attack
 * Cross-site scripting
 * Cross-site forgery
 
-WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. 
+The WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. 
 
-WAF also will perform a browser integrity check. The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have user agent or who add a non-standard user-agent (this tactic is commonly used by abuse bots, crawlers, or APIs).
+The WAF also performs a *browser integrity check*. The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent. (This tactic is commonly used by abuse bots, crawlers, or APIs.)
 
 ## Best practice 4: Configure your TLS settings
-CIS provides some options for encrypting your traffic. As a reverse proxy we close TLS conections at our datacenters and open a new TLS connection to your origin server(s).
+CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
 
-There are four modes of operation for TLS:
-* **Off** -- TLS is disabled in this mode, this is not recommended.
-* **Client-to-edge** -- Encrypts traffic from CIS to your clients, but not from CIS to your origin server(s).
-* **End-to-end flexible** -- Encrypts all traffic, however, a self-signed certificate can be used to secure traffic between CIS and your origin server(s).
-* **End-to-end CA signed** -- Encrypts all traffic, however, a CA signed certificate must be used.
+TLS offers four modes of operation:
+* **Off**: TLS is disabled in this mode, it is not recommended.
+* **Client-to-edge**: TLS encrypts traffic from CIS to your clients, but not from CIS to your origin server(s).
+* **End-to-end flexible**: TLS encrypts all traffic; however, you can use a self-signed certificate to secure traffic between CIS and your origin server(s).
+* **End-to-end CA signed**: TLS encrypts all traffic; you must use a CA-signed certificate.
 
-CIS also allows use of custom certificates or you can use a wildcard certificate provisioned for you by CIS.
+For more detail about your TLS options, please refer to [this document](tls-options.html).
+
+CIS also allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
 
 ### Upload a custom certificate
 You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (e.g., Extended Validation (EV) certificate). Remember that you will be responsible for managing your certificate.
