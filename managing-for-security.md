@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-03-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -42,7 +42,7 @@ Any records that cannot be proxied through IBM CIS, and that still use your orig
 Some customers use separate IP ranges for HTTP and non-HTTP traffic, thereby allowing them to proxy all records pointing to their HTTP IP range, and to obscure all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
-Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to quickly and automatically identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
+Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
 
 ### Increase the Security Level for Sensitive Areas to 'High'
 You can increase this setting by adding a **Page Rule** for administration pages or login pages, to reduce brute-force attempts:
@@ -65,20 +65,43 @@ This setting can be decreased for general pages and API traffic:
 ### What do Security Level settings mean?
 Our Security Level settings are aligned with threat scores that certain IP addresses acquire from malicious behavior on our network. A threat score above 10 is considered high.
 
-* **HIGH** -- Threat scores greater than 0 will be challenged.
-* **MEDIUM** -- Treat scores greater than 14 will be challenged.
-* **LOW** -- Threat scores greater than 24 will be challenged.
-* **ESSENTIALLY OFF** -- Threat scores greater than 49 will be challenged.
+* **HIGH**: Threat scores greater than 0 are challenged.
+* **MEDIUM**: Treat scores greater than 14 are challenged.
+* **LOW**: Threat scores greater than 24 are challenged.
+* **ESSENTIALLY OFF**: Threat scores greater than 49 are challenged.
 * **OFF** - Enterprise customers can remove this security feature entirely.
 
-## Best practice 3: Activate your Web Application Firewall (WAF) safely
-Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. WAF is updated automatically to handle new vulnerabilities as they are identified.
+We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for Setup document](best-practices.html#best-practice-3-review-your-security-settings-to-make-sure-they-dont-interfere-with-api-traffic)
 
-WAF protects against the following attacks:
+## Best practice 3: Activate your Web Application Firewall (WAF) safely
+Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. Your WAF is updated automatically to handle new vulnerabilities as they are identified.
+
+The WAF protects you against the following types of attacks:
 * SQL injection attack
 * Cross-site scripting
 * Cross-site forgery
 
-WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. WAF also will perform a browser integrity check.
+The WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. 
 
+The WAF also performs a *browser integrity check*. The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent. (This tactic is commonly used by abuse bots, crawlers, or APIs.)
 
+## Best practice 4: Configure your TLS settings
+CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
+
+TLS offers four modes of operation:
+* **Off**: TLS is disabled in this mode, it is not recommended.
+* **Client-to-edge**: TLS encrypts traffic from CIS to your clients, but not from CIS to your origin server(s).
+* **End-to-end flexible**: TLS encrypts all traffic; however, you can use a self-signed certificate to secure traffic between CIS and your origin server(s).
+* **End-to-end CA signed**: TLS encrypts all traffic; you must use a CA-signed certificate.
+
+For more detail about your TLS options, please refer to [this document](tls-options.html).
+
+CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
+
+### Upload a custom certificate
+You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
+
+![custom-certificate](images/upload-custom-certificate.png)
+
+### Utilize a provisioned certificate
+CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can help you perform these additional steps.
