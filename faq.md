@@ -10,10 +10,10 @@ lastupdated: "2018-03-02"
 # FAQ
 
 ## What is TLS?
-TLS is a standard security protocol for establishing encrypted links between a web server and a browser in an online communication. Aa TLS certificate is necessary to create a TLS connection with a website, and comprises of the domain name, the name of the company, and additional data such as company address, city, state, and country. It also shows the expiration date of the TLS certificate, and details of the issuing Certificate Authority (CA).
+TLS is a standard security protocol for establishing encrypted links between a web server and a browser in an online communication. A TLS certificate is necessary to create a TLS connection with a website, and comprises of the domain name, the name of the company, and additional data such as company address, city, state, and country. The certificate also shows the expiration date, and details of the issuing Certificate Authority (CA).
 
 ## How Does TLS Work?
-When a browser initiates a connection with a TLS secured website, it first retrieves the site's TLS Certificate to check whether ther certificate is still valid. It verifies that the CA is one that the browser trusts, and that the certificate is being used by the website for which it has been issued. If any of these checks fail, you'll get a warning indicating that the website is not secured by a valid certificate.
+When a browser initiates a connection with a TLS secured website, it first retrieves the site's TLS Certificate to check whether the certificate is still valid. It verifies that the CA is one that the browser trusts, and that the certificate is being used by the website for which it has been issued. If any of these checks fail, you'll get a warning indicating that the website is not secured by a valid certificate.
 
 When a TLS certificate is installed on a web server, it enables a secure connection between the web server and the browser that connects to it. The website's URL is prefixed with "https" instead of "http" and a padlock is shown on the address bar. If the website uses an extended validation (EV) certificate, the browser may also show a green address bar.
 
@@ -39,7 +39,7 @@ The flood of incoming messages, connection requests, or malformed packets to the
 
 ## I got a 522 error, what do I do now?
 
-A 522 error indicates we weren't able to establish a connetion with your origin server (that is, your host). After about 15 seconds of failing to connect, we close the connection and display a 522 error page.
+A 522 error indicates we weren't able to establish a connection with your origin server (that is, your host). After about 15 seconds of failing to connect, we close the connection and display a 522 error page.
 
 This issue usually is caused by firewall or security software that accidentally blocks our IP addresses. Because CIS acts as a reverse proxy, connections to your site will appear to come from a range of CIS IPs. This behavior can cause certain firewalls to block these connections, which prevents us from serving content to your site visitors properly.
 
