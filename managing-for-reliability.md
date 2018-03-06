@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-02"
+lastupdated: "2018-03-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,7 +19,7 @@ Generally, our recommended best practices are these:
 
 Each of these items provides certain functionality you can use to create a more reliable CIS deployment.
 
-Notice that the CIS interface is organized into sections for *security*, *reliability*, and *perfomance*. The main navigation menu is shown in the following figure, with the Global Load Balancers and DNS menu items are revealed:
+Notice that the CIS interface is organized into sections for *security*, *reliability*, and *perfomance*. The main navigation menu is shown in the following figure, with the Global Load Balancers and DNS menu items revealed:
 
 ![Left navigation DNS ](images/cis-left-navigation.png)
 
