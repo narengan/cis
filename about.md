@@ -10,13 +10,13 @@ lastupdated: "2018-03-06"
 # About IBM Cloud Internet Services
 IBM Cloud Internet Services (CIS) provides a fast, highly performant, reliable and secure internet service for customers running their business on IBM Cloud.   
 
-IBM CIS gets you going quickly by establishing defaults for you, which you can change easily from the API or UI interfaces. Here are some comonly changed parameters:
+IBM CIS gets you going quickly by establishing defaults for you, which you can change easily from the API or UI interfaces. Here are some commonly changed parameters:
 
  * **DNS settings** : you can use CIS to host your DNS or you can create CNAME records.
  * **Crypto settings (TLS)** : the default is 'flexible' which encrypts the connection between your host and the CIS edge server, but does not encrypt the communication between the CIS edge server and origin server.
  * **Firewall settings (IP reputation filter)**: the default is 'medium' which is highly successful with few false positives, challenging about 1 in 50 million requests.
  * **Speed settings**: these can make page loads faster, but can create some difficulty with Javascript. In particular, settings can be toggled off if Javascript pages have difficulty.
- * **Cache** : the standard mode leads to the most bandwidth savings, but it can be adjusted by each customer. Clear individual files when you are uploading new content, rather than rebuilding your entire cache, which takes much longer. You can use **Development Mode** to bypass the cache and still take advantage of security features such as the IP firewall.
+ * **Cache** : the standard mode leads to the most bandwidth savings, but it can be adjusted. Clear individual files when you are uploading new content, rather than rebuilding your entire cache, which takes much longer. You can use **Development Mode** to bypass the cache and still take advantage of security features such as the IP firewall.
  * **Page Rules** : lets specific page rules be applied according to each URL. Changes take effect immediately.
 
 ## Caching
