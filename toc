@@ -8,6 +8,8 @@ Cloud Internet Services (CIS)
     getting-started.md
     about.md
     security-features.md
+    reliability-features.md
+    performance-features.md
     tls-options.md
     caching-tutorial.md
     dns.md
