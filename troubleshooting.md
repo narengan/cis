@@ -11,7 +11,7 @@ lastupdated: "2018-03-02"
 
 ## How do I know if my data is passing through my IBM Cloud CIS connection?
 
-IBM Cloud CIS uses HTTP headers, which it can read, add, or modify. The header lets us trace how a request was routed, using a CF-Ray number. The CF-Ray number can be found by a `curl` comand or with a Google Chrome plug in called "Claire".
+IBM Cloud CIS uses HTTP headers, which it can read, add, or modify. The header lets us trace how a request was routed, using a CF-Ray number. The CF-Ray number can be found by a `curl` command or with a Google Chrome plug in called "Claire".
 
 To know whether data has passed through IBM Cloud CIS, you need to locate the “Ray ID” which will be present on every packet.
 
