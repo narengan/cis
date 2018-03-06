@@ -28,7 +28,7 @@ Notice that the CIS interface is organized into sections for *security*, *reliab
  
  To get started setting up your DNS configuration, select **DNS** from the navigation menu, as shown previously.
  
- For detailed information about settng up and managing your DNS for reliability, please [refer to this document]().
+ For detailed information about settng up and managing your DNS for reliability, please [refer to this document](dns.html#setting-up-your-domain-name-system-dns-for-ibm-cis).
 
 
 ## Setting up Global Load Balancers
@@ -36,7 +36,7 @@ Notice that the CIS interface is organized into sections for *security*, *reliab
 
 To get started setting up your Global Load Balancers, select **Global Load Balancers** from the navigation menu.
 
- For detailed information about settng up and managing your Global Load Balancers, please [refer to this document]().
+ For detailed information about settng up and managing your Global Load Balancers, please [refer to this document](glb.html#global-load-balancer-glb-concepts).
 
 ## Using Page Rules to increase reliability
 
