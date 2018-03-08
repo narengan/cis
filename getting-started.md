@@ -46,7 +46,7 @@ Begin protecting and improving the performance of your web service by entering y
 ![Getting Started](images/overview-add-domain.png)
 
 Meanwhile, the Overview screen will show your domain in "Pending" status.
-Note: The CIS instance will not be able to be deleted while a domain has been added. To delete the instance, please delete the domain from the instance first.
+Note: The CIS instance will not be able to be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
 
 **Step 3. (Optional) Review, verify and add your Domain's DNS Records.**
 
