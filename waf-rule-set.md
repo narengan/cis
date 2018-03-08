@@ -2,7 +2,7 @@
 
 # WAF default rule set
 
-| Rule | Result |
+| Rule | Action |
 |----------|---------------|
 Numbers Botnet,challenge
 IE6 Binary POST Botnet,challenge
