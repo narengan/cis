@@ -81,9 +81,7 @@ The WAF protects you against the following types of attacks:
 * Cross-site scripting
 * Cross-site forgery
 
-The WAF also contains the **CIS Rule Set**, which includes rules to stop attacks most commonly seen on our network, and the **OWASP Top 10** vulnerabilities. 
-
-The WAF also performs a *browser integrity check*. The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent. (This tactic is commonly used by abuse bots, crawlers, or APIs.)
+The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-default-rule-set.html) document for more details on the default rule set and the behavior of each rule.
 
 ## Best practice 4: Configure your TLS settings
 CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
