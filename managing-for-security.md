@@ -81,7 +81,7 @@ The WAF protects you against the following types of attacks:
 * Cross-site scripting
 * Cross-site forgery
 
-The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-default-rule-set.html) document for more details on the default rule set and the behavior of each rule.
+The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-rule-set.html) document for more details on the default rule set and the behavior of each rule.
 
 ## Best practice 4: Configure your TLS settings
 CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
