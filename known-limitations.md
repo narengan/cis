@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-16"
+lastupdated: "2018-03-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -9,8 +9,8 @@ lastupdated: "2018-02-16"
 
 # Known Limitations
 
-Our recommendation is to use Chrome.
+ * Our recommendation is to use Chrome.
 
-In Firefox and Safari, the uploaded, modified, and expires dates for a certificate cannot be displayed.
+ * In Firefox and Safari, the *uploaded*, *modified*, and *expires* dates for a certificate cannot be displayed.
 
-Editing the URL match for a page rule will cause the rule to be placed at the lowest priority.
+ * Editing the URL match for a page rule causes that rule to be placed at the lowest priority.
