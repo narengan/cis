@@ -19,7 +19,7 @@ For each capability, IBM CIS helps you tune its features to suit your specific n
  * Caching and page rules
  * DDoS Protection
 
-## Process overview:
+## Process overview
 
 You can start using IBM Cloud Internet Services (CIS) for your internet traffic with just a few steps.
 
