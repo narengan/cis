@@ -106,6 +106,6 @@ What happened:
 
 What you can do:
 
-* Email the results from `www.YOUR_DOMAIN.com/cdn-cgi/trace` to the CIS support team
+* Email the results from `www.YOUR_DOMAIN.com/cdn-cgi/trace` to the [CIS support team](need an email address)
 * Temporarily toggle your CIS services to off (No proxy)
 
