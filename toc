@@ -24,7 +24,7 @@ Cloud Internet Services (CIS)
     managing-for-performance.md
     helpful-tools.md
     using-page-rules.md
-    caching-tutorial.md
+    caching-with-page-rules.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
