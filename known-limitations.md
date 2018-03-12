@@ -9,5 +9,8 @@ lastupdated: "2018-02-16"
 
 # Known Limitations
 
+Our recommendation is to use Chrome.
 
-We can include a list of known limitaions for the Beta release, to be updated for GA.
+In Firefox and Safari, the uploaded, modified, and expires dates for a certificate cannot be displayed.
+
+Editing the URL match for a page rule will cause the rule to be placed at the lowest priority.
