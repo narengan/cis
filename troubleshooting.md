@@ -43,10 +43,6 @@ The `traceroute` command shows the entire path that an IP request has taken.
 
 The support team makes use of these commands to assist you.
 
-## How can I check the network status of IBM Cloud CIS overall?
-
-You can check the overall network status at [need link]().
-
 ## If you see a privacy warning:
 
 The SSL certificates issued by IBM Cloud CIS cover the root domain (`example.com`) and one level of subdomain (`*.example.com`). If you’re trying to reach a second-level subdomain (`*.*.example.com`) you will see a privacy warning in your browser, because these host names are not added to the SAN.
