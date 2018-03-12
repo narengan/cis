@@ -1,13 +1,13 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-12"
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# TUTORIAL: Caching and Page Rules
+# Use Page Rules with Caching
 
 Page Rules give you the ability to take various actions based on the page's URL, such as creating redirects, fine tuning caching behavior, or enabling and disabling services.
 
