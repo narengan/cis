@@ -21,7 +21,7 @@ A Page Rule specifies some settings and values that you can apply to a specific 
 |IP Geolocation Header|Includes the country code of the visitor location with all requests to your website. The information will be found in the CF-IPCountry HTTP header. | |  
 |Security Level|Controls how high a client threat score must be for a client will encounter a challenge page, and can be used to set part of your site to always present visitors with the Under Attack mode challenge before they can visit your site. | |
 |Server Side Excludes|Toggles SSE on or off.  | |
-|SSL|Controls which of the SSL modes is used. | |
+|SSL|Controls which of the TLS modes is used. | |
 |WAF|Toggles WAF on or off. | |  
 |Automatic HTTPS Rewrites|Toggles Automatic HTTPS Rewrites on or off.  | |
 |Opportunistic Encryption|Toggles Opportunistic Encryption on or off.  | |
