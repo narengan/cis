@@ -7,7 +7,7 @@ lastupdated: "2018-02-16"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Managing your IBM Cloud CIS deployment
+# Managing your IBM Cloud Internet Services (CIS) deployment
 
 You'll begin by using the Overview screen as your working base of operations. It shows all of the current parameters for your deployment.
 
@@ -26,7 +26,7 @@ On the Overview screen, you may see that your domain name configuration is in **
 
 Go to your DNS page and add a record (most likely an A record). Type in the information about your DNS record and then click `Add record` to implement your changes.
 
-![add-DNS](images/add-domain-records-screen.png)
+![add-DNS](images/create-a-type-record.png)
 
 ## Set up and manage your caching
 
@@ -44,48 +44,44 @@ You have the option of 3 types of caching, available from the caching screen dro
  
 At any time you can purge your cache to make way for updates by entering the URL into the purge cache field. You can purge a single file or multiple files (up to 30 at a time).
  
- ## Cache expiration
+ ## Browser Expiration
  
-You can use the dropdown menu to select the time of cache expiration that you require, for example 8 hours, or 1 day.
-
-![caching image](images/caching-screen.png)
+You can use the dropdown menu to select the time of browser expiration that you require, for example 8 hours, or 1 day.
  
  ## Using Development Mode
  
-Development mode is intended for use when major updates or new file uploads are required, so you do not want the end users to work from the cache at all, but to retrieve files directly from the origin servers. Development mode expires automatically after 3 hours.
-
-![IMAGE](images/development-mode-toggle.png)
-
-To begin using Development Mode, toggle the switch to "Enabled" position. To stop using Development Mode, toggle the switch to "Disabled" position.
+Development mode is intended for use when major updates or new file uploads are required, so you do not want the end users to work from the cache at all, but to retrieve files directly from the origin servers. Development mode expires automatically after 3 hours. To begin using Development Mode, toggle the switch to "Enabled" position. To stop using Development Mode, toggle the switch to "Disabled" position.
 
 ## Managing your Page Rules
  
-You can enable 50 Page Rules per page. Use the drop down menus to configure the Page Rules. The Page Rules are divided into three categories: Security, Performance, and Reliability.
+You can enable 50 Page Rules. Use the dropdown menus to configure the Page Rule. The rule settings are divided into three categories: Security, Performance, and Reliability.
 
-Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. After you've selected the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Overview screen.
+Notice that when certain rules are enabled, other options become grayed out, if they are in conflict with the other rules you've just selected. After you've selected the Page Rules you desire, click "Provision" to enable them. They will take effect immediately, and they can be viewed immediately on the Page Rules screen.
  
  ![PAGE RULES MENUS](images/page-rule-dropdown-settings.png)
  
- You also can enable or disable your Page Rules from the table displayed in the Overview screen. See [Using Page Rules](using-page-rules.html) for more information.
+ You also can enable or disable your Page Rules from the table displayed in the Page Rules screen. See [Using Page Rules](using-page-rules.html) for more information.
  
  ## Security settings
  
-By default, DDoS protection is enabled for all IBM Cloud CIS accounts. Also, IBM Cloud CIS provides 25 default rules for WAF, which you can toggle on and off as you desire, or you can upload your own WAF rules. The 25 rules are enabled for you, even if you have no DNS records in our DNS management system. When you toggle the rules on or off, the changes are applied immediately.
+Apply DDoS protection by enabling the proxy toggle on DNS records, which can be done from the Records table on the DNS page. Turn on WAF using the toggle. When you toggle the rules on or off, the changes are applied immediately.
 
 ![IMAGE](images/ddos-waf-ssl-screen.png)
 
 ## Certificates
 
-When you deploy into a Zone, IBM Cloud CIS automatically deploys a universal certificate for that zone. Thus, you don't need to do anything to have certificate-based protection in that zone. If you desire, you can upload your own certificate. You'll need a separate certificate for each zone, and you'll see an error message if the certificate you are uploading does not match your zone.
+When you deploy into a Zone, IBM CIS automatically deploys a universal certificate for that zone. Thus, you don't need to do anything to have certificate-based protection in that zone. If you desire, you can upload your own certificate. You'll need a separate certificate for each zone, and you'll see an error message if the certificate you are uploading does not match your zone.
+
+![IMAGE](images/certificates-table.png)
  
  ## Set up and configure your load balancers
  
- IBM Cloud CIS provides global load balancing as a service.
+ IBM CIS provides global load balancing as a service.
 
 ![IMAGE](images/glb-screen.png)
 
 ### GLB Dashboard
-There will be three lists that contain the load balancers, pools, and health checks. The lists will display the new or updated global load balancer or one of it's components after provisioning or updating. Initially they are empty, but before creating a load balancer there are a few actions that must be taken.
+There will be three lists that contain the load balancers, origin pools, and health checks. The lists will display the new or updated global load balancer or one of its components after provisioning or updating. Initially they are empty, but before creating a load balancer there are a few actions that must be taken.
 
 #### Create
 >Note: <sup>`*`</sup> indicates this step is optional
@@ -107,12 +103,12 @@ There will be three lists that contain the load balancers, pools, and health che
     * **Health**: Status of the load balancer.
     * **Hostname**: Name prepended to the domain name.
     * **Available Pools**: Count of healthy pools.
-    * **TTL**: Time To Listen.
+    * **TTL**: Time To Live.
     * **Proxy**: Enable or disable proxy traffic flow.
     * **Status**: Enable or disable the load balancer.
 
 #### Edit/Delete
-To edit or delete a load balancer or one of it's components click the overflow menu button located on the far right of each row.
+To edit or delete a load balancer or one of its components click the overflow menu button located on the far right of each row.
 
 Overflow menu button:
 
