@@ -7,7 +7,7 @@ lastupdated: "2018-03-01"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# How IBM Cloud Internet Services keeps your work secure
+# How IBM Cloud Internet Services (CIS) keeps your work secure
 
 IBM CIS is a globally distributed cloud service that blocks threats and limits abusive bots and crawlers, which can waste your bandwidth and server resources. CIS works as a global HTTP(S) reverse proxy and a managed DNS service provider. Your web traffic is routed through our intelligent global network to optimize both your performance and your security.
 
