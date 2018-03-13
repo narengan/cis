@@ -2,28 +2,26 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-06"
+lastupdated: "2018-03-05"
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
+# Global Load Balancer (GLB) Concepts
 
+This document contains some concepts and definitions related to the Global Load Balancer (GLB) and how it affects your IBM CIS deployment.
 
+## Global Load Balancer
 
-# Global Load Balancing (GLB)
+The Global Load Balancer (GLB) manages traffic across server resources located in multiple regions. The GLB utilizes a pool which allows for the traffic to be distributed to multiple origins. This provides many benefits including:
 
-Load Balancing automatically reduces latency by directing visitors to the infrastructure closest to them. By keeping visitors close to your infrastructure, Load Balancing provides quick delivery of content. It operates at the DNS level, and supports any protocol, from HTTP(S) through TCP- and UDP-based services. This lets you use Load Balancing with existing services, or in conjunction with other cloud providers.
+  * Minimize response time
+  * Higher availability through redundancy
+  * Maximize traffic throughput
 
-## Geo Policies
+## Pool
 
-Geo Policies allow you to direct visitors to datacenters located in the same region. For instance, visitors in Europe are sent to a European datacenter, U.S. visitors are sent to a North American datacenter, and so forth.
+A pool is a group of origin servers that traffic is intelligently routed to when attached to a GLB. The minimum number of available origin servers for the pool to be marked healthy is configurable by the user along with which specific health check to use. The origin pool can be associated with a specific region or it can be made available to all regions.
 
-## Health checks
+## Health Check
 
-Load Balancing Health Checks are performed on specific URLs through periodic HTTP/HTTPS requests, and are configured with customizable intervals, timeouts, and status codes. When an origin server is marked as unhealthy, visitors are routed away from failures using fast failover routes. 
+A health check helps gain insight into the availability of pools so that traffic can be routed to the healthy ones. These checks periodically send HTTP/HTTPS requests and monitor the responses. They can be configured with customized intervals, timeouts, status codes, and more. As soon as a pool is marked unhealthy, traffic will be intelligently rerouted to another available pool, if available.
