@@ -48,14 +48,14 @@ If you want to redirect your visitors to use HTTPS, use the **Always Use HTTPS**
 
 
 ## Custom Caching
-Sets caching behavior for any URL matching the Page Rule pattern, using any of our standard cache levels. Setting **Cache Level** to **Cache Everything** caches any content, even if it is not one of our default static file types. Setting **Cache Level** to **Bypass** setting prevents caching on that URL.
+Sets caching behavior for any URL matching the Page Rule pattern, using any of our standard cache levels. Setting **Cache Level** to **Cache Everything** caches any content, even if it is not one of our default static file types. Setting **Cache Level** to the **Bypass** setting prevents caching on that URL.
 
 When specifying cache level using Page Rules, you can set an **Edge Cache TTL**, which controls how long CIS will retain files in our cache.
 
-**Browser Cache TTL** controls how long resources cached by client browsers remain valid. If a browser requests a resource again and the TTL has not expired, it will receive an HTTP 304 (Not Modified) response. You can set TTLs ranging from 30 minutes to 1 year.
+**Browser Cache TTL** controls how long resources cached by client browsers remain valid. If a browser requests a resource again and the TTL has not expired, the browser receives an `HTTP 304 (Not Modified)` response. You can set TTLs ranging from 30 minutes to 1 year.
 
 Not all default caching behaviors are strictly RFC-compliant. Setting **Origin Cache Control** by means of Page Rules uses a newer set of caching rules that seeks to adhere more closely to RFCs, primarily with respect to revalidation. For example, our default behavior with `max-age=0` is to not cache at all, whereas setting **Origin Cache Control** caches, but it always revalidates.
 
-The following example sets a Page Rule to cache everything found in the "/images" folder. Cached resources expire in 30 minutes in the user's browser, and they expire after one day in the IBM CIS datacenters:
+The following example sets a Page Rule to cache everything found in the `/images` folder. Cached resources expire in 30 minutes in the user's browser, and they expire after one day in the IBM CIS datacenters:
 
 ![image3](images/url-example.png)
