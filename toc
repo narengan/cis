@@ -10,7 +10,7 @@ Cloud Internet Services (CIS)
     security-features.md
     reliability-features.md
     performance-features.md
-    tls-options.md
+    ssl-options.md
     dns.md
     glb.md
     cache.md
