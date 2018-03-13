@@ -2,24 +2,24 @@
   
 copyright:
    years: 2018
-lastupdated: "2018-03-06"
+lastupdated: "2018-03-13"
  
 ---
 
 
 # Best practices for CIS setup
 
-Because IBM Cloud CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. Here are some recommended best practices for integrating CIS with your origin servers. 
+Because IBM CIS is positioned at the edge of your network, you’ll need to take a few steps to guarantee a smooth integration with your CIS services. Here are some recommended best practices for integrating CIS with your origin servers. 
 
-You can do these steps either before or after you change your DNS and activate our proxy service. These recommendations allow CIS to connect to your origin servers properly. They’ll help you prevent any issues with API or HTTPS traffic, and help your logs capture the correct IP addresses of your customers, rather than the protective CIS IP addresses.
+You can do these steps either before or after you change your DNS and activate our proxy service. These recommendations allow IBM CIS to connect to your origin servers properly. They’ll help you prevent any issues with API or HTTPS traffic, and help your logs capture the correct IP addresses of your customers, rather than the protective CIS IP addresses.
 
 Here’s what you’ll need to set up:
 
  * Best practice 1: Restore the originating IPs of your customers
  * Best practice 2: Incorporate CIS IP addresses
- * Best practice 3: Integrate API traffic with appropriate security settings
- * Best practice 4: Configure your TLS with a custom certificate and a Full (Strict) setting
-
+ * Best practice 3: Make sure your security settings don't interfere with API traffic
+ * Best practice 4: Configure your security settings as strictly as possible
+ 
 ## Best practice 1: Know how to restore the originating IPs of your customers
 
 As a reverse proxy, we provide the origination IP in these headers:
@@ -65,17 +65,17 @@ IBM CIS usually accelerates API traffic by removing connection overhead. However
 |------------------------------------------------|
 | *The browser integrity check looks for HTTP headers that are commonly abused by spammers. It denies traffic with those headers access to your page. It also blocks visitors that do not have a user agent, or who add a non-standard user agent (this tactic is commonly used by abuse bots, crawlers. or APIs).* |
 
-## Best practice 4: Configure your security settings
+## Best practice 4: Configure your security settings as strictly as possible
 
-CIS provides some options for encrypting your traffic. As a reverse proxy, we close SSL connections at our datacenters and open a new TLS connection to your origin servers. For your SSL termination with CIS, you can upload a custom SSL certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
+CIS provides some options for encrypting your traffic. As a reverse proxy, we close SSL connections at our datacenters and open a new TLS connection to your origin servers. For your termination with CIS, you can upload a custom certificate from your account, you can use a wildcard certificate provisioned for you by CIS, or both.
 
 ### Upload a custom certificate
  
- You can upload your public and private key when you create an Enterprise domain. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
+You can upload your public and private key when you create an Enterprise domain. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, IBM CIS won't track the certificate expiration dates. 
  
 ### Alternatively, utilize a certificate provisioned by CIS
  
-CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
+IBM CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
  
 ### Change your TLS setting to **End-to-End CA Signed**
  
