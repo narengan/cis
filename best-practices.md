@@ -77,12 +77,7 @@ CIS provides some options for encrypting your traffic. As a reverse proxy, we cl
  
 CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers, by default. Manual verification could be required for setting up these certificates, and your support team can help you perform these additional steps.
  
-### Consider a keyless TLS configuration
+### Change your TLS setting to **End-to-End CA Signed**
  
-Using a keyless TLS configuration, our customers can maintain their own private key while still allowing CIS to complete TLS connections. Keyless TLS gives you increased security around private keys and identification, while still letting you use the CIS services. Many financial clients use this setting.
- 
- 
-### Change your TLS setting to **Full** (Strict)
- 
-Most of our Enterprise customers utilize the Full (Strict) security setting. A **Full (Strict)** setting requires a valid, CA-signed certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
+Most of our Enterprise customers utilize the End-to-End CA Signed security setting. An **End-to-End CA Signed** setting requires a valid, CA-signed certificate installed on your web server. The certificate's expiration date must be in the future, and it must have a matching *hostname* or *Subject Alternative Name (SAN)*.
 
