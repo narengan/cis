@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-12"
+lastupdated: "2018-03-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -15,4 +15,7 @@ lastupdated: "2018-03-12"
 
  * Editing the URL match for a page rule causes that rule to be placed at the lowest priority.
  
- * Without a configured domain one can still navigate to Reliability > Global Load Balancers and create load balancer pools and health checks. However, upon clicking 'Create load balancer', configuring the load balancer, and clicking 'Provision 1 Resource', the request will be rejected since a domain is needed. This is done so the user can understand the purpose of the pools and monitors in the load balancer creation flow.
+ * Without a configured domain, you can navigate to **Reliability > Global Load Balancers** to create your load balancer pools and health checks. However, if you select **Create load balancer**, configure the load balancer, and click **Provision 1 Resource**, the request will be rejected because a domain is required. This functional limitation helps the user understand the purpose of pools and monitors in the load balancer creation flow.
+
+ * Our system will not gather your domain records at this time.
+
