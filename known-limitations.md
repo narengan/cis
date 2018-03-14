@@ -14,3 +14,5 @@ lastupdated: "2018-03-12"
  * In Firefox and Safari, the *uploaded*, *modified*, and *expires* dates for a certificate cannot be displayed.
 
  * Editing the URL match for a page rule causes that rule to be placed at the lowest priority.
+ 
+ * Our system will not gather your domain records at this time.
