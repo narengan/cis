@@ -21,4 +21,4 @@ lastupdated: "2018-03-15"
 
  * When you add a new domain, our system currently does not gather or import your existing domain records.
 
- * For this Beta release, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
+ * For this Early Access program, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
