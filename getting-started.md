@@ -40,7 +40,7 @@ You'll see the first screen of the IBM CIS application, where you'll select the 
 
 **Step 2. Add and configure your Domain.**
 
-Begin protecting and improving the performance of your web service by entering your domain or a subdomain.
+Begin protecting and improving the performance of your web service by entering your domain or a subdomain. These should be DNS zones (the nameservers for which can be cofigured at the domain's registrar or DNS provider), not CNAMEs.
 
 ![Getting Started](images/overview-add-domain.png)
 
