@@ -44,12 +44,15 @@ You'll see the first screen of the IBM CIS application, where you'll select the 
 
 **Step 2. Add and configure your Domain.**
 
-Begin protecting and improving the performance of your web service by entering your domain or a subdomain.
+Begin protecting and improving the performance of your web service by entering your domain or a subdomain. 
+
+**Note:** Please specify DNS zones. You can configure the nameservers for these domains or subdomains at the domain's registrar or DNS provider. Do not use CNAMEs.
 
 ![Getting Started](images/overview-add-domain.png)
 
 The Overview screen will show your domain in "Pending" status.
-Note: The IBM CIS instance will not be able to be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
+ 
+**Note:** The IBM CIS instance cannot be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
 
 **Step 3. Configure your Name Servers with the Registrar or existing DNS Provider.**
 
