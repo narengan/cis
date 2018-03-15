@@ -34,7 +34,7 @@ To begin, open your IBM Cloud dashboard and find the IBM CIS application icon un
 
 ![Catalog](images/catalog-cis-tile.png)
 
-For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
+For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account. Note that the Early Access program is limited to one instance per account. Once you create a resource instance and add a domain to it, you will not be allowed to add new resource instances for CIS. This restriction is enforced even if you delete a trial domain and attempt to add a domain again to the same resource instance. You will encounter an error if you attempt to do so.
 
 You'll see the first screen of the IBM CIS application, where you'll select the "Add Domain" button to begin.
 
