@@ -21,7 +21,7 @@ The IBM Cloud Internet Services (CIS) security settings include safe defaults de
 
 When a subdomain is proxied using IBM CIS, all traffic is protected because we actively respond with IP addresses specific to IBM CIS (for example, all of your clients connect to CIS proxies first, and your origin IP addresses are obscured).
 
-### Use CIS proxies for all DNS Records for HTTP(S) traffic from your origin
+### Use IBM CIS proxies for all DNS Records for HTTP(S) traffic from your origin
 
 To improve the security of your origin IP address, all HTTP(S) traffic should be proxied.
 
@@ -42,7 +42,7 @@ Any records that cannot be proxied through IBM CIS, and that still use your orig
 Some customers use separate IP ranges for HTTP and non-HTTP traffic, thereby allowing them to proxy all records pointing to their HTTP IP range, and to obscure all non-HTTP traffic with a different IP subnet.
 
 ## Best practice 2: Configure your Security Level selectively
-Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 4 million websites, which allows our system to identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
+Your **Security Level** establishes the sensitivity of our **IP Reputation Database**. IBM CIS sees over 1 billion unique IP addresses every month, from more than 7 million websites, which allows our system to identify malicious actors and prevent them from reaching your web assets. To prevent negative interactions or false positives, configure your **Security Level** by domain to heighten security where necessary, and to decrease it where appropriate.
 
 ### Increase the Security Level for Sensitive Areas to 'High'
 You can increase this setting by adding a **Page Rule** for administration pages or login pages, to reduce brute-force attempts:
@@ -81,7 +81,7 @@ The WAF protects you against the following types of attacks:
 The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-rule-set.html) document for more details on the default rule set and the behavior of each rule.
 
 ## Best practice 4: Configure your TLS settings
-CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
+IBM CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
 
 TLS offers four modes of operation:
 * **Off**: TLS is disabled in this mode, it is not recommended.
@@ -91,12 +91,12 @@ TLS offers four modes of operation:
 
 For more detail about your TLS options, please refer to [this document](ssl-options.html).
 
-CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
+IBM CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
 
 ### Upload a custom certificate
-You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, CIS won't track the certificate expiration dates. 
+You can upload your custom certificate by clicking **Add Certificate** button and entering your certificate, private key, and bundle method. If you upload your own certificate, you gain immediate compatibility with encrypted traffic, and you maintain control over your certificate (for example, an Extended Validation (EV) certificate). Remember that you'll be responsible for managing your certificate if you upload a custom certificate. For example, IBM CIS won't track the certificate expiration dates. 
 
 ![custom-certificate](images/upload-custom-certificate.png)
 
 ### Utilize a provisioned certificate
-CIS has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates your support team can help you perform these additional steps.
+IBM has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates. Your support team can help you perform these additional steps.
