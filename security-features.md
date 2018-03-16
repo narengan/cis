@@ -11,7 +11,7 @@ lastupdated: "2018-03-16"
 
 IBM CIS is a globally distributed cloud service that blocks threats and limits abusive bots and crawlers, which can waste your bandwidth and server resources. IBM CIS works as a global HTTP(S) reverse proxy and a managed DNS service provider. Your web traffic is routed through our intelligent global network to optimize both your performance and your security.
 
-![security-graphic.png](images/cis-pops.png)
+![security-graphic.png](images/security-graphic.png)
 
 Here’s a quick feature overview:
 
