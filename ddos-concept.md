@@ -32,7 +32,9 @@ This category of attacks attempts to create congestion by consuming all availabl
 
 ## What do I do if I’m under a DDoS attack?
 
-**Step 1:** Turn on “Defense mode" from the **Overview** screen. ![Defense Mode](images/defense-mode.png)
+**Step 1:** Turn on “Defense mode" from the **Overview** screen. 
+
+![Defense Mode](images/defense-mode.png)
 
 **Step 2:** Set your DNS records for maximum security.
 
