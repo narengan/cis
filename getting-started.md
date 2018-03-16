@@ -23,7 +23,7 @@ For each capability, IBM CIS helps you tune its features to suit your specific n
 ## Before you begin
 Before you begin using IBM Cloud Internet Services, you'll first need an IBMid. Then you can order your IBM Cloud Internet Services through your IBM Cloud Account, or through the new IBM Cloud Internet Services Portal, depending on your preference.
 
-If you need assistance in obtaining an account to use IBM Cloud Internet Services, you can contact your IBM sales representative for additional guidance on getting started.
+If you need assistance in obtaining an account to use IBM Cloud Internet Services, contact your IBM sales representative for additional guidance on getting started.
 
 ## Process overview
 
