@@ -29,7 +29,7 @@ Common types are:
  * Volumetric attacks (amplification attacks)
 
 ###	Application Layer Attacks
-An application layer attack is sometimes referred to as a layer-7 DDoS attack (in reference to the 7th layer of the OSI model). The goal of these attacks is to exhaust the resources of the victim, by targeting the layer where web pages are generated on the server and delivered to the visitors in response to HTTP requests (that is, the application layer). Layer-7 attacks are challenging to defend, because the traffic can be difficult to identify as malicious.
+An application layer attack is sometimes referred to as a layer-7 DDoS attack (in reference to the 7th layer of the OSI model). The goal of these attacks is to exhaust the resources of the victim, by targeting the layer where web pages are generated on the server and delivered to the visitors in response to HTTP requests (that is, the application layer). Layer-7 attacks are challenging, because the traffic can be difficult to identify as malicious.
 
 ###	Protocol Attacks
 Protocol attacks utilize weaknesses in layer 3 and layer 4 of the ISO protocol stack to render the target inaccessible. These attacks, also known as a state-exhaustion attacks, cause a service disruption by consuming all the available _state table_ capacity of web application servers, or of intermediate resources such as firewalls and load balancers. 
