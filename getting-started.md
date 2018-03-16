@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -9,7 +9,7 @@ lastupdated: "2018-03-05"
 
 # Getting Started with IBM Cloud Internet Services (CIS)
 
-IBM Cloud Internet Services (CIS) offers three main capabilities to enhance your workflow: [security](managing-for-security.html), [reliability](managing-for-reliability.html), and [performance](managing-for-performance.html).
+IBM Cloud Internet Services (CIS) offers three main capabilities to enhance your workflow: [security](/docs/infrastructure/cis/managing-for-security.html), [reliability](/docs/infrastructure/cis/managing-for-reliability.html), and [performance](/docs/infrastructure/cis/managing-for-performance.html).
 
 For each capability, IBM CIS helps you tune its features to suit your specific needs, including:
 
@@ -18,6 +18,12 @@ For each capability, IBM CIS helps you tune its features to suit your specific n
  * Web Application Firewall (WAF)
  * Caching and page rules
  * DDoS Protection
+
+
+## Before you begin
+Before you begin using IBM Cloud Internet Services, you'll first need an IBMid. You can then order your Cloud Internet Services through your IBM Cloud Account, or through the new IBM Cloud Internet Services Portal, depending on your preference.
+
+If you need assistance in obtaining an account to use IBM Cloud Internet Services, you can contact your IBM sales representative for additional guidance on getting started.
 
 ## Process overview
 
@@ -30,29 +36,22 @@ You can start using IBM Cloud Internet Services (CIS) for your internet traffic 
 
 **Step 1: Open the IBM CIS application**
 
-To begin, open your IBM Cloud dashboard and find the IBM CIS application icon under the **Platform -> Network** category.
+Open your IBM Cloud dashboard and find the IBM Cloud Internet Services application icon under the **Platform -> Network** category.
 
 ![Catalog](images/catalog-cis-tile.png)
 
-For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account. 
+For the Early Access release, there is only one plan and it is free. Click the "Create" button to begin provisioning your account.
 
 You'll see the first screen of the IBM CIS application, where you'll select the "Add Domain" button to begin.
 
-|**Note that the Early Access program is limited to one instance per account.** |
-|-------------------------------------------------------------------|
-| After you've created a resource instance and added a domain to it, you are not allowed to add new resource instances for CIS. This restriction is enforced even if you delete a trial domain and then attempt to add a domain again to the same resource instance. You'll encounter an error if you attempt to do so.|
-
 **Step 2. Add and configure your Domain.**
 
-Begin protecting and improving the performance of your web service by entering your domain or a subdomain. 
-
-**Note:** Please specify DNS zones. You can configure the nameservers for these domains or subdomains at the domain's registrar or DNS provider. Do not use CNAMEs.
+Begin protecting and improving the performance of your web service by entering your domain or a subdomain.
 
 ![Getting Started](images/overview-add-domain.png)
 
 The Overview screen will show your domain in "Pending" status.
- 
-**Note:** The IBM CIS instance cannot be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
+Note: The IBM CIS instance will not be able to be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
 
 **Step 3. Configure your Name Servers with the Registrar or existing DNS Provider.**
 
