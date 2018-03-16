@@ -84,7 +84,7 @@ When you deploy into a Zone, IBM CIS automatically deploys a universal certifica
 On your dashboard, you'll see three lists that show the load balancers, origin pools, and health checks. The lists display the new or updated global load balancer or one of its components after you've provisioned or updated it. Initially the lists are empty, and before you create a load balancer you must take a few actions.
 
 #### Create
->Note: <sup>`*`</sup> indicates this step is optional
+**Note**: <sup>`*`</sup> indicates this step is optional
 1) <sup>`*`</sup>Create a health check, click "Create health check".
   ![IMAGE](images/glb-health-check-list.png)
     * **Path**: The endpoint path to health check against.
@@ -119,12 +119,14 @@ The following options are provided for each list.
 * Health Check
 
   ![IMAGE](images/health-check-overflow.png)
+  
     * **Edit health check**: This option redirects the user to the edit flow. 
     * **Delete health check**: This option brings up the confirmation dialog box for the deletion flow.
 
 * Pool
 
   ![IMAGE](images/pool-overflow.png)
+  
     * **View pool details**: This option brings up a modal dialog box with information about the pool.
     * **Edit pool**: This option redirects the user to the edit flow.
     * **Delete pool**: This option brings up the confirmation dialog box for the deletion flow.
@@ -132,6 +134,7 @@ The following options are provided for each list.
 * Load Balancer
 
   ![IMAGE](images/load-balancer-overflow.png)
+  
     * **Disable/Enable**: Enable or disable a load balancer.
     * **Edit load balancer**: Redirects to the edit flow. 
     * **Delete load balancer**: Brings up the confirmation dialog box for the deletion flow.
