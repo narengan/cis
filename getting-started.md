@@ -68,7 +68,7 @@ After you've configured your registrar or DNS provider, it may require up to 24 
 
 **Step 4. Ensure that Cloud Internet Services is resolving your application, hostname or website.**
 
-From the Reliability, DNS section, ensure that you add DNS Records - A record and any CNAME, AAAA or MX entries populated.  Without these records added, once the registrar delegation is complete, Cloud Internet Services cannot resolve your Internet facing applications. 
+From the Reliability, DNS section, ensure that you add DNS Records - A record and any AAAA or MX entries populated.  Cloud Internet Services cannot resolve your Internet facing applications if these records are not added before the registrar delegation is complete.  
 
 ![Getting Started](images/dns-records.png)
 
