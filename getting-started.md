@@ -44,14 +44,21 @@ For the Early Access release, there is only one plan and it is free. Click the "
 
 You'll see the first screen of the IBM CIS application, where you'll select the "Add Domain" button to begin.
 
+**Note that the Early Access program is limited to one instance per account.** |
+|-------------------------------------------------------------------|
+| After you've created a resource instance and added a domain to it, you are not allowed to add new resource instances for CIS. This restriction is enforced even if you delete a trial domain and then attempt to add a domain again to the same resource instance. You'll encounter an error if you attempt to do so.|
+
 **Step 2. Add and configure your Domain.**
 
 Begin protecting and improving the performance of your web service by entering your domain or a subdomain.
 
+**Note:** Please specify DNS zones. You can configure the nameservers for these domains or subdomains at the domain's registrar or DNS provider. Do not use CNAMEs.
+
 ![Getting Started](images/overview-add-domain.png)
 
 The Overview screen will show your domain in "Pending" status.
-Note: The IBM CIS instance will not be able to be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
+
+**Note:** The IBM CIS instance cannot be deleted when a domain has been added. To delete the instance, please delete the domain from the instance first.
 
 **Step 3. Configure your Name Servers with the Registrar or existing DNS Provider.**
 
