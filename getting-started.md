@@ -66,6 +66,12 @@ To begin receiving the benefits of IBM CIS, configure your registrar or domain n
 
 After you've configured your registrar or DNS provider, it may require up to 24 hours for the changes to take effect.
 
-**Step 4. In the meantime, you can begin managing other IBM CIS functions and features.**
+**Step 4. Ensure that Cloud Internet Services is resolving your application, hostname or website.**
+
+From the Reliability, DNS section, ensure that you add DNS Records - A record and any CNAME, AAAA or MX entries populated.  Without these records added, once the registrar delegation is complete, Cloud Internet Services cannot resolve your Internet facing applications. 
+
+![Getting Started](images/dns-records.png)
+
+**Step 5. In the meantime, you can begin managing other IBM CIS functions and features.**
 
 For more details about managing other functions and features, please see the [step-by-step instructions](how-to.html).
