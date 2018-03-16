@@ -24,9 +24,9 @@ Different DDoS attack vectors target varying components of a network connection.
 
 Common types are:
 
- * Application layer attacks
- * Protocol attacks
- * Volumetric attacks
+ * Application layer attacks (layer 7)
+ * Protocol attacks (layers 3 and 4)
+ * Volumetric attacks (amplification attacks)
 
 ###	Application Layer Attacks
 An application layer attack is sometimes referred to as a layer-7 DDoS attack (in reference to the 7th layer of the OSI model). The goal of these attacks is to exhaust the resources of the victim, by targeting the layer where web pages are generated on the server and delivered to the visitors in response to HTTP requests (that is, the application layer). Layer-7 attacks are challenging to defend, because the traffic can be difficult to identify as malicious.
