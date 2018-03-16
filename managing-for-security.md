@@ -80,7 +80,7 @@ The WAF protects you against the following types of attacks:
 
 The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-rule-set.html) document for more details on the default rule set and the behavior of each rule.
 
-For more information about how the WAY works, please see the [WAF Concepts document](waf-concept.html)
+For more information about the WAF, please see the [WAF Concepts document](waf-concept.html)
 
 ## Best practice 4: Configure your TLS settings
 IBM CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
