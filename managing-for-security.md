@@ -7,7 +7,7 @@ lastupdated: "2018-03-13"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Manage your IBM CIS for optimal Security
+# Manage your IBM CIS for optimal security
 
 The IBM Cloud Internet Services (CIS) security settings include safe defaults designed to avoid false positives and negative influence on your traffic. However, these safe default settings do not provide the best security posture for every customer. Take the following steps to be sure that your CIS account is configured in a safe and secure way:
 
@@ -68,7 +68,7 @@ Our Security Level settings are aligned with threat scores that certain IP addre
 * **LOW**: Threat scores greater than 24 are challenged.
 * **ESSENTIALLY OFF**: Threat scores greater than 49 are challenged.
 
-We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for Setup document](best-practices.html#best-practice-3-review-your-security-settings-to-make-sure-they-dont-interfere-with-api-traffic)
+We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for CIS Setup document](best-practices.html)
 
 ## Best practice 3: Activate your Web Application Firewall (WAF) safely
 Your WAF is available in the **Security** section. We will walk through these settings in reverse order to ensure that your WAF is configured as safely as possible before turning it on for your entire domain. These initial settings can reduce false positives by populating the Traffic Application with WAF events for further tuning. Your WAF is updated automatically to handle new vulnerabilities as they are identified.
@@ -79,6 +79,8 @@ The WAF protects you against the following types of attacks:
 * Cross-site forgery
 
 The WAF contains a default rule set which includes rules to stop the most common attacks. At this time, we allow you to either enable or disable the WAF. See the [WAF default rule set](waf-rule-set.html) document for more details on the default rule set and the behavior of each rule.
+
+For more information about how the WAY works, please see the [WAF Concepts document](waf-concept.html)
 
 ## Best practice 4: Configure your TLS settings
 IBM CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
