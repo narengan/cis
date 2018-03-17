@@ -25,7 +25,7 @@ Before you begin using IBM CIS, you'll first need an [IBMid](https://www.ibm.com
 
 If you need assistance in obtaining an account to use IBM Cloud Internet Services, [contact your IBM sales representative](https://www.ibm.com/cloud-computing/bluemix/contact-us) for additional guidance on getting started.
 
-If you have an existing Softlayer account, you can [link](https://console.bluemix.net/docs/account/softlayerlink.html#unifyingaccounts)your account with your IBMid. 
+If you have an existing Softlayer account, you can [link](https://console.bluemix.net/docs/account/softlayerlink.html#unifyingaccounts) your account with your IBMid. 
 
 ## Process overview
 
