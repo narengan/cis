@@ -9,6 +9,6 @@ lastupdated: "2018-03-19"
 
 # Video 
 
-Click the link to watch a short inrtoductory video that describes the security benefits of IBM Cloud Internet Services.
+Click the link to watch a short introductory video that describes the security benefits of IBM Cloud Internet Services (CIS).
 
 https://www.youtube.com/watch?v=TJqkBVogMvk
