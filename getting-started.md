@@ -16,8 +16,9 @@ For each capability, IBM CIS helps you tune its features to suit your specific n
  * Authoritative DNS servers
  * Global and Local Load Balancing
  * Web Application Firewall (WAF)
- * Caching and page rules
  * DDoS Protection
+ * Caching and page rules
+
 
 
 ## Before you begin
