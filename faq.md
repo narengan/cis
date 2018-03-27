@@ -12,6 +12,15 @@ lastupdated: "2018-03-16"
 ## What do I get with an Early Access Plan?
 The Early Access program, by design, allows only one zone per account. It is recommended that only one instance be created per account and the zone name be verified. It is critical that the zone name be verified before it is added. If a zone is deleted, another zone or the same zone cannot be added during Early Access program.
 
+## Why is my domain in Pending state? How do I activate it?
+When you add a domain to CIS, we give you a couple of nameservers to configure at your registrar (or at your DNS provider, if you are adding a subdomain). The domain or subdomain will remain in pending state until you configure the nameservers correctly. Make sure you add both the nameservers to your registrar or DNS provider. We periodically scan the public DNS system to check whether the nameservers have been configured as instructed. As soon as we are able to verify the nameserver change (this may take up to 24 hours), we activate your domain. You can submit a request to recheck nameservers potentially sooner than our scheduled automatic check by clicking on the `Recheck nameservers` in the overview page.
+
+## Who is the registrar for my domain?
+You may consult https://whois.icann.org/ for this information. Note that you must have the administrative privilege to edit your domain's configuration at the regisrar to update or add the nameservers we provide for your domain when you add it to CIS . However, if you don't know who the registrar is for the domain you're trying to add to CIS, you will likely not have the permission to update your domain's configuration at the registrar. You will have to work with the owner of the domain in your organization to make the necessary changes.
+
+## I want to keep my current DNS provider for my domain (example.com). Can I delegate a subdomain (subdomain.example.com) from my current DNS provider to CIS?
+Yes. The process is similar to adding a domain, as described above. Instead of the Registrar, you will be dealing with the DNS provider for the higher level domain. When you add a subdomain to CIS, you will be given two nameservers to configure, as usual. You will configure a Name Server (NS) record for each of the two nameservers as DNS records within your domain being managed by the other DNS provider. Once we are able to verify that the required NS records have been added, we activate your subdomain. If you do not manage the higher level domain within your organization, you will have to work with the owner of the higher level domain to get the NS records added.
+
 
 ## What is TLS?
 TLS is a standard security protocol for establishing encrypted links between a web server and a browser in an online communication. A TLS certificate is necessary to create a TLS connection with a website, and comprises of the domain name, the name of the company, and additional data such as company address, city, state, and country. The certificate also shows the expiration date, and details of the issuing Certificate Authority (CA).
