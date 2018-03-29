@@ -85,4 +85,4 @@ To proceed, select the **Reliability** tab from your left-hand navbar, then sele
 
 ### Step 5. In the meantime, you can begin managing other IBM CIS functions and features.
 
-For more details about managing other functions and features, please see the [step-by-step instructions](how-to.html).
+For more details about managing other functions and features, please see the [step-by-step instructions](/docs/infrastructure/cis/how-to.html).
