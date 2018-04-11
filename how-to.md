@@ -89,29 +89,29 @@ On your dashboard, you'll see three lists that show the load balancers, origin p
 1) <sup>`*`</sup>Create a health check, click "Create health check".
   ![IMAGE](images/glb-health-check-list.png)
     <ul>
-      <li>* **Path**: The endpoint path to health check against.</li> 
-      <li>* **Type**: The protocol to use for the health check.</li>
-      <li>* **Description**: User provided description.</li>
+      <li>**Path**: The endpoint path to health check against.</li> 
+      <li>**Type**: The protocol to use for the health check.</li>
+      <li>**Description**: User provided description.</li>
     </ul>
 
 2) Create a pool, click "Create pool". 
   ![IMAGE](images/glb-pool-list.png)
     <ul>
-      <li>* **Health**: Status of the pool.</li>
-      <li>* **Name**: User provided name.</li>
-      <li>* **Origins**: Count of healthy origins in the pool.</li>
-      <li>* **Health Check**: Path of the attached health check, if any.</li>
+      <li>**Health**: Status of the pool.</li>
+      <li>**Name**: User provided name.</li>
+      <li>**Origins**: Count of healthy origins in the pool.</li>
+      <li>**Health Check**: Path of the attached health check, if any.</li>
     </ul>
 
 3) Create a load balancer, click "Create load balancer".
   ![IMAGE](images/glb-load-balancer-list.png)
     <ul>
-      <li>* **Health**: Status of the load balancer.</li>
-      <li>* **Hostname**: Name prepended to the domain name.</li>
-      <li>* **Available Pools**: Count of healthy pools.</li>
-      <li>* **TTL**: Time To Live.</li>
-      <li>* **Proxy**: Enable or disable proxy traffic flow.</li>
-      <li>* **Status**: Enable or disable the load balancer.</li>
+      <li>**Health**: Status of the load balancer.</li>
+      <li>**Hostname**: Name prepended to the domain name.</li>
+      <li>**Available Pools**: Count of healthy pools.</li>
+      <li>**TTL**: Time To Live.</li>
+      <li>**Proxy**: Enable or disable proxy traffic flow.</li>
+      <li>**Status**: Enable or disable the load balancer.</li>
     </ul>
 
 #### Edit/Delete
