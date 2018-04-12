@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-04-12"
 
 ---
 
@@ -25,3 +25,4 @@ A pool is a group of origin servers that traffic is intelligently routed to when
 ## Health Check
 
 A health check helps gain insight into the availability of pools so that traffic can be routed to the healthy ones. These checks periodically send HTTP/HTTPS requests and monitor the responses. They can be configured with customized intervals, timeouts, status codes, and more. As soon as a pool is marked unhealthy, traffic will be intelligently rerouted to another available pool, if available.
+**Note**: Be aware that your logs have references to Cloudflare because of IBM's partnership with Cloudflare to power CIS.
