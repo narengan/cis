@@ -59,3 +59,10 @@ Not all default caching behaviors are strictly RFC-compliant. Setting **Origin C
 The following example sets a Page Rule to cache everything found in the `/images` folder. Cached resources expire in 30 minutes in the user's browser, and they expire after one day in the IBM CIS datacenters:
 
 ![image3](images/url-example.png)
+
+**Serve Stale Content** serves pages from our cache, even when your server goes down. Visitors see a limited version of your site, with a message that they are in offline browsing mode. 
+
+This feature returns an HTTP status 503. When servers are online again, CIS seamlessly takes visitors to regular browsing.
+
+If the requested page is not in the cache, the visitor is taken to an error page that informs them the page they are requesting is offline.
+**Note**: If a **Cache Everything** page rule is enabled with expiration times set lower than the caching frequency it causes the **Serve Stale Content** to be purged in the corresponding interval.
