@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-13"
+lastupdated: "2018-04-18"
 ---
 
 {:shortdesc: .shortdesc}
@@ -83,7 +83,7 @@ The WAF contains a default rule set which includes rules to stop the most common
 For more information about the WAF, please see the [WAF Concepts document](waf-concept.html)
 
 ## Best practice 4: Configure your TLS settings
-IBM CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS conections at our datacenters and open a new TLS connection to your origin server.
+IBM CIS provides some options for encrypting your traffic. As a reverse proxy, we close TLS connections at our datacenters and open a new TLS connection to your origin server.
 
 TLS offers four modes of operation:
 * **Off**: TLS is disabled in this mode, it is not recommended.
@@ -92,6 +92,9 @@ TLS offers four modes of operation:
 * **End-to-end CA signed**: TLS encrypts all traffic; you must use a CA-signed certificate.
 
 For more detail about your TLS options, please refer to [this document](ssl-options.html).
+
+### Require Mondern TLS
+**Require Modern TLS** prevents older browsers from connecting using older, less secure versions of TLS. Any connections from browsers using TLS 1.1 or earlier are refused. TLS versions 1.2 and 1.3 are included in Modern TLS and are considered secure. 
 
 IBM CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
 
