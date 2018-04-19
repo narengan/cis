@@ -93,9 +93,6 @@ TLS offers four modes of operation:
 
 For more detail about your TLS options, please refer to [this document](ssl-options.html).
 
-### Require Mondern TLS
-**Require Modern TLS** prevents older browsers from connecting using older, less secure versions of TLS. Any connections from browsers using TLS 1.1 or earlier are refused. TLS versions 1.2 and 1.3 are included in Modern TLS and are considered secure. 
-
 IBM CIS allows you to use custom certificates, or you can use a wildcard certificate provisioned for you by CIS.
 
 ### Upload a custom certificate
@@ -105,3 +102,6 @@ You can upload your custom certificate by clicking **Add Certificate** button an
 
 ### Utilize a provisioned certificate
 IBM has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates. Your support team can help you perform these additional steps.
+
+### Require Modern TLS
+**Require Modern TLS** prevents older browsers from connecting using older, less secure versions of TLS. Any connections from browsers using TLS 1.1 or earlier are refused. TLS versions 1.2 and 1.3 are included in Modern TLS and are considered secure.
