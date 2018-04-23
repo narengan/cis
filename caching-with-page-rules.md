@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-12"
+lastupdated: "2018-04-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -65,4 +65,4 @@ The following example sets a Page Rule to cache everything found in the `/images
 This feature returns an HTTP status 503. When servers are online again, CIS seamlessly takes visitors to regular browsing.
 
 If the requested page is not in the cache, the visitor sees an error page that informs them the page they are requesting is offline.
-**Note**: If a **Cache Everything** page rule is enabled with expiration times set lower than the caching frequency it causes the **Serve Stale Content** to be purged in the corresponding interval.
+**Note**: If a **Cache Everything** page rule is enabled with expiration times set lower than the caching frequency, the **Serve Stale Content** is purged in the corresponding interval.
