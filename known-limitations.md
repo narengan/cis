@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-04-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,8 +10,6 @@ lastupdated: "2018-03-15"
 # Known Limitations
 
  * Our recommendation is to use Chrome.
-
- * In Firefox and Safari, the *uploaded*, *modified*, and *expires* dates for a certificate cannot be displayed.
 
  * Editing the URL match for a page rule causes that rule to be placed at the lowest priority.
  
@@ -22,3 +20,5 @@ lastupdated: "2018-03-15"
  * When you add a new domain, our system currently does not gather or import your existing domain records.
 
  * For this Early Access program, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
+ 
+ * At this time, LOC records cannot be imported. As a workaround, use the UI or API to create any LOC records.
