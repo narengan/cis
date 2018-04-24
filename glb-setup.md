@@ -119,9 +119,3 @@ Optionally, the following fields can be configured:
  * **TTL**: Time to live (TTL) of the DNS entry for the IP address returned by this load balancer. This option  applies only to unproxied load balancers, otherwise it defaults to `Automatic`.
  * **Region Pools**: A mapping of region or country codes to a list of pools (ordered by their failover priority) for the given region. Any regions not explicitly defined will fall back to using the default pools.
  
- ## Alternative GLB Setup
-You can directly create pools and health checks from the **Create Load Balancer** menu option. Navigate to **Reliability > Global Load Balancer > Create load balancer > Add pool**, and select the option to **Create New** under Origin pool. 
-
-![IMAGE](images/create-new-origin-pool.png)
-
-Input a pool name, origins, and select a health check. You can create a new health check here by choosing **Create New** in the Health Check dropdown menu, and entering the information to create the health check.
