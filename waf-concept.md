@@ -24,3 +24,14 @@ A WAF typically protects web applications from attacks such as cross-site forger
 A WAF operates through a set of rules often called policies. These policies aim to protect against vulnerabilities in the application by filtering out malicious traffic. 
 
 The value of a WAF comes from the speed and ease with which its policy modifications can be implemented, thereby allowing a faster response to varying attack vectors. For example, during a [DDoS attack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Denial-of-service_attack), rate limiting can be implemented by modifying WAF policies.
+
+## What are the key benefits of CloudFlare's Web Application Firewall?
+
+<< CIS's WAF is easy way to set-up, manage and customize security rules to protect your web applications from common web threats. 
+Key features include:
+
+Easy set-up - The CIS WAF is part of our overall service, which takes just a few minutes to set-up. Once you re-direct your DNS to us, you can switch on the WAF and set-up the rules you need.
+
+Greater default rule set plus configurability - In addition to mod_security rules and the OWASP Top 10. You can manage new rule sets by going to “Manage WAF” from the CIS settings page.
+
+Detailed reporting - You’ll see much greater detail in the reporting, for example, threats blocked by rule/rule group. >> re word and confirm if we are doing this 
