@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-04-24"
+lastupdated: "2018-04-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,6 +20,22 @@ Using  the Overview screen, you can see the status of all your selections. You c
 On the Overview screen, you may see that your domain name configuration is in **Pending** status, or in **Active** status as shown in the following figure.
 
 ![overview screen image](images/overview-screen-configuration-summary.png)
+
+## Changing the Service Mode
+On the Overview page under the Service Mode section there is a dropdown to select one of two modes:
+
+* **Defense Mode** helps protect against existing or predicted DNS attacks. This mode prevents all traffic from reaching your origin servers through your domain.
+* **Pause Service** disablea all security and performance benefits to your domain. DNS functions still resolve for your website, but traffic is sent directly to configured origins. 
+
+### Steps to set Service Mode
+
+1. Select the desired mode from the dropdown menu.
+1. Click the `Activate` button.
+1. Confirm or cancel the selection in the confirmation popup.
+
+A notification appears on all pages to show that either Pause Service or Defense Mode is active.
+To return to normal operation, click `Deactivate mode`.
+![deactivate mode button image](images/deactivate-mode.png)
 
 
 ## Configuring and managing your DNS
