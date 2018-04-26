@@ -6,13 +6,16 @@ lastupdated: "2018-04-26"
 
 # How to use the CIS Metrics Tools
 
-You can use the CIS Metrics tools (from the side navigation bar) to display information about Domain and DNS metrics in easy-to-digest charts and tables. The smallest viewable increment for Metrics is 6 hours.
+You can use the CIS Metrics tools (from the side navigation bar) to display information about Domain and DNS metrics in easy-to-digest charts and tables.
 
 The CIS Metrics tools suite contains these tools:
  * **Domain Metrics**, which consists of Web Traffic, Performance, and Security tools
  * **DNS Metrics**, which consists of three traffic tools
     
-**Note:** Each chart displays only the top ten items. You can click on any item in the key to toggle the display of that item.
+**Notes:** 
+
+ * The smallest viewable increment for CIS Metrics is 6 hours.
+ * Each chart displays only the top ten items. You can click on any item in the key to toggle the display of that item.
 
 ## Domain Metrics
 The **Domain Metrics** tools are a series of charts, tables, and graphes that show web traffic, performance, and security information.
