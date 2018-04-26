@@ -18,7 +18,7 @@ The CIS Metrics tools suite contains these tools:
  * Each chart displays only the top ten items. You can click on any item in the key to toggle the display of that item.
 
 ## Domain Metrics
-The **Domain Metrics** tools are a series of charts, tables, and graphes that show web traffic, performance, and security information.
+The **Domain Metrics** tools are a series of charts, tables, and graphs that show web traffic, performance, and security information.
 
 **Note**: **Domain Metrics** can retrieve up to 90 days at one time, but retrieving 3 different 30-day ranges is quicker.
 
