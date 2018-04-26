@@ -25,7 +25,7 @@ On the Overview screen, you may see that your domain name configuration is in **
 On the Overview page under the Service Mode section there is a dropdown to select one of two modes:
 
 * **Defense Mode** helps protect against existing or predicted DNS attacks. This mode prevents all traffic from reaching your origin servers through your domain.
-* **Pause Service** disablea all security and performance benefits to your domain. DNS functions still resolve for your website, but traffic is sent directly to configured origins. 
+* **Pause Service** disables all security and performance benefits to your domain. DNS functions still resolve for your website, but traffic is sent directly to configured origins. 
 
 ### Steps to set Service Mode
 
