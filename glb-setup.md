@@ -17,6 +17,15 @@ lastupdated: "2018-04-24"
 ## GLB Dashboard
 On your dashboard, you'll see three lists that show the load balancers, origin pools, and health checks. The lists display the new or updated global load balancer or one of its components after you've provisioned or updated it. Initially the lists are empty, and before you create a load balancer you must take a few actions.
 
+### GLB Quick setup
+You can directly create pools and health checks from the **Create Load Balancer** menu option. Navigate to **Reliability > Global Load Balancer > Create load balancer > Add pool**, and select the option to **Create New** under Origin pool. 
+
+![IMAGE](images/create-new-origin-pool.png)
+
+Input a pool name, origins, and select a health check. You can create a new health check here by choosing **Create New** in the Health Check dropdown menu, and entering the information to create the health check. 
+
+For fully configurable options, use the longer setup method in the sections that follow. 
+
 ### Create
 **Note**: <sup>`*`</sup> indicates this step is optional
 
