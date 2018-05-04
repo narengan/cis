@@ -15,6 +15,9 @@ lastupdated: "2018-05-04"
 
 <!-- This template is for introducing a command line interface(cli). It is a conceptual template intended to document productive use of the cli. It is not intended for task information.  -->
 
+
+This template is under development by the Network Docs Tribe--not yet ready for prime time engineers--but you can use it if you really need to.
+
 # <CLI_name> commands
 <!-- Insert your CLI name into topic title above. -->
 <!-- The navigation title should be just <CLI_name>. -->
