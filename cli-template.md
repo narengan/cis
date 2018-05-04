@@ -1,7 +1,5 @@
 ---
 
-
-
 copyright:
 
   years: 2018
@@ -10,44 +8,23 @@ lastupdated: "2018-05-04"
 
 ---
 
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
 
-
 <!-- This template is for introducing a command line interface(cli). It is a conceptual template intended to document productive use of the cli. It is not intended for task information.  -->
-
-<!-- The name of this file should remain index.md.
-Please delete out content examples and coding that you are not using for your service. -->
-
 
 # <CLI_name> commands
 <!-- Insert your CLI name into topic title above. -->
 <!-- The navigation title should be just <CLI_name>. -->
 {: #CLI_name}
-<!-- Provide an appropriate ID above -->
-
-
-<!-- Short description: REQUIRED
-The short description section should include one to two sentences describing why a developer would want to use this cli. This should be conversational style. For search engine optimization, include cli name. Keep the {: shortdesc} after the first paragraph so that the framework renders it properly.
-
-Example: -->
-
-The Bluemix command line interface, which is called cloud-cli, provides extra capabilities for service offerings. You can use cloud-cli to manage V2 service brokers and templates.
-{:shortdesc}
-
-
-<!-- Prerequisites/Authorization/Environment: OPTIONAL
-The section should lists all the prerequisites/authorization/environment that are required to use the cli commands. Or give a brief introduction to the prerequisites/authorization/environment that the cli commands might use. Use **Note** to call out this section.
-Examples: -->
-
-**Note**: cloud-cli requires Java 1.7.0. You can download cloud-cli from Bluemix to use on your local system as a complement to the Bluemix user interface.
+<!-- Provide your CLI ID above -->
 
 
 <!-- Commands index: REQUIRED
 Use a table to list out all the commands so that commands information is easy to scan and locate. Add a link to the anchor of each command.
+
 Use "<CLI_name> commands index" as section title.
 If there are a great many commands, to make it easy to retrieve specific commands, you can add several index tables. Group the commands by functions or other similar characteristics, and then make one group a table.
   - Arrange the commands in alphabetical order,across columns, then rows.
@@ -123,7 +100,7 @@ Example: -->
 ## login
 {: #login}
 
-Use this command to log in to Bluemix.
+Use this command to log in to IBM Cloud.
 
 ```
 cloud-cli login [userID] [pw]
@@ -135,14 +112,14 @@ cloud-cli login [userID] [pw]
 
    <dl>
    <dt>userID</dt>
-   <dd>The Bluemix user ID.</dd>
+   <dd>The IBM Cloud user ID.</dd>
    <dt>pw</dt>
-   <dd>The user's password for Bluemix.</dd>
+   <dd>The user's password for IBM Cloud.</dd>
     </dl>
 
 <strong>Examples</strong>:
 
-Log in to Bluemix with the userID *Tom* and password *p123*.
+Log in to IBM Cloud with the userID *Tom* and password *p123*.
 ```
 cloud-cli login Tom p123
 ```
@@ -156,14 +133,6 @@ cloud-cli login Tom p123
 
 ...
 
-
-<!-- Related links section: REQUIRED.
-Related links display in the upper right of the getting started page.
-Ensure that you retain the lowercase anchor IDs (eg. {: #rellinks}) as shown in this template. These are used as IDs during transform and the doc framework keys off the IDs for display.
-The headings coded here are not actually used. The doc framework provides the correct headings.
-Also ensure that the related links stay in position at the end of this file or the doc framework will not display them properly.
-Use {:new_window} for external links to open a new window. And, use ![External link icon](../icons/launch-glyph.svg) at the end of the link text to include the external link icon.-->
-<!-- Please delete all comments within the related links section to avoid breaking the build. Thanks. -->
 
 # Related Links
 {: #rellinks}
