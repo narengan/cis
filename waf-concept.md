@@ -25,12 +25,12 @@ A WAF operates through a set of rules often called policies. These policies aim 
 
 The value of a WAF comes from the speed and ease with which its policy modifications can be implemented, thereby allowing a faster response to varying attack vectors. For example, during a [DDoS attack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Denial-of-service_attack), rate limiting can be implemented by modifying WAF policies.
 
-## What are the key benefits of CIS's Web Application Firewall?
+## What are the key benefits of the IBM Cloud CIS Web Application Firewall?
 
-CIS's WAF is an easy way to set-up, manage and customize security rules to protect your web applications from common web threats. See the following list for key features.
+The IBM Cloud CIS WAF is an easy way to set up, manage, and customize security rules to protect your web applications from common web threats. See the following list for key features:
 
-**Easy setup**: The CIS WAF is part of our overall service, which takes just a few minutes to set up. Once you redirect your DNS to us, you can switch on the WAF and set up the rules you need.
+ * **Easy setup**: The CIS WAF is part of our overall service, which takes just a few minutes to set up. Once you redirect your DNS to us, you can switch on the WAF and set up the rules you need.
 
-**Greater default ruleset plus configurability**: In addition to mod_security rules and the OWASP Top 10, you can manage new rulesets by going to “Manage WAF” from the CIS settings page.
+ * **Greater default ruleset plus configurability**: In addition to `mod_security` rules and the _OWASP Top 10_, you can manage new rulesets by navigating to **Manage WAF** from the CIS settings page.
 
-**Detailed reporting** See greater detail in the reporting, for example, threats blocked by rule/rule group. 
+ * **Detailed reporting** See greater detail in the reporting, for example, threats blocked by rule/rule group. 
