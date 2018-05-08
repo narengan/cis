@@ -2,7 +2,21 @@
 
 ---
 
-# CLI Overview
+# CIS Command Line Interface
+The following commands are available from the command line interface (CLI) in CIS:
+  
+    * [Resource Instance](cli/cli-resource-instance.html)
+    * [Domain](cli/cli-domain.html)
+    * [DNS Record](cli/cli-dns-record.html)
+    * [GLB](cli/cli-glb.html)
+    * [Cache](cli/cli-cache.html)
+    * [SSL](cli/cli-ssl.html)
+    * [WAF](cli/cli-waf.html)
+    * [Pagerule](cli/cli-pagerule.html)
+    * [Metrics](cli/cli-metrics.html)
+    * [Overview](cli/cli-overview.html)
+
+
 Use the overview command, shown below, as your template to create CLI documentation in `man` page format.
 
 ## Overview
