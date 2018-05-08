@@ -51,15 +51,16 @@ OPTIONS
 
 The `overview` command also is one of the CLI commands available to you. It just happens to make a good example as well, so we included it here.
 
-## Overview
 
-### NAME
+### Overview
+
+#### NAME
   overview - show the overview information for an instance. 
 
-### USAGE
+#### USAGE
   bx cis overview [-i, --instance INSTANCE_ID] 
 
-### OPTIONS
+#### OPTIONS
  **-i, --instance INSTANCE_ID**  (Optional) Set the instance ID. If not set, will use the instance specified by the "bx cis instance-set" command.
 
 **Output messages**:
