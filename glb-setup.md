@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-04-24"
+lastupdated: "2018-05-08"
 ---
 
 {:shortdesc: .shortdesc}
@@ -67,6 +67,7 @@ Overflow menu button:
 The following options are provided for each list.
 
 * Health Check
+    * **View health check**: This option shows a short summary of the health check, with a link that takes you to the edit flow.
     * **Edit health check**: This option redirects the user to the edit flow. 
     * **Delete health check**: This option brings up the confirmation dialog box for the deletion flow.
 
