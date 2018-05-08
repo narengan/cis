@@ -3,7 +3,7 @@
 ---
 
 # CLI Overview
-Use the following template to create CLI documentation in `man` page format.
+Use the overview command, shown below, as your template to create CLI documentation in `man` page format.
 
 ## Overview
 
