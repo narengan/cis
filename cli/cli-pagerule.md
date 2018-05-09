@@ -21,10 +21,10 @@ The following `pagerule` commmands are available:
 ## Create Page Rule
 
 ### NAME
-page-rule-add - Create a page rule under a given DNS domain.
+page-rule-create - Create a page rule under a given DNS domain.
 
 ### USAGE
-bx cis page-rule-add <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+bx cis page-rule-create <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
 
 ### OPTIONS
    **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance specified by the "bx cis instance-set" command.
