@@ -26,7 +26,7 @@ The following families of commands are available from the command line interface
 
 ## Template
 
-The CIS CLI documentation is shown in modified `man` page format. You can use the `man` page format, shown below, as your example if you need to create additional CLI documentation. Or you can use any of the existing CLI command documentation as an example.
+The CIS CLI documentation is shown in modified `man` page format. You can use the `man` page format, shown below, as your example if you need to create additional CLI documentation. Or you can use any of the other existing CLI command documentation as an example.
 
 ```
 man(1)                                                                  man(1)
