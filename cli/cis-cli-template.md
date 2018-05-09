@@ -62,37 +62,37 @@ The `overview` command also is one of the CLI commands available to you. It just
 ### Overview
 
 #### NAME
-  overview - show the overview information for an instance. 
+  overview - Show the overview information for an instance. 
 
 #### USAGE
-  bx cis overview [-i, --instance INSTANCE_ID] 
+  bx cis overview [-i, --instance INSTANCE_NAME] 
 
 #### OPTIONS
- **-i, --instance INSTANCE_ID**  (Optional) Set the instance ID. If not set, will use the instance specified by the "bx cis instance-set" command.
+ **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, the context instance specified by 'bx cis   instance-set' will be used.
 
 **Output messages**:
 
-    * service mode:
-    * service details:
+    * Service Mode
+    * Service Details
+            Domain Name
+            Status
+            ID
+            Service Plan
 
-            domain:
-            id:
-            plan:
+    * Security
+            Web Application Firewall
+            TLS Mode
+            Dedicated Certificates
+            Custom Certificates
 
-    * security:
+    * Performance 
+            Page Rules
+            Browser Expiration
+            Caching Level
 
-             waf:
-             tls mode:
-            certificates:
-
-    * pagerules:
-
-              active rules:
-              browser expiration:
-              caching level:
-
-    * reliability:
-
-              dns records:
-              dns security:
-              active load balancer:
+    * Reliability:
+              DNS Records
+              DNS Security
+              Load Balancers
+              
+    **Service Mode** is displayed only when the domain is paused or in defense mode.
