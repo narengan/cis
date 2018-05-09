@@ -20,82 +20,80 @@ The following `pagerule` commmands are available:
 
 ## Create Page Rule
 
-### NAME
-page-rule-create - Create a page rule under a given DNS domain.
+### NAME:
+page-rule-create - Create a page rule of the DNS domain.
 
-### USAGE
+### USAGE:
 bx cis page-rule-create <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
 
-### OPTIONS
-   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance specified by the "bx cis instance-set" command.
-   **-s, --json-str JSON_STR**  (Optional) The JSON data used to create a page rule. The required fields in JSON data are "targets" and "actions", and optional fields are "priority" and "status" fields, where, 
+### ARGUMENTS:
+DNS_DOMAIN_ID is the id of DNS domain.
 
-    * **targets**:  the target URL pattern to evaluate on a request. 
-    * **actions**: An array of actions to perform if the targets of this rule match the request. Available actions are:
+### OPTIONS:
+   -i, --instance  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   -s, --json-str  The JSON data describing a page rule.
 
-**disable_security, always_use_https, ssl, browser_cache_ttl, security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie, browser_check, server_side_exclude, always_online, email_obfuscation, automatic_https_rewrites, opportunistic_encryption, ip_geolocation, explicit_cache_control, cache_deception_armor, waf,** and **forwarding_url**.
+                   The required fields in JSON data are targets, actions:
 
-    * **priority**: (Optional) A number that indicates the preference for a page rule over another. Default is 1.
+                       "targets":The target URL pattern to evaluate on a request.
+                       "actions":An array of actions to perform if the targets of this rule match the request. Available actions are:
+                           disable_security, always_use_https, ssl, browser_cache_ttl,
+                           security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
+                           browser_check, server_side_exclude, always_online, email_obfuscation,
+                           automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
+                           explicit_cache_control, cache_deception_armor, waf and forwarding_url.
 
-    * **status**: (Optional) Status of the page rule. The valid values are "active" and "disabled", default is "disabled".
+                   The optional fields are priority, status:
 
-   **-j, --json-file JSON_FILE**  (Optional) The JSON file used to create a page rule. 
-   **-o, --output OUTPUT_FILE**  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+                       "priority":A number that indicates the preference for a page rule over another. Default is 1.
+                       "status":Status of the page rule. The valid values are 'active' and 'disabled', default is 'disabled'.
 
-### EXAMPLES
+                   Sample JSON data:
 
-    * bx cis page-rule-create b7b847226e772bd44c5c3a1a27cad3b1 -j pagerule.json
-
-where, pagerule.json is a file with the following example Json data. 
-{
-    "targets": [
-        {
-            "target": "url",
-            "constraint": {
-                "operator": "matches",
-                "value": "*example.com/images/*"
-            }
-        }
-    ],
-    "actions": [
-        {
-            "id": "always_use_https"
-        },
-        {
-            "id": "always_online",
-            "value": "on"
-        },
-        {
-            "id": "ssl",
-            "value": "flexible"
-        },
-        {
-            "id": "browser_cache_ttl",
-            "value": 14400
-        },
-        {
-            "id": "security_level",
-            "value": "medium"
-        },
-        {
-            "id": "cache_level",
-            "value": "basic"
-        },
-        {
-            "id": "edge_cache_ttl",
-            "value": 7200
-        },
-        {
-            "id": "bypass_cache_on_cookie",
-            "value": "wp-.*|wordpress.*|comment_.*"
-        }
-    ]
-}
-
-    * bx cis page-rule-create b7b847226e772bd44c5c3a1a27cad3b1 -s '{"targets": [{"target":"url", "constraint": {"operator": "matches", "value":"*example.com/images/*"}}], "actions": [ {"id": "always_use_https"}, {"id": "always_online", "value": "on"}, {"id": "ssl", "value": "flexible"}, {"id": "browser_cache_ttl", "value": 14400}, {"id": "security_level", "value": "medium"}, {"id": "cache_level", "value": "basic"}, {"id": "edge_cache_ttl", "value": 7200}, {"id": "bypass_cache_on_cookie", "value": "wp-.*|wordpress.*|comment_.*"} ] }'
-
-
-
+                   {
+                       "targets": [
+                           {
+                               "target": "url",
+                               "constraint": {
+                                   "operator": "matches",
+                                   "value": "*example.com/images/*"
+                               }
+                           }
+                       ],
+                       "actions": [
+                           {
+                               "id": "always_online",
+                               "value": "on"
+                           },
+                           {
+                               "id": "ssl",
+                               "value": "flexible"
+                           },
+                           {
+                               "id": "browser_cache_ttl",
+                               "value": 14400
+                           },
+                           {
+                               "id": "security_level",
+                               "value": "medium"
+                           },
+                           {
+                               "id": "cache_level",
+                               "value": "basic"
+                           },
+                           {
+                               "id": "edge_cache_ttl",
+                               "value": 7200
+                           },
+                           {
+                               "id": "bypass_cache_on_cookie",
+                               "value": "wp-.*|wordpress.*|comment_.*"
+                           }
+                       ]
+                   }
+   -j, --json-file  A file contains input JSON data.
+   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   
 #### Output Message:
 
     * page rule id
@@ -111,80 +109,79 @@ where, pagerule.json is a file with the following example Json data.
 ## Update a Page Rule
 
 ### NAME:
-   page-rule-update - Update a given page rule.
+   page-rule-update - Update the page rule of the DNS domain.
 
 ### USAGE:
-   bx cis page-rule-update <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+   bx cis page-rule-update DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+   
+### ARGUMENTS:
+   DNS_DOMAIN_ID is the id of DNS domain.
+   PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
-  **-i, --instance INSTANCE_NAME** (Optional) Instance name. If not set, will use the instance set by "bx cis set-instance" by default.
-  **-s, --json-str JSON_STR ** (Optional) The JSON data used to create a page rule. The required fields in JSON data are "targets" and "actions", and optional fields are "priority" and "status" fields, where, 
+   -i, --instance  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   -s, --json-str  The JSON data describing a page rule.
 
-    * **targets**:  the target URL pattern to evaluate on a request. The URL can be set to match a series of similar patterns by using wildcard "*", e.g. "*example.com/images/*" matches both HTTP/HTTPS requests under domain example.com that start with URI with /images/.
-    * **actions**: An array of actions to perform if the targets of this rule match the request. Available actions are:
+                   The required fields in JSON data are targets, actions:
 
-**disable_security, always_use_https, ssl, browser_cache_ttl, security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie, browser_check, server_side_exclude, always_online, email_obfuscation, automatic_https_rewrites, opportunistic_encryption, ip_geolocation, explicit_cache_control, cache_deception_armor, waf,** and **forwarding_url**.
+                       "targets":The target URL pattern to evaluate on a request.
+                       "actions":An array of actions to perform if the targets of this rule match the request. Available actions are:
+                           disable_security, always_use_https, ssl, browser_cache_ttl,
+                           security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
+                           browser_check, server_side_exclude, always_online, email_obfuscation,
+                           automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
+                           explicit_cache_control, cache_deception_armor, waf and forwarding_url.
 
-    * **priority**: (Optional) A number that indicates the preference for a page rule over another. Default is 1.
+                   The optional fields are priority, status:
 
-    * **status**: (Optional) Status of the page rule. The valid values are "active" and "disabled", default is "disabled".
+                       "priority":A number that indicates the preference for a page rule over another. Default is 1.
+                       "status":Status of the page rule. The valid values are 'active' and 'disabled', default is 'disabled'.
 
-   **-j, --json-file JSON_FILE**  (Optional) The JSON file used to create a page rule.
-   **-o, --output OUTPUT_FILE**  (Optional) Output the result formatted to a JSON file. If not set, will output the result to terminal.
+                   Sample JSON data:
 
-### EXAMPLES
-
-1.     bx cis page-rule-create b7b847226e772bd44c5c3a1a27cad3b1 -j page_rule.json
-
-where, page_rule.json may have the following example Json data. 
-{
-    "targets": [
-        {
-            "target": "url",
-            "constraint": {
-                "operator": "matches",
-                "value": "*example.com/images/*"
-            }
-        }
-    ],
-    "actions": [
-        {
-            "id": "always_use_https"
-        },
-        {
-            "id": "always_online",
-            "value": "on"
-        },
-        {
-            "id": "ssl",
-            "value": "flexible"
-        },
-        {
-            "id": "browser_cache_ttl",
-            "value": 14400
-        },
-        {
-            "id": "security_level",
-            "value": "medium"
-        },
-        {
-            "id": "cache_level",
-            "value": "basic"
-        },
-        {
-            "id": "edge_cache_ttl",
-            "value": 7200
-        },
-        {
-            "id": "bypass_cache_on_cookie",
-            "value": "wp-.*|wordpress.*|comment_.*"
-        }
-    ]
-}
-
-1.     bx cis page-rule-update b7b847226e772bd44c5c3a1a27cad3b1 -s '{"targets": [{"target":"url", "constraint": {"operator": "matches", "value":"*example.com/images/*"}}], "actions": [ {"id": "always_use_https"}, {"id": "always_online", "value": "on"}, {"id": "ssl", "value": "flexible"}, {"id": "browser_cache_ttl", "value": 14400}, {"id": "security_level", "value": "medium"}, {"id": "cache_level", "value": "basic"}, {"id": "edge_cache_ttl", "value": 7200}, {"id": "bypass_cache_on_cookie", "value": "wp-.*|wordpress.*|comment_.*"} ] }'
-
-
+                   {
+                       "targets": [
+                           {
+                               "target": "url",
+                               "constraint": {
+                                   "operator": "matches",
+                                   "value": "*example.com/images/*"
+                               }
+                           }
+                       ],
+                       "actions": [
+                           {
+                               "id": "always_online",
+                               "value": "on"
+                           },
+                           {
+                               "id": "ssl",
+                               "value": "flexible"
+                           },
+                           {
+                               "id": "browser_cache_ttl",
+                               "value": 14400
+                           },
+                           {
+                               "id": "security_level",
+                               "value": "medium"
+                           },
+                           {
+                               "id": "cache_level",
+                               "value": "basic"
+                           },
+                           {
+                               "id": "edge_cache_ttl",
+                               "value": 7200
+                           },
+                           {
+                               "id": "bypass_cache_on_cookie",
+                               "value": "wp-.*|wordpress.*|comment_.*"
+                           }
+                       ]
+                   }
+   -j, --json-file  A file contains input JSON data.
+   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Message:
 
