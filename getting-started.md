@@ -60,8 +60,7 @@ You'll see the first screen of the IBM CIS application, where you'll select the 
 | After you've created a resource instance and added a domain to it, you are not permitted to add new resource instances for IBM CIS. This restriction is enforced even if you delete a trial domain and then attempt to add a domain again to the same resource instance. You'll encounter an error if you attempt to do so.|
 
 ### Step 2. Add and configure your Domain.
-
-Initially, you will be greeted by a welcome page. Select **Let's get started** to begin setting up CIS.
+Select **Let's get started** from the welcome page to begin setting up CIS.
 
 ![Getting Started](images/overview-setup-step1.png)
 
@@ -78,7 +77,7 @@ The Overview screen will show your domain in `Pending` status. Your domain will 
 ### Step 3. Setup your DNS records (optional).
 Before transitioning the traffic for your domain to CIS, we strongly recommend you import or recreate your DNS records in CIS. You can choose to skip this step, but if your DNS records are not configured properly in CIS, it could leave parts of your website inaccessible.
 
-You may import records by uploading your exported records from your current DNS or you may manually create your DNS records. To import records select **Import records**.
+Import records by uploading your exported records from your current DNS or manually create your DNS records. To import records select **Import records**.
 
 ![Getting Started](images/overview-setup-step3.png)
 
