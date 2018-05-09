@@ -8,7 +8,16 @@ lastupdated: "2018-05-08"
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+
 # Pagerule
+
+The following `pagerule` commmands are available:
+
+* Create
+* Update
+* Delete
+* Show
+
 ## Create Page Rule
 
 ### NAME
