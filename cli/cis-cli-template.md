@@ -1,6 +1,13 @@
 ---
 
+copyright:
+  years: 2018
+lastupdated: "2018-05-08"
+
 ---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
 # CIS Command Line Interface
 The following families of commands are available from the command line interface (CLI) in CIS. At these links, you'll find the full set of commands within each set, including `Create`, `Delete`, `Update`, and so forth.
