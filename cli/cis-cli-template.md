@@ -65,10 +65,10 @@ The `overview` command also is one of the CLI commands available to you. It just
   overview - Show the overview information for an instance. 
 
 #### USAGE
-  bx cis overview [-i, --instance INSTANCE_NAME] 
+  ibmcloud cis overview [-i, --instance INSTANCE_NAME] 
 
 #### OPTIONS
- **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, the context instance specified by 'bx cis   instance-set' will be used.
+ **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis   instance-set' will be used.
 
 **Output messages**:
 
