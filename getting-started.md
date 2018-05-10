@@ -74,8 +74,8 @@ The Overview screen will show your domain in `Pending` status. Your domain will 
 
 **Note:** The IBM CIS instance cannot be deleted after a domain has been added. To delete the instance, please delete the domain from the instance first.
 
-### Step 3. Setup your DNS records (optional).
-Before transitioning the traffic for your domain to CIS, we strongly recommend you import or recreate your DNS records in CIS. You can choose to skip this step, but if your DNS records are not configured properly in CIS, it could leave parts of your website inaccessible.
+### Step 3. Set up your DNS records (optional).
+Before transitioning the traffic for your domain to CIS, we strongly recommend that you import or recreate your DNS records in CIS. You can choose to skip this step, but if your DNS records are not configured properly in CIS, it could leave parts of your website inaccessible.
 
 Import records by uploading your exported records from your current DNS or manually create your DNS records. To import records select **Import records**.
 
