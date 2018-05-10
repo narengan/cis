@@ -16,6 +16,7 @@ The following `pagerule` commmands are available:
 * Create
 * Update
 * Delete
+* List
 * Show
 
 ## Create Page Rule
@@ -24,13 +25,13 @@ The following `pagerule` commmands are available:
 page-rule-create - Create a page rule of the DNS domain.
 
 ### USAGE:
-bx cis page-rule-create <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+ibmcloud cis page-rule-create <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
 
 ### ARGUMENTS:
 DNS_DOMAIN_ID is the id of DNS domain.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    -s, --json-str  The JSON data describing a page rule.
 
                    The required fields in JSON data are targets, actions:
@@ -112,14 +113,14 @@ DNS_DOMAIN_ID is the id of DNS domain.
    page-rule-update - Update the page rule of the DNS domain.
 
 ### USAGE:
-   bx cis page-rule-update DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+   ibmcloud cis page-rule-update DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
    
 ### ARGUMENTS:
    DNS_DOMAIN_ID is the id of DNS domain.
    PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    -s, --json-str  The JSON data describing a page rule.
 
                    The required fields in JSON data are targets, actions:
@@ -201,10 +202,10 @@ DNS_DOMAIN_ID is the id of DNS domain.
    page-rule-delete - Delete a given page rule.
 
 ### USAGE
-   bx cis page-rule-delete <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME]
+   ibmcloud cis page-rule-delete <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME]
 
 ### OPTIONS
-**-i, --instance INSTANCE_NAME** (Optional) Instance name. If not set, will use the instance set by "bx cis instance-set" command.
+**-i, --instance INSTANCE_NAME** (Optional) Instance name. If not set, will use the instance set by "ibmcloud cis instance-set" command.
 
 #### Output Message:
     * result of deleting the page rule
@@ -216,10 +217,10 @@ DNS_DOMAIN_ID is the id of DNS domain.
    page-rules - List page rules of a given zone.
 
 ### USAGE
-   bx cis page-rules <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis page-rules <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
 
 ### OPTIONS
-   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by the "bx cis set-instance" command.
+   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by the "ibmcloud cis set-instance" command.
    **-o, --output OUTPUT_FILE**  (Optional) Output the result formatted to a JSON file. If not set, will output the result to terminal.
 
 #### Output Table Columns:
@@ -236,10 +237,10 @@ DNS_DOMAIN_ID is the id of DNS domain.
    page-rule - Get details of a given page rule.
 
 ### USAGE:
-   bx cis page-rule <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis page-rule <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
 
 ### OPTIONS:
-   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by "bx cis instance-set" command.
+   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by "ibmcloud cis instance-set" command.
    **-o, --output OUTPUT_FILE**  (Optional) Output the result formatted to a JSON file. If not set, will output the result to terminal.
 
 #### Output Message:
