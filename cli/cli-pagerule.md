@@ -12,7 +12,6 @@ lastupdated: "2018-05-08"
 # Pagerule
 
 The following `pagerule` commmands are available:
-
 * Create
 * Update
 * Delete
@@ -99,7 +98,6 @@ The following `pagerule` commmands are available:
    -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Message:
-
    * page rule id
    * target
    * priority
@@ -191,14 +189,13 @@ The following `pagerule` commmands are available:
    -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Message:
-
-    * page rule id
-    * target
-    * priority
-    * status
-    * actions table (columns as below):
-        * action ID
-        * action value
+   * page rule id
+   * target
+   * priority
+   * status
+   * actions table (columns as below):
+       * action ID
+       * action value
 
 
 
@@ -218,7 +215,7 @@ The following `pagerule` commmands are available:
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 
 #### Output Message:
-    * result of deleting the page rule
+   * result of deleting the page rule
 
 
 ## List Page Rules
@@ -238,11 +235,10 @@ The following `pagerule` commmands are available:
    -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Table Columns:
-
-    * page rule id
-    * target
-    * priority
-    * status
+   * page rule id
+   * target
+   * priority
+   * status
 
 
 ## Show a Page Rule
@@ -264,13 +260,12 @@ The following `pagerule` commmands are available:
 
 
 #### Output Message:
-
-    * page rule id
-    * target
-    * priority
-    * status
-    * actions table (columns as below):
-      1. action ID
-      1. action value
+   * page rule id
+   * target
+   * priority
+   * status
+   * actions table (columns as below):
+     1. action ID
+     1. action value
 
 
