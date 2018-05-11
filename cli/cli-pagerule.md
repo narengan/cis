@@ -22,16 +22,15 @@ The following `pagerule` commmands are available:
 ## Create Page Rule
 
 ### NAME:
-page-rule-create - Create a page rule of the DNS domain.
+   page-rule-create - Create a page rule of the DNS domain.
 
 ### USAGE:
-ibmcloud cis page-rule-create <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
+   ibmcloud cis page-rule-create DNS_DOMAIN_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
 
 ### ARGUMENTS:
-DNS_DOMAIN_ID is the id of DNS domain.
+   DNS_DOMAIN_ID is the id of DNS domain.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    -s, --json-str  The JSON data describing a page rule.
 
                    The required fields in JSON data are targets, actions:
@@ -92,18 +91,22 @@ DNS_DOMAIN_ID is the id of DNS domain.
                            }
                        ]
                    }
+                   
    -j, --json-file  A file contains input JSON data.
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
    
+   -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   
+   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+
 #### Output Message:
 
-    * page rule id
-    * target
-    * priority
-    * status
-    * actions table (columns as below):
-    * action ID
-    * action value
+   * page rule id
+   * target
+   * priority
+   * status
+   * actions table (columns as below):
+       * action ID
+       * action value
 
 
 
@@ -113,14 +116,13 @@ DNS_DOMAIN_ID is the id of DNS domain.
    page-rule-update - Update the page rule of the DNS domain.
 
 ### USAGE:
-   ibmcloud cis page-rule-update DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]
-   
+   ibmcloud cis page-rule-update DNS_DOMAIN_ID PAGE_RULE_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+
 ### ARGUMENTS:
    DNS_DOMAIN_ID is the id of DNS domain.
    PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    -s, --json-str  The JSON data describing a page rule.
 
                    The required fields in JSON data are targets, actions:
@@ -181,7 +183,11 @@ DNS_DOMAIN_ID is the id of DNS domain.
                            }
                        ]
                    }
+                   
    -j, --json-file  A file contains input JSON data.
+   
+   -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   
    -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Message:
@@ -198,14 +204,18 @@ DNS_DOMAIN_ID is the id of DNS domain.
 
 ## Delete a Page Rule
 
-### NAME
-   page-rule-delete - Delete a given page rule.
+### NAME:
+   page-rule-delete - Delete a page rule of the DNS domain.
 
-### USAGE
-   ibmcloud cis page-rule-delete <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME]
+### USAGE:
+   ibmcloud cis page-rule-delete DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME]
 
-### OPTIONS
-**-i, --instance INSTANCE_NAME** (Optional) Instance name. If not set, will use the instance set by "ibmcloud cis instance-set" command.
+### ARGUMENTS:
+   DNS_DOMAIN_ID is the id of DNS domain.
+   PAGE_RULE_ID is the id of page rule.
+
+### OPTIONS:
+   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 
 #### Output Message:
     * result of deleting the page rule
@@ -213,15 +223,19 @@ DNS_DOMAIN_ID is the id of DNS domain.
 
 ## List Page Rules
 
-### NAME
-   page-rules - List page rules of a given zone.
+### NAME:
+   page-rules - List page rules of the DNS domain.
 
-### USAGE
-   ibmcloud cis page-rules <DNS_DOMAIN_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+### USAGE:
+   ibmcloud cis page-rules DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
 
-### OPTIONS
-   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by the "ibmcloud cis set-instance" command.
-   **-o, --output OUTPUT_FILE**  (Optional) Output the result formatted to a JSON file. If not set, will output the result to terminal.
+### ARGUMENTS:
+   DNS_DOMAIN_ID is the id of DNS domain.
+
+### OPTIONS:
+   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   
+   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Table Columns:
 
@@ -234,14 +248,20 @@ DNS_DOMAIN_ID is the id of DNS domain.
 ## Show a Page Rule
 
 ### NAME:
-   page-rule - Get details of a given page rule.
+   page-rule - Get details of a page rule.
 
 ### USAGE:
-   ibmcloud cis page-rule <DNS_DOMAIN_ID> <PAGE_RULE_ID> [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis page-rule DNS_DOMAIN_ID PAGE_RULE_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+
+### ARGUMENTS:
+   DNS_DOMAIN_ID is the id of DNS domain.
+   PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
-   **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, will use the instance set by "ibmcloud cis instance-set" command.
-   **-o, --output OUTPUT_FILE**  (Optional) Output the result formatted to a JSON file. If not set, will output the result to terminal.
+   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   
+   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+
 
 #### Output Message:
 
