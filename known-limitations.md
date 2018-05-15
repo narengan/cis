@@ -25,7 +25,7 @@ lastupdated: "2018-05-15"
  
  * Wildcard A, AAAA, and CNAME records (*) cannot be proxied.
 
- * When you delete a dedicated certificate, the certificate will temporarily be pending deletion. This may cause the certificate to reappear in the list for a short time before the deletion is complete.
+ * When you delete a dedicated certificate, it may reappear in the list for a short time before the deletion is complete.
  
-  * To modify your custom dedicated certificate’s hostnames after ordering you must order a new certificate then delete the old one. 
+ * To modify your custom dedicated certificate’s hostnames after ordering, you must order a new certificate and then delete the old one. 
   
