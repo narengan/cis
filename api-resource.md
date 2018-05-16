@@ -25,7 +25,7 @@ Here's how to view the CIS API specifications:
 
 ## Notes
 
-1. API endpoint: https://api.cis.cloud.ibm.com.
+1. API endpoint: `https://api.cis.cloud.ibm.com`.
 
 2. The **X-Auth-User-Token** header is required for each API call. This header is the bearer token for the user, which can be retrieved from IAM (for example, using the `ibmcloud iam oauth-tokens` command).
 
