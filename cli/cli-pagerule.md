@@ -118,6 +118,7 @@ The following `pagerule` commmands are available:
 
 ### ARGUMENTS:
    DNS_DOMAIN_ID is the id of DNS domain.
+   
    PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
@@ -209,6 +210,7 @@ The following `pagerule` commmands are available:
 
 ### ARGUMENTS:
    DNS_DOMAIN_ID is the id of DNS domain.
+   
    PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
@@ -251,6 +253,7 @@ The following `pagerule` commmands are available:
 
 ### ARGUMENTS:
    DNS_DOMAIN_ID is the id of DNS domain.
+   
    PAGE_RULE_ID is the id of page rule.
 
 ### OPTIONS:
