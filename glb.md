@@ -18,6 +18,9 @@ The Global Load Balancer (GLB) manages traffic across server resources located i
   * Higher availability through redundancy
   * Maximize traffic throughput
 
+The GLB will route traffic to the pool with the highest priority and distribute load among its origin evenly using round-robin. If the primary pools becomes unavailable traffic will automatically be routed to the next pool in the list based on priority.
+If pools are set up for specific regions, then traffic from those regions will be sent to the pools for this region first. Only if all pools for a given region are down will traffic fall back to the default pools. In this case the fallback pool is the pool with the lowest priority. 
+
 ## Pool
 
 A pool is a group of origin servers that traffic is intelligently routed to when attached to a GLB. The minimum number of available origin servers for the pool to be marked healthy is configurable by the user along with which specific health check to use. The origin pool can be associated with a specific region or it can be made available to all regions.
