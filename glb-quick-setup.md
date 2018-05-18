@@ -17,4 +17,4 @@ Input a pool name, origins, and select a health check. You can create a new heal
 
 For fully configurable options, use the longer setup method in [Set up and configure your load balancers](glb-setup.html).
 
-For definitions of common terms, see this [Glossary)](glossary.html).
+For definitions of common terms, see this [Glossary](glossary.html).
