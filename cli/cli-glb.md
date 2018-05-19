@@ -11,7 +11,7 @@ lastupdated: "2018-05-10"
 
 # Global Load Balancer (GLB)
 
-The following `glb` commmands are available:
+The following `glb` commands are available:
 
 * Create GLB
 * Update GLB
