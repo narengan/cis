@@ -10,7 +10,7 @@ lastupdated: "2018-05-18"
 
 # Set up and configure your load balancers
  
- IBM CIS provides global load balancing as a service.
+ IBM CIS provides global load balancing as a service. Here's how the GLB Dashboard looks:
 
 ![IMAGE](images/glb-screen.png)
 
