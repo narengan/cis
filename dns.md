@@ -121,7 +121,7 @@ To add this record type, valid values must exist in the **Name** and **Content**
     Required Fields: Name, Content
     Optional Field: TTL (Default value is Automatic)
 
-Note: The first time you order a dedicated certificate Domain Control Validation (DCV) process occurs, which generates a corresponding TXT record. If you delete the TXT record, the DCV process happens again when you order another dedicated certificate. If you delete a dedicated certificate, the TXT record corresponding to the DCV process is not deleted.
+**Note**: The first time you order a dedicated certificate Domain Control Validation (DCV) process occurs, which generates a corresponding TXT record. If you delete the TXT record, the DCV process happens again when you order another dedicated certificate. If you delete a dedicated certificate, the TXT record corresponding to the DCV process is not deleted.
 
 ### NS Type record
 
