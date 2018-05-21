@@ -12,16 +12,16 @@ lastupdated: "2018-05-08"
 # CIS Command Line Interface
 The following families of commands are available from the command line interface (CLI) in CIS. At these links, you'll find the full set of commands within each set, including `Create`, `Delete`, `Update`, and so forth.
   
-    * [Resource Instance](cli/cli-resource-instance.html)
-    * [Domain](cli/cli-domain.html)
-    * [DNS Record](cli/cli-dns-record.html)
-    * [GLB](cli/cli-glb.html)
-    * [Cache](cli/cli-cache.html)
-    * [SSL](cli/cli-ssl.html)
-    * [WAF](cli/cli-waf.html)
-    * [Pagerule](cli/cli-pagerule.html)
-    * [Metrics](cli/cli-metrics.html)
-    * [Overview](cli/cli-overview.html)
+  * [Resource Instance](cli/cli-resource-instance.html)
+  * [Domain](cli/cli-domain.html)
+  * [DNS Record](cli/cli-dns-record.html)
+  * [GLB](cli/cli-glb.html)
+  * [Cache](cli/cli-cache.html)
+  * [TLS](cli/cli-tls.html)
+  * [WAF](cli/cli-waf.html)
+  * [Pagerule](cli/cli-pagerule.html)
+  * [Metrics](cli/cli-metrics.html)
+  * [Overview](#overview)
 
 
 ## Template
@@ -72,27 +72,27 @@ The `overview` command also is one of the CLI commands available to you. It just
 
 **Output messages**:
 
-    * Service Mode
+  * Service Mode
     * Service Details
-            Domain Name
-            Status
-            ID
-            Service Plan
+    *  Domain Name
+       * Status
+       * ID
+       * Service Plan
 
-    * Security
-            Web Application Firewall
-            TLS Mode
-            Dedicated Certificates
-            Custom Certificates
+  * Security
+    * Web Application Firewall
+    * TLS Mode
+    * Dedicated Certificates
+    * Custom Certificates
 
-    * Performance 
-            Page Rules
-            Browser Expiration
-            Caching Level
+  * Performance 
+    * Page Rules
+    * Browser Expiration
+    * Caching Level
 
-    * Reliability:
-              DNS Records
-              DNS Security
-              Load Balancers
+  * Reliability:
+    * DNS Records
+    * DNS Security
+    * Load Balancers
               
-    **Service Mode** is displayed only when the domain is paused or in defense mode.
+**Service Mode** is displayed only when the domain is paused or in defense mode.
