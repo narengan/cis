@@ -101,7 +101,13 @@ You can upload your custom certificate by clicking **Add Certificate** button an
 ![custom-certificate](images/upload-custom-certificate.png)
 
 ### Order dedicated certificates
-CIS makes managing your certificates easy by offering dedicated certificates. You no longer need to generate private keys, create certificate signing requests (CSR), or remember to renew certificates. You can order a dedicated certificate by clicking **Add Certificate** button and ordering a wildcard certificate or entering hostnames to order a dedicated custom certificate. The type of certificates are SHA-2/ECDSA signed certificate using P-256 key, SHA-2/RSA signed certificate using RSA 2048-bit key, and SHA-1/RSA signed certificate using RSA 2048-bit key. CIS can issue for all TLDs except for `.cu`, `.iq`, `.ir`, `.kp`, `.sd`, `.ss`, and `.ye`. CIS manages the expiration date. To edit the hostnames on your dedicated custom certificate, you must reorder then delete.
+CIS makes managing your certificates easy by offering dedicated certificates. You no longer need to generate private keys, create certificate signing requests (CSR), or remember to renew certificates. You can order a dedicated certificate by clicking **Add Certificate** button and ordering a wildcard certificate or entering hostnames to order a dedicated custom certificate. The type of certificates are:
+
+ * SHA-2/ECDSA signed certificate using P-256 key, 
+ * SHA-2/RSA signed certificate using RSA 2048-bit key, and 
+ * SHA-1/RSA signed certificate using RSA 2048-bit key. 
+ 
+ CIS can issue for all TLDs except for `.cu`, `.iq`, `.ir`, `.kp`, `.sd`, `.ss`, and `.ye`. CIS manages the expiration date. To edit the hostnames on your dedicated custom certificate, you must reorder then delete.
 
 **Note**: The first time you order a dedicated certificate Domain Control Validation (DCV) process occurs, which generates a corresponding TXT record. If you delete the TXT record, the DCV process happens again when you order another dedicated certificate. If you delete a dedicated certificate, the TXT record corresponding to the DCV process is not deleted.
 
