@@ -186,10 +186,10 @@ affect price.
 
    `-s, --json-str`  The JSON data used to upload a custom certificate.
    * The required fields in JSON data are `certificate`, `private_key`:
-     * "certificate":SSL certificate or certificate and the intermediate(s) for the domain.
-     * "private_key":Private key for the domain.
+     * `"certificate":` SSL certificate or certificate and the intermediate(s) for the domain.
+     * `"private_key": `Private key for the domain.
    * The optional fields are bundle_method:
-     * "bundle_method":Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
+     * `"bundle_method":` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
 
    Sample JSON data:
                       {
@@ -228,10 +228,10 @@ affect price.
 `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 `-s, --json-str`  The JSON data used to update a custom certificate.
    * The required fields in JSON data are `certificate`, `private_key`:
-     * "certificate":SSL certificate or certificate and the intermediate(s) for the domain.
-     * "private_key":Private key for the domain.
+     * `"certificate":` SSL certificate or certificate and the intermediate(s) for the domain.
+     * `"private_key":` Private key for the domain.
    * The optional fields are bundle_method:
-     * "bundle_method":Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
+     * `"bundle_method":` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
 
    Sample JSON data:
                       {
@@ -272,9 +272,9 @@ affect price.
 
    `-s, --json-str`  The JSON data used to change the custom certificates' priority.
    * The required fields in JSON data are `certificates`:
-     * "certificates":An array of objects with the follow fields.
-     * "id":Custom certificate identifier.
-     * "priority":The order/priority in which the certificate will be used in a request. Higher numbers will be tried first.
+     * `"certificates":` An array of objects with the follow fields.
+     * `"id":` Custom certificate identifier.
+     * `"priority":` The order/priority in which the certificate will be used in a request. Higher numbers will be tried first.
 
    Sample JSON data:
                       {
