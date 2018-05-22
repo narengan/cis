@@ -27,7 +27,7 @@ The following `dns-record` commands are available:
    `ibmcloud cis dns-record-create DNS_DOMAIN_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
    `-s, --json-str`  The JSON data used to describe a DNS Record.
@@ -37,7 +37,7 @@ ARGUMENTS:
   * For type `A`, `AAAA`, `CNAME`, `NS`, `TXT`, `SPF`:
     * The required fields in JSON data are `name`, `type`, `content`:
     * The optional fields are `ttl`, `proxied`:
-      * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+      * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -79,10 +79,10 @@ ARGUMENTS:
                    }
 
 
-   * For type MX:
+   * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `priority`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -94,7 +94,7 @@ ARGUMENTS:
                    }
 
 
-   * For type LOC:
+   * For type `LOC`:
      * The required fields in JSON data are `name`, `type`, `data`:
 
                        "data":
@@ -112,7 +112,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -136,7 +136,7 @@ ARGUMENTS:
                    }
 
 
-   * For type SRV:
+   * For type `SRV`:
      * The required fields in JSON data are `type`, `data`:
 
                        "data":
@@ -148,7 +148,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -165,10 +165,10 @@ ARGUMENTS:
                        }
                    }
 
-   * For type CAA:
+   * For type `CAA`:
      * The required fields in JSON data are name, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -182,9 +182,9 @@ ARGUMENTS:
                    }
    `-j, --json-file`  A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -211,9 +211,9 @@ ARGUMENTS:
    `ibmcloud cis dns-record-update DNS_DOMAIN_ID DNS_RECORD_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
-   `DNS_RECORD_ID` is the id of DNS record.
+   `DNS_RECORD_ID` is the ID of DNS record.
 
 ### OPTIONS:
    `-s, --json-str`  The JSON data used to describe a DNS Record.
@@ -223,7 +223,7 @@ ARGUMENTS:
    * For type `A`, `AAAA`, `CNAME`, `NS`, `TXT`, `SPF`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
   Sample JSON data:
 
@@ -270,7 +270,7 @@ ARGUMENTS:
    * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are ttl, priority, proxied:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -302,7 +302,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -340,7 +340,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -362,7 +362,7 @@ ARGUMENTS:
    * For type `CAA`:
      * The required fields in JSON data are `name`, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `"proxied":` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -377,9 +377,9 @@ ARGUMENTS:
                    
     `-j, --json-file`   A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -406,14 +406,14 @@ ARGUMENTS:
    `ibmcloud cis dns-record DNS_DOMAIN_ID DNS_RECORD_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
-   `DNS_RECORD_ID` is the id of DNS record.
+   `DNS_RECORD_ID` is the ID of DNS record.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -439,12 +439,12 @@ ARGUMENTS:
    `ibmcloud cis dns-record-delete DNS_DOMAIN_ID DNS_RECORD_ID [-i, --instance INSTANCE_NAME]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
-   `DNS_RECORD_ID` is the id of DNS record.
+   `DNS_RECORD_ID` is the ID of DNS record.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 
 ## List DNS Records
@@ -456,21 +456,21 @@ ARGUMENTS:
    `ibmcloud cis dns-records DNS_DOMAIN_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
    `-s, --json-str`  The JSON data to query DNS records.
 
 The optional fields are type, name, content, page, per_page, order, direction, match:
 
-  * `"type":` Type of DNS records to display.      
-  * `"name":` Value of name field to filter by.
-  * `"content":` Value of content field to filter by.
-  * `"page":` Page number of paginated results.
-  * `"per_page":` Maximum number of DNS records per page.
-  * `"order":` Field by which to order list of DNS records. Valid values are 'type', 'name', 'content', 'ttl', 'proxied'
-  * `"direction":` Direction in which to order results [ascending/descending order]. Valid values are 'asc', 'desc'         
-  * `"match":` Whether to match all or at least one search parameter. Valid values are 'any', 'all'.
+  * `type` Type of DNS records to display.      
+  * `name` Value of name field to filter by.
+  * `content` Value of content field to filter by.
+  * `page` Page number of paginated results.
+  * `per_page` Maximum number of DNS records per page.
+  * `order` Field by which to order list of DNS records. Valid values are `type`, `name`, `content`, `ttl`, `proxied`
+  * `direction` Direction in which to order results [ascending/descending order]. Valid values are `asc`, `desc`         
+  * `match` Whether to match all or at least one search parameter. Valid values are `any`, `all`.
 
   Sample JSON data:
 
@@ -482,9 +482,9 @@ The optional fields are type, name, content, page, per_page, order, direction, m
                    
    `-j, --json-file`  A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output Table Columns:
