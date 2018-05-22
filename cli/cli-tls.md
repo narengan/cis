@@ -31,7 +31,7 @@ The following `tls` commands are available:
  `ibmcloud cis tls-settings DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME]`
 
 ### OPTIONS
-  `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+  `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 #### Output Message:
    * TLS Mode
@@ -51,10 +51,10 @@ The following `tls` commands are available:
                               [--tls-1-2-only (on | off)] [--tls-1-3 (on | off)] [-i, --instance INSTANCE_NAME]`
 
 ### OPTIONS
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
    `--mode value:` Specify whether visitors can browse your website over a secure connection, and when they
-                do, how CIS will connect to your origin server.
+                do, how CIS connect to your origin server.
                 Valid values are: `off`, `client-to-edge`, `end-to-end-flexible`, `end-to-end-ca-signed`.
                 See documentation link for detailed TLS mode description.
                 https://console.bluemix.net/docs/infrastructure/cis/ssl-options.html#tls-options
@@ -63,7 +63,7 @@ The following `tls` commands are available:
                                        `false`.
 
    `--tls-1-2-only value:`  Specify whether Crypto TLS 1.2 feature is enable for your domain. Enabling this
-                                       feature will prevent use of previous versions. Valid values are `on` and `off`.
+                                       feature prevents use of previous versions. Valid values are `on` and `off`.
 
    `--tls-1-3 value:`  Specify whether Crypto TLS 1.3 feature is enabled for your domain. Valid values are `on` and
                                `off`.
@@ -81,9 +81,9 @@ The following `tls` commands are available:
    `ibmcloud cis certificates DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### OPTIONS
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output Table Columns:
    * Type
@@ -113,13 +113,13 @@ The following `tls` commands are available:
 
 ### OPTIONS
 
-   `-i, --instance INSTANCE_NAME ` (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance INSTANCE_NAME ` (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
    `--cert-id value:` ID of dedicated or custom certificate.
 
    `--universal:` Show universal certificate details.
 
-   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output message:
@@ -153,9 +153,9 @@ The following `tls` commands are available:
    `--hostnames`  (Optional) valid host names for the certificate packs. Add up to 50 custom hostnames - May
 affect price.
 
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output OUTPUT_FILE` (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output OUTPUT_FILE` (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output Message:
 
@@ -182,14 +182,14 @@ affect price.
   `ibmcloud cis certificate-upload DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]`
 
 ### OPTIONS
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
    `-s, --json-str`  The JSON data used to upload a custom certificate.
    * The required fields in JSON data are `certificate`, `private_key`:
-     * `"certificate":` SSL certificate or certificate and the intermediate(s) for the domain.
-     * `"private_key": `Private key for the domain.
+     * `certificate` SSL certificate or certificate and the intermediate(s) for the domain.
+     * `private_key` Private key for the domain.
    * The optional fields are bundle_method:
-     * `"bundle_method":` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
+     * `bundle_method` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
 
    Sample JSON data:
    
@@ -201,7 +201,7 @@ affect price.
                       
    `-j, --json-file JSON_FILE`  (Optional) A file contains input JSON data.
 
-   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output Message:
 
@@ -227,13 +227,13 @@ affect price.
   `ibmcloud cis certificate-update DNS_DOMAIN_ID CERT_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]`
 
 ### OPTIONS
-`-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+`-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 `-s, --json-str`  The JSON data used to update a custom certificate.
    * The required fields in JSON data are `certificate`, `private_key`:
-     * `"certificate":` SSL certificate or certificate and the intermediate(s) for the domain.
-     * `"private_key":` Private key for the domain.
+     * `certificate` SSL certificate or certificate and the intermediate(s) for the domain.
+     * `private_key` Private key for the domain.
    * The optional fields are bundle_method:
-     * `"bundle_method":` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
+     * `bundle_method` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
 
    Sample JSON data:
                       {
@@ -244,7 +244,7 @@ affect price.
 
 `-j, --json-file JSON_FILE`  (Optional) A file contains input JSON data.
 
-`-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+`-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output Message:
 
@@ -270,13 +270,13 @@ affect price.
   `ibmcloud cis certificate-priority-change DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-s, --json-str JSON_STR] [-j, --json-file JSON_FILE] [-o, --output OUTPUT_FILE]`
 
 ### OPTIONS
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
    `-s, --json-str`  The JSON data used to change the custom certificates' priority.
    * The required fields in JSON data are `certificates`:
-     * `"certificates":` An array of objects with the follow fields.
-     * `"id":` Custom certificate identifier.
-     * `"priority":` The order/priority in which the certificate will be used in a request. Higher numbers will be tried first.
+     * `certificates` An array of objects with the follow fields.
+     * `id` Custom certificate identifier.
+     * `priority` The order/priority in which the certificate is used in a request. Higher numbers are tried first.
 
    Sample JSON data:
                       {
@@ -294,7 +294,7 @@ affect price.
 
    `-j, --json-file JSON_FILE`  (Optional) A file contains input JSON data.
 
-   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output message:
 
@@ -320,7 +320,7 @@ affect price.
   `ibmcloud cis certificate-delete DNS_DOMAIN_ID CERT_ID [-i, --instance INSTANCE_NAME]`
 
 ### OPTIONS
-   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 #### Output Message:
   Result of deleting certificate
