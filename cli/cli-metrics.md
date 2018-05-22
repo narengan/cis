@@ -18,7 +18,7 @@ The following `metrics` commands are available:
 
 ## Web Analytics
 ### NAME:
-   web-analytics - Get analytics of the DNS domain.
+   `web-analytics` - Get analytics of the DNS domain.
 
 ### USAGE:
    `ibmcloud cis web-analytics DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-s, --since TIME] [-t, --table requests | bandwidth | uniques | threats | status_code] [-o, --output OUTPUT_FILE]`
