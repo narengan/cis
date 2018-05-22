@@ -32,9 +32,9 @@ The following `domain` commands are available:
    `DNS_DOMAIN_NAME` is the FQDN of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output:
   * ID                     
@@ -57,12 +57,12 @@ The following `domain` commands are available:
    `ibmcloud cis domain-resume DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output:
@@ -86,12 +86,12 @@ The following `domain` commands are available:
    `ibmcloud cis domain-pause DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   DNS_DOMAIN_ID is the id of DNS domain.
+   DNS_DOMAIN_ID is the ID of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output:
   * ID                     
@@ -116,12 +116,12 @@ The following `domain` commands are available:
    `ibmcloud cis domain DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 #### Output:
   * ID                     
@@ -144,10 +144,10 @@ The following `domain` commands are available:
    `ibmcloud cis domain-remove DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 
 ## List domains
@@ -159,9 +159,9 @@ The following `domain` commands are available:
    `ibmcloud cis domains [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]`
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 
 #### Output:
@@ -180,7 +180,7 @@ The following `domain` commands are available:
    `ibmcloud cis domain-activation-check DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME]`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
