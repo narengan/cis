@@ -28,7 +28,7 @@ The following `cache` commands are available:
 
    * `-i, --instance INSTANCE_NAME` (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   *  `--all`Clear cached assets entirely, when this option exists, users are asked to confirm `Y/N`. Purging all cached files increases page load times while the files are being re-created. This process removes all of your cached data on all edge servers.
+   *  `--all` Clear cached assets entirely, when this option exists, users are asked to confirm `Y/N`. Purging all cached files increases page load times while the files are being re-created. This process removes all of your cached data on all edge servers.
 
    * `-f, --file** file1,file2,...`  an array of files (separated by commas) that should be cleared from cache. You may purge up to 30 files at a time with comma-separated files. To specify a file, you must enter the full path. Wildcards are not supported at this time.
 
@@ -47,7 +47,7 @@ Result of cache purging.
 
 ### OPTIONS
 
-   * `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   * `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 #### Output messages:
 
