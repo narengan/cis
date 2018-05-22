@@ -21,19 +21,19 @@ The following `metrics` commands are available:
    web-analytics - Get analytics of the DNS domain.
 
 ### USAGE:
-   ibmcloud cis web-analytics DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-s, --since TIME] [-t, --table requests | bandwidth | uniques | threats | status_code] [-o, --output OUTPUT_FILE]
+   `ibmcloud cis web-analytics DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-s, --since TIME] [-t, --table requests | bandwidth | uniques | threats | status_code] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   DNS_DOMAIN_ID is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the id of DNS domain.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 
-   -s, --since     Since time to now. Valid values are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 3m.
+   `-s, --since `    Since time to now. Valid values are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 3m.
 
-   -t, --table     Output table. Valid values are 'requests', 'bandwidth', 'uniques', 'threats' and 'status_code'. If not set, output all the tables.
+   `-t, --table`     Output table. Valid values are 'requests', 'bandwidth', 'uniques', 'threats' and 'status_code'. If not set, output all the tables.
 
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`    Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 #### Output Message:
 
@@ -64,22 +64,22 @@ The following `metrics` commands are available:
 
 ## DNS analytics
 ### NAME:
-   dns-analytics - Get DNS analytics of the domain.
+   `dns-analytics` - Get DNS analytics of the domain.
 
 ### USAGE:
-   ibmcloud cis dns-analytics DNS_DOMAIN_ID DIMENSION [-i, --instance INSTANCE_NAME] [-s, --since TIME] [-o, --output OUTPUT_FILE]
+   `ibmcloud cis dns-analytics DNS_DOMAIN_ID DIMENSION [-i, --instance INSTANCE_NAME] [-s, --since TIME] [-o, --output OUTPUT_FILE]`
 
 ### ARGUMENTS:
-   DNS_DOMAIN_ID is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the id of DNS domain.
 
-   DIMENSION is queried dimension. The valid value is either 'queries-by-response-code' or 'queries-by-type'.
+   `DIMENSION` is queried dimension. The valid value is either 'queries-by-response-code' or 'queries-by-type'.
 
 ### OPTIONS:
-   -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 
-   -s, --since  Since time to now. Valid values are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago)
+   `-s, --since` Since time to now. Valid values are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago)
 
-   -o, --output  Output the result as JSON style to a file. If not set, will output the result to terminal.
+   `-o, --output`  Output the result as JSON style to a file. If not set, will output the result to terminal.
 
 
 #### Output Message:
