@@ -37,7 +37,7 @@ ARGUMENTS:
   * For type `A`, `AAAA`, `CNAME`, `NS`, `TXT`, `SPF`:
     * The required fields in JSON data are `name`, `type`, `content`:
     * The optional fields are `ttl`, `proxied`:
-      * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+      * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -82,7 +82,7 @@ ARGUMENTS:
    * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `priority`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -112,7 +112,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -148,7 +148,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -168,7 +168,7 @@ ARGUMENTS:
    * For type `CAA`:
      * The required fields in JSON data are name, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -223,7 +223,7 @@ ARGUMENTS:
    * For type `A`, `AAAA`, `CNAME`, `NS`, `TXT`, `SPF`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
   Sample JSON data:
 
@@ -270,7 +270,7 @@ ARGUMENTS:
    * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are ttl, priority, proxied:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -302,7 +302,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -340,7 +340,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -362,7 +362,7 @@ ARGUMENTS:
    * For type `CAA`:
      * The required fields in JSON data are `name`, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether or not traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
