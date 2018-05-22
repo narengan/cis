@@ -192,11 +192,13 @@ affect price.
      * `"bundle_method":` Bundle method, default value is `compatible`, valid values are: `compatible`, `modern` and `user-defined`.
 
    Sample JSON data:
+   
                       {
                         "certificate": "xxx",
                         "private_key": "xxx",
                         "bundle_method": "compatible"
                       }
+                      
    `-j, --json-file JSON_FILE`  (Optional) A file contains input JSON data.
 
    `-o, --output OUTPUT_FILE`  (Optional) Output the result as JSON style to a file. If not set, will output the result to terminal.
