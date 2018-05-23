@@ -23,8 +23,9 @@ The following families of commands are available from the command line interface
   * [Metrics](cli/cli-metrics.html)
   * [Overview](#overview)
 
+The CIS CLI documentation is shown in modified `man` page format. The `overview` command also is one of the CLI commands available to you. It just happens to make a good example as well, so we included it here.
 
-## Overview
+## The Overview command definition
 
 ### NAME
   `overview` - Show the overview information for an instance. 
