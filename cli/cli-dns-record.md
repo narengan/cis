@@ -82,7 +82,7 @@ ARGUMENTS:
    * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `priority`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -112,7 +112,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -148,7 +148,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -168,7 +168,7 @@ ARGUMENTS:
    * For type `CAA`:
      * The required fields in JSON data are name, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -182,9 +182,9 @@ ARGUMENTS:
                    }
    `-j, --json-file`  A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
+   `-i, --instance`   Instance name. If the name is not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
+   `-o, --output`     Outputs the result as JSON style to a file. If the filename is not set, it outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -223,7 +223,7 @@ ARGUMENTS:
    * For type `A`, `AAAA`, `CNAME`, `NS`, `TXT`, `SPF`:
      * The required fields in JSON data are `name`, `type`, `content`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
   Sample JSON data:
 
@@ -269,8 +269,8 @@ ARGUMENTS:
 
    * For type `MX`:
      * The required fields in JSON data are `name`, `type`, `content`:
-     * The optional fields are ttl, priority, proxied:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+     * The optional fields are `ttl`, `priority`, `proxied`:
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -302,7 +302,7 @@ ARGUMENTS:
                            "precision_vert": Vertical precision of location.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -340,7 +340,7 @@ ARGUMENTS:
                            "target": A valid hostname.
 
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -362,7 +362,7 @@ ARGUMENTS:
    * For type `CAA`:
      * The required fields in JSON data are `name`, `type`, `data`:
      * The optional fields are `ttl`, `proxied`:
-       * `proxied` Control whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
+       * `proxied` Controls whether traffic should flow through the security and performance functions on CIS. Can be used for update only.
 
    Sample JSON data:
 
@@ -377,9 +377,9 @@ ARGUMENTS:
                    
     `-j, --json-file`   A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
+   `-i, --instance`   Instance name. If the name is not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
+   `-o, --output`     Outputs the result as JSON style to a file. If the filename is not set, it outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -411,9 +411,9 @@ ARGUMENTS:
    `DNS_RECORD_ID` is the ID of DNS record.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
+   `-i, --instance`  Instance name. If the name is not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
+   `-o, --output`    Outputs the result as JSON style to a file. If the filename not set, it outputs the result to terminal.
 
 
 #### Output Table Columns:
@@ -444,7 +444,7 @@ ARGUMENTS:
    `DNS_RECORD_ID` is the ID of DNS record.
 
 ### OPTIONS:
-   `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
+   `-i, --instance`  Instance name. If the name is not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
 
 ## List DNS Records
@@ -461,7 +461,7 @@ ARGUMENTS:
 ### OPTIONS:
    `-s, --json-str`  The JSON data to query DNS records.
 
-The optional fields are type, name, content, page, per_page, order, direction, match:
+The optional fields are `type`, `name`, `content`, `page`, `per_page`, `order`, `direction`,`match`:
 
   * `type` Type of DNS records to display.      
   * `name` Value of name field to filter by.
@@ -469,7 +469,7 @@ The optional fields are type, name, content, page, per_page, order, direction, m
   * `page` Page number of paginated results.
   * `per_page` Maximum number of DNS records per page.
   * `order` Field by which to order list of DNS records. Valid values are `type`, `name`, `content`, `ttl`, `proxied`
-  * `direction` Direction in which to order results [ascending/descending order]. Valid values are `asc`, `desc`         
+  * `direction` Direction in which to order results [ascending or descending order]. Valid values are `asc`, `desc`         
   * `match` Whether to match all or at least one search parameter. Valid values are `any`, `all`.
 
   Sample JSON data:
@@ -482,9 +482,9 @@ The optional fields are type, name, content, page, per_page, order, direction, m
                    
    `-j, --json-file`  A file contains input JSON data.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
+   `-i, --instance`   Instance name. If name is not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o, --output`     Output the result as JSON style to a file. If not set, outputs the result to terminal.
+   `-o, --output`     Outputs the result as JSON style to a file. If the file name not set, it outputs the result to terminal.
 
 
 #### Output Table Columns:
