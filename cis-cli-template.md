@@ -62,13 +62,13 @@ The `overview` command also is one of the CLI commands available to you. It just
 ### Overview
 
 #### NAME
-  overview - Show the overview information for an instance. 
+  `overview` - Show the overview information for an instance. 
 
 #### USAGE
-  ibmcloud cis overview [-i, --instance INSTANCE_NAME] 
+  `ibmcloud cis overview [-i, --instance INSTANCE_NAME]` 
 
 #### OPTIONS
- **-i, --instance INSTANCE_NAME**  (Optional) Instance name. If not set, the context instance specified by 'ibmcloud cis   instance-set' will be used.
+ `-i, --instance INSTANCE_NAME`  (Optional) Instance name. If not set, the context instance specified by `ibmcloud cis   instance-set` is used.
 
 **Output messages**:
 
@@ -95,4 +95,4 @@ The `overview` command also is one of the CLI commands available to you. It just
     * DNS Security
     * Load Balancers
               
-**Service Mode** is displayed only when the domain is paused or in defense mode.
+`Service Mode` is displayed only when the domain is paused or in defense mode.
