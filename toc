@@ -35,7 +35,7 @@ Cloud Internet Services (CIS)
 
     {: .navgroup id="reference"}
     api-resource.md
-    cis-cli-template.md
+    cis-cli-overview.md
     glossary.md
     {: .navgroup-end}
 
