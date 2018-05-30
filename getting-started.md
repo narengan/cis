@@ -49,15 +49,12 @@ Once the IBM CIS application starts up, you'll see the IBM CIS **Overview** scre
 
 **What plan do I choose?**
 
-For the _Early Access_ release, there is only one plan you can choose, and it is free. Click the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
+There are 2 plans to choose from, the Standard Plan and the Free Trial. The Free Trial expires after 30 days at which point the user needs to upgrade to the Standard Plan. **Note that the Free Trial is limited to one instance per account.** Click the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
 
 **Begin Provisioning**
 
 You'll see the first screen of the IBM CIS application, where you'll select the **Add Domain** button to begin.
 
-|**Note that the Early Access program is limited to one instance per account.** |
-|-------------------------------------------------------------------|
-| After you've created a resource instance and added a domain to it, you are not permitted to add new resource instances for IBM CIS. This restriction is enforced even if you delete a trial domain and then attempt to add a domain again to the same resource instance. You'll encounter an error if you attempt to do so.|
 
 ### Step 2. Add and configure your Domain.
 Select **Let's get started** from the welcome page to begin setting up CIS.
