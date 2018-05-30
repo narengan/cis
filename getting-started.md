@@ -30,7 +30,7 @@ If you have an existing Softlayer account, you can [link your account](https://c
 
 ## Process overview
 
-You can start using IBM CIS for your internet traffic with just a few steps.
+You can start using IBM CIS for your Internet traffic with just a few steps.
 
  * Open the IBM CIS application from your IBM Cloud dashboard.
  * Add the domain you want to manage.
@@ -49,7 +49,9 @@ Once the IBM CIS application starts up, you'll see the IBM CIS **Overview** scre
 
 **What plan do I choose?**
 
-There are 2 plans to choose from, the Standard Plan and the Free Trial. The Free Trial expires after 30 days at which point the user needs to upgrade to the Standard Plan. **Note that the Free Trial is limited to one instance per account.** Click the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
+There are 2 plans to choose from, the **Standard Plan** and the **Free Trial**. The **Free Trial** expires after 30 days, at which point you would need to upgrade to the **Standard Plan**. Select the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
+
+**Note:** The **Free Trial** is limited to one instance per account. 
 
 **Begin Provisioning**
 
