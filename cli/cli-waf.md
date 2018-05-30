@@ -79,7 +79,7 @@ The following `waf` commands are available:
   `ibmcloud cis waf-packages DNS_DOMAIN_ID`
 
 ### ARGUMENTS:
-   `DNS_DOMAIN_ID` is the id of DNS domain.
+   `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 ### OPTIONS:
    `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
