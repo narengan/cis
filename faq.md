@@ -66,7 +66,7 @@ All of these IPs must be whitelisted to avoid 522 errors. It's also worth checki
 
 522 errors can also be caused by network connectivity issues, so confirm that your server and network is generally healthy and not overloaded.
 
-If after taking the above steps you still receive errors, please contact IBM CIS support and confirm the following:
+If after taking the above steps you still receive errors, contact IBM CIS support and confirm the following:
 
 * You've whitelisted our IP ranges
 * Your server/network is online and generally healthy
@@ -82,7 +82,7 @@ $ whois 104.28.22.57 | grep OrgName
 OrgName:        IBM
 ```
 
-If you would rather bypass CIS on a domain (we will still resolve DNS), then non-proxying the record would be a possible solution.
+If you would rather bypass CIS on a domain (we will still resolve DNS), then non-proxying the record is a possible solution.
 
 ## I got a DNS Validation error: 1004; now what can I do?
 
@@ -90,4 +90,4 @@ For page rules to work, DNS needs to resolve for your zone. As a result, you mus
 
 ## Can I add a CNAME for a root record?
 
-Yes, IBM CIS supports a feature called "CNAME Flattening" by default. This allows our users to add a CNAME as a root record. Under the covers, our authoritative DNS servers enumerate the CNAME target's records, and respond with those records instead of the CNAME itself, effectively hiding the fact that the user configured a CNAME at the root of the domain.
+Yes. IBM CIS supports a feature called "CNAME Flattening" which allows our users to add a CNAME as a root record. Our authoritative DNS servers enumerate the CNAME target's records and respond with those records instead of the CNAME itself, effectively hiding the fact that the user configured a CNAME at the root of the domain.
