@@ -87,3 +87,7 @@ If you would rather bypass CIS on a domain (we will still resolve DNS), then non
 ## I got a DNS Validation error: 1004; now what can I do?
 
 For page rules to work, DNS needs to resolve for your zone. As a result, you must have a proxied DNS record for your zone. 
+
+## Can I add a CNAME for a root record?
+
+Yes, IBM CIS supports a feature called "CNAME Flattening" by default. This allows our users to add a CNAME as a root record. Under the covers, our authoritative DNS servers enumerate the CNAME target's records, and respond with those records instead of the CNAME itself, effectively hiding the fact that the user configured a CNAME at the root of the domain.
