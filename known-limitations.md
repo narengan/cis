@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-05-15"
+lastupdated: "2018-05-300"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,7 +19,7 @@ lastupdated: "2018-05-15"
 
  * When you add a new domain, our system currently does not gather or import your existing domain records.
 
- * For this Early Access program, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
+ * For this service, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
  
  * At this time, LOC records cannot be imported. As a workaround, use the UI or API to create any LOC records.
  
