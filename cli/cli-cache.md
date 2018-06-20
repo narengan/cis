@@ -19,9 +19,11 @@ The following `cache` commands are available:
 
 ## Purge Cache
 **NAME**
+
   `cache-purge` -  Clear cached assets file by file or entirely for a given DNS domain to guarantee served assets are updated.
 
 **USAGE**
+
   `ibmcloud cis cache-purge DNS_DOMAIN_ID (--all | -f, --file file1,file2,...) [-i, --instance INSTANCE_NAME]`
 
 **OPTIONS**
@@ -34,15 +36,18 @@ The following `cache` commands are available:
 
 
 **Output messages:**
+
 Result of cache purging.
 
 
 ## Show cache settings
 
 **NAME**
+
   `cache-settings` - Get caching settings for a given DNS domain.
 
 **USAGE**
+
   `ibmcloud cis cache-settings DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME]`
 
 **OPTIONS**
@@ -58,9 +63,11 @@ Result of cache purging.
 ## Update cache settings
 
 **NAME**
+
   `cache-settings-update` - Update cache settings for a give DNS domain.
 
 **USAGE**
+
   `ibmcloud cis cache-settings-update DNS_DOMAIN_ID [--caching-level LEVEL][--browser-expiration EXPIRATION][--development-mode (enabled | disabled)][-i, --instance INSTANCE_NAME]`
 
 **OPTIONS**
@@ -87,4 +94,5 @@ Result of cache purging.
 
 
 **Output messages:**
+
 The output message contains the result of your cache settings update.
