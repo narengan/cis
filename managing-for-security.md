@@ -123,7 +123,7 @@ If you receive an error when ordering certificates refresh the page and try agai
 IBM has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates. Your support team can help you perform these additional steps.
 
 ### Certificate priority at our edge
-The priority by which the certificates will be displayed at our edge is:
+The priority by which the certificates are displayed at our edge is:
 1. Uploaded custom
 2. Dedicated custom
 3. Dedicated wildcard
