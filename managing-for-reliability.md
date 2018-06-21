@@ -36,7 +36,7 @@ Notice that the CIS interface is organized into sections for *security*, *reliab
 
 To get started setting up your Global Load Balancers, select **Global Load Balancers** from the navigation menu.
 
-For detailed information about settng up and managing your Global Load Balancers, please [refer to this document](glb.html#global-load-balancer-glb-concepts).
+For detailed information about setting up and managing your Global Load Balancers, please [refer to this document](glb.html#global-load-balancer-glb-concepts).
 
 ## Using Page Rules to increase reliability
 
