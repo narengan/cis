@@ -112,7 +112,7 @@ Yes. IBM CIS supports a feature called "CNAME Flattening" which allows our users
 
 ## What is the default healtcheck timeout?
 
-Default healthcheck timeout is 60 seconds.
+The default healthcheck timeout is 60 seconds.
 
 ## Can healthchecks be configured for non-HTTP/HTTPS traffic?
 
@@ -122,6 +122,6 @@ No, only with HTTP/HTTPS.
 
 No, only with HTTP/HTTPS.
 
-## Will disabling all of my origins in an origin pool disable the origin pool itself?
+## Will disabling all of my origins in an origin pool disable the entire origin pool itself?
 
-Yes, if the origin pool is being used in a load balancer the traffic will be routed to the next highest priority pool or the fallback pool.
+Yes, if the origin pool is being used in a load balancer, the traffic will be routed to the next highest priority pool or the fallback pool.
