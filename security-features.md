@@ -16,7 +16,7 @@ IBM CIS is a globally distributed cloud service that blocks threats and limits a
 Here’s a quick feature overview:
 
 ## Security features
- * To use security features, [DNS records](dns-concepts.md#proxying-dns-records) or [GLB](glb.md) needs to be proxied. This is so traffic flows through our servers and the data can be monitored.
+ * Proxy [DNS records](dns-concepts.md#proxying-dns-records) or [GLB](glb.md) to use security features. This allows traffic to flow through our servers and the data can be monitored.
 ### Web Application Firewall (WAF)
  * WAF is implemented through two rule sets: [OWASP](waf-owasp-rule set.md) and [CIS](waf-cis-rule set.md).
 ### Unlimited DDoS mitigation
