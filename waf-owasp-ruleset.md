@@ -17,7 +17,7 @@ The OWASP Ruleset contains generic attack detection rules. The OWASP rules prote
 ## Managing OWASP
 
 Unlike the [CIS ruleset](waf-cis-ruleset.html), OWASP allows you to set Sensitivity. 
-A request may trigger a set of OWASP rules that have a high to low severity score associated with them. The final score is calculated based on all the rules triggered. After calculating the final score, CIS compares it to the sensitivity threshhold selected in the begining, and then either blocks or allows the request.
+A request may trigger a set of OWASP rules that have a high to low severity score associated with them. The final score is calculated based on all the rules triggered. After calculating the final score, CIS compares it to the sensitivity threshold selected in the beginning, and then either blocks or allows the request.
 
 |Sensitivity	score| Trigger threshold|
 |------|---------------|
@@ -32,6 +32,5 @@ Keep in mind that OWASP rules can only be toggled _on_ or _off_, unlike rules in
 ## How to deal with False Positives?
 
 False positives can occur when variable or value evaluates as _true_ or _positive_ but it's actually a negative. In the context of our WAF, a false positive means that a request is blocked because it was mistakenly evaluated as malicious.
-
 
 To deal with false positives and make sure to avoid them in the future, you must know how to spot them and correct them. Review the logs of blocked requests, and then evaluate whether these requests were reasonably blocked within the context of the expected and normal traffic of your website.
