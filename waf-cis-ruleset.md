@@ -6,7 +6,12 @@ lastupdated: "2018-06-21"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-
+# WAF settings
+Block | Blocking an attack will stop any action before it is posted to your website.
+Simulate | To test for false positives, set the WAF to Simulate mode, which will record the response to possible attacks without challenging or blocking.
+Challenge | A challenge page asks visitors to submit a CAPTCHA to continue to your website.
+Threshold / sensitivity setting | Set rules to trigger more or less depending on sensitivity
+Customizable block pages | Customize the page a visitor sees when they’re blocked, eg. “Call this telephone number for help.” Available for Enterprise customers.
 
 # CIS Rule Set for WAF
 
@@ -35,4 +40,4 @@ CIS Rule set lets you perform four actions on each rule:
 3. **Block**: Block simply blocks the request entirely, with no option to bypass it for that request.
 4. **Challenge**: Displays a challenge (CAPTCHA) page that must be completed before the request in question is allowed access.
 
-You may notice that the names of the rules don't reveal exactly how they work and that they are mostly a general summary of their function. This is deliberate.  For security purposes, we don't reveal the code (or other exact information) we use to filter traffic. This prevents malicious actors from reverse engineering it to bypass our defenses. 
+You may notice that the names of the rules don't reveal exactly how they work and that they are mostly a general summary of their function. This is deliberate.  For security purposes, we don't reveal the code (or other exact information) we use to filter traffic. This prevents malicious actors from reverse engineering it to bypass our defenses.
