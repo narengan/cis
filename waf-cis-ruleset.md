@@ -7,11 +7,12 @@ lastupdated: "2018-06-21"
 {:new_window: target="_blank"}
 
 # WAF settings
+|Action| Definition|
+|---|---|
 Block | Blocking an attack will stop any action before it is posted to your website.
-Simulate | To test for false positives, set the WAF to Simulate mode, which will record the response to possible attacks without challenging or blocking.
+Simulate | To test for false positives, set the WAF to Simulate mode, which records the response to possible attacks without challenging or blocking.
 Challenge | A challenge page asks visitors to submit a CAPTCHA to continue to your website.
-Threshold / sensitivity setting | Set rules to trigger more or less depending on sensitivity
-Customizable block pages | Customize the page a visitor sees when they’re blocked, eg. “Call this telephone number for help.” Available for Enterprise customers.
+Threshold or sensitivity setting | Set rules to trigger more or less, depending on sensitivity.
 
 # CIS Rule Set for WAF
 
