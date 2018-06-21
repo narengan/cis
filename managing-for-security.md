@@ -122,5 +122,12 @@ If you receive an error when ordering certificates refresh the page and try agai
 ### Utilize a provisioned certificate
 IBM has partnered with several Certificate Authorities (CAs) to provide domain wildcard certificates for our customers. Manual verification could be required for setting up these certificates. Your support team can help you perform these additional steps.
 
+### Certificate priority at our edge
+The priority by which the certificates will be displayed at our edge is:
+1. Uploaded custom
+2. Dedicated custom
+3. Dedicated wildcard
+4. Universal
+
 ### Require Modern TLS
 **Require Modern TLS** prevents older browsers from connecting using older, less secure versions of TLS. Any connections from browsers using TLS 1.1 or earlier are refused. TLS versions 1.2 and 1.3 are included in Modern TLS and are considered secure.
