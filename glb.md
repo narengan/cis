@@ -12,11 +12,11 @@ This document contains some concepts and definitions related to the Global Load 
 
 ## Global Load Balancer
 
-The Global Load Balancer (GLB) manages traffic across server resources located in multiple regions. The origin server can serve up all of the content for a website, provided that the traffic does not extend beyond the server's processing capabilities and latency is not a primary concern. The GLB utilizes a pool which allows for the traffic to be distributed to multiple origins. This provides many benefits including:
+The Global Load Balancer (GLB) manages traffic across server resources located in multiple regions. The origin server can serve up all of the content for a website, provided that the web traffic does not extend beyond the server's processing capabilities and latency is not a primary concern. The GLB utilizes a _pool_ implementation that allows for the traffic to be distributed to multiple origins. This pool capability provides many benefits including:
 
-  * Minimize response time
-  * Higher availability through redundancy
-  * Maximize traffic throughput
+  * Minimizes response time
+  * Createsigher availability through redundancy
+  * Maximizes traffic throughput
 
 The GLB routes traffic to the pool with the highest priority and distributes the load among its origin evenly, using round-robin protocol. If the primary pool becomes unavailable, traffic is routed automatically to the next pool in the list based on priority.
 
