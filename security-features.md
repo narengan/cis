@@ -18,7 +18,7 @@ Here’s a quick feature overview:
 ## Security features
  * To use security features, [DNS records](dns-concepts.md#proxying-dns-records) or [GLB](glb.md) needs to be proxied. This is so traffic flows through our servers and the data can be monitored.
 ### Web Application Firewall (WAF)
- * WAF is implemented through two rulesets: [OWASP](waf-owasp-ruleset.md) and [CIS](waf-cis-ruleset.md).
+ * WAF is implemented through two rule sets: [OWASP](waf-owasp-rule set.md) and [CIS](waf-cis-rule set.md).
 ### Unlimited DDoS mitigation
  * DDoS mitigation is typically an expensive service that can grow in cost when under attack. We include unlimited DDoS mitigation with CIS at no additonal cost.
 
