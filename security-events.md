@@ -17,7 +17,7 @@ Action taken can be one of :
  IP Address shows source IP of the web request
  Location shows country associated with the source of the web request
  Host shows the hostname of your server which has been accessed
- Date shows the timestamp of the event occurrence.
+ Date shows the day of the event occurrence.
 
  
 
@@ -28,4 +28,5 @@ If the triggered rule for an event has id 981176, this means the block was cause
 
 In effect this means that all requests that get blocked by OWASP will show on your Security Events as blocked by 981176. If you expand the event details and see the Event Triggers section,  you will see the individual OWASP rules that were matched to increase the request’s threat score.
 
-
+## What action should be taken if valid traffic is blocked ?
+By expanding each event to see event details, the detailed information is shown. For OWASP rule triggered events, all the individual OWASP rules that were match wil be shown in the Event Triggers section. At this point you should be able to decide: does this traffic look normal for my website, or did it rightfully get blocked? With this knowledge, if you decided that this block is a false positive, you could go back to your WAF configuration, and disable a few of these individual OWASP rules until this request doesn't exceed your sensitivity threshold any longer.
