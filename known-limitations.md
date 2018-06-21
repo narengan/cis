@@ -28,4 +28,12 @@ lastupdated: "2018-05-30"
  * When you delete a dedicated certificate, it may reappear in the list for a short time before the deletion is complete.
  
  * To modify your custom dedicated certificate’s hostnames after ordering, you must order a new certificate and then delete the old one. 
-  
+
+## Global Load Balancer
+ * Cloud Internet Services allows for '_' to be used in load balancer hostnames. This will not work correctly if being configured with Kubernetes clusters. 
+
+ * For the "Standard" plan a max of 5 load balancers, pools, and monitors can be configured. Each pool can have a total of 6 origins but there can only be 6 unique origins used throughout the CIS instance.
+
+* Health check events for deleted pools/origins cannot be filtered but will still show up in the table.
+
+* Health check events when filtering on the 'Pool Health' will return 'Degraded' pools because they are technically healthy but contain 1 or more critical origins.
