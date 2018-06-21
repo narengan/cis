@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-06-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -30,7 +30,5 @@ The value of a WAF comes from the speed and ease with which its policy modificat
 The IBM Cloud CIS WAF is an easy way to set up, manage, and customize security rules to protect your web applications from common web threats. See the following list for key features:
 
  * **Easy setup**: The CIS WAF is part of our overall service, which takes just a few minutes to set up. Once you redirect your DNS to us, you can switch on the WAF and set up the rules you need.
-
- * **Greater default ruleset plus configurability**: In addition to `mod_security` rules and the _OWASP Top 10_, you can manage new rulesets by navigating to **Manage WAF** from the CIS settings page.
 
  * **Detailed reporting** See greater detail in the reporting, for example, threats blocked by rule/rule group. 
