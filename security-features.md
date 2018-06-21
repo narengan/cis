@@ -20,7 +20,7 @@ Here’s a quick feature overview:
 ### Web Application Firewall (WAF)
  * WAF is implemented through two rulesets: [OWASP](waf-owasp-ruleset.md) and [CIS](waf-cis-ruleset.md).
 ### Unlimited DDoS mitigation
- * DDoS mitigation is typically a an expensive service that can grow in cost when under attack. We include unlimited DDoS mitigation with CIS at no additonal cost.
+ * DDoS mitigation is typically an expensive service that can grow in cost when under attack. We include unlimited DDoS mitigation with CIS at no additonal cost.
 
 ## Security Standards and platform
 
