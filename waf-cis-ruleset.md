@@ -10,9 +10,10 @@ lastupdated: "2018-04-25"
 
 # CIS Rule Set for WAF
 
-Select **Rule Details** to reveal the rulesets of this package. There are 10 rulesets:
+Select **View CIS Rules** to reveal the rulesets of this package. The rulesets follow:
 
 * Drupal
+* Flash
 * Joomla
 * Magento
 * Miscellaneous
