@@ -32,13 +32,12 @@ Cloud Internet Services (CIS)
     using-page-rules.md
     caching-with-page-rules.md
     helpful-tools.md
+    
     {: .topicgroup}
     Step-by-step guides 
-        [Secure and resilient multi-region Kubernetes clusters with Cloud Internet Services](https://console.stage1.bluemix.net/docs/tutorials/multi-region-k8s-cis.html)
-        
-        [Using CIS to secure your Cloud Foundry applications across regions](https://console.bluemix.net/docs/tutorials/multi-region-webapp.html#register-a-custom-domain-with-ibm-cloud-internet-services)
-      
-{: .topicgroup}
+    [Secure and resilient multi-region Kubernetes clusters with Cloud Internet Services](https://console.stage1.bluemix.net/docs/tutorials/multi-region-k8s-cis.html)  
+    [Using CIS to secure your Cloud Foundry applications across regions](https://console.bluemix.net/docs/tutorials/multi-region-webapp.html#register-a-custom-domain-with-ibm-cloud-internet-services)
+    {: .topicgroup}
     
     {: .navgroup-end}
 
