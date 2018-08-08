@@ -1,0 +1,37 @@
+---
+copyright:
+  years: 2018
+lastupdated: "2018-08-08"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+# Protecting your site
+
+IBM Cloud Internet Services offers several tools for controlling your traffic so that you protect your domains, URLs, and directories against specified volumes of traffic, certain groups of requesters, and particular requesting IPs. This section details the tools available.
+
+
+## IP Firewall
+The IP Firewall allows you to control access for specific IP addresses, IP ranges, specific countries, specific ASNs, and certain CIDR blocks. Available actions on incoming requests are:
+  * Whitelist 
+  * Block 
+  * Challenge (Captcha) 
+  * JavaScript Challenge (IUAM challenge)
+
+For example, if you notice that a particular IP is causing malicious requests, you can block that user via IP address.
+
+## Zone Lockdown
+Zone Lockdown allows you whitelist specific IP addresses and IP ranges such that all other IPs are blacklisted. Zone Lockdown supports:
+
+  * Specific sub-domains. For example, you can allow IP 1.2.3.4 to access domain `foo.example.com` and allow IP 5.6.7.8 to access domain `bar.example.com`, but not necessarily allow the reverse.
+  * Specific URLs. For example, you can allow IP 1.2.3.4 to access directory `example.com/foo/*` and allow IP 5.6.7.8 to access directory `example.com/bar/*`, but not necessarily allow the reverse.
+This is useful when you need more granularity in your access rules because, with the IP Firewall, you can either apply the block to all sub-domains of the current domain, or all domains on your account, and you cannot specify URIs.
+
+ 
+## User-Agent Blocking Rules
+User-Agent Blocking rules allow you to take action on any User-Agent string you want. This works like Zone Lockdown as described earlier, except the block examines the incoming User-Agent string rather than the IP. You can choose how to handle a matching request with the same list of actions as you have in the IP Firewall (Block, JS Challenge, Captcha Challenge, and Whitelist). Note that User-Agent blocking applies to your entire zone. You cannot specify sub-domains in the same manner you can Zone Lockdowns.
+
+This tool is useful for blocking any User-Agent strings that you deem suspicious.
+
+ 
