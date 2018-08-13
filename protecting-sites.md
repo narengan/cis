@@ -30,7 +30,7 @@ This capability is useful when you need more granularity in your access rules be
 
  
 ## User-Agent Blocking Rules
-User-Agent Blocking rules allow you to take action on any User-Agent string you select. This capability works like Domain Lockdown as described previously, except the block examines the incoming User-Agent string rather than the IP. You can choose how to handle a matching request with the same list of actions as you have estabilshed in the IP Rules (Block, JS Challenge, Captcha Challenge, and Whitelist). Note that User-Agent blocking applies to your entire zone. You cannot specify sub-domains in the same manner you can Domain Lockdowns.
+User-Agent Blocking rules allow you to take action on any User-Agent string you select. This capability works like Domain Lockdown as described previously, except the block examines the incoming User-Agent string rather than the IP. You can choose how to handle a matching request with the same list of actions as you have estabilshed in the IP Rules (Block, Challenge, and JS Challenge). Note that User-Agent blocking applies to your entire zone. You cannot specify sub-domains in the same manner you can Domain Lockdowns.
 
 This tool is useful for blocking any User-Agent strings that you deem suspicious.
 
