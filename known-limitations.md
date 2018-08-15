@@ -28,4 +28,6 @@ lastupdated: "2018-08-10"
 
 * Health check events for deleted pools and origins cannot be filtered, but they still appear in the table.
 
-* If you filter Health check events by 'Pool Health', 'Degraded' pools are included because they technically are healthy, but may contain 1 or more critical origins.
+* If you filter Health check events by `Pool Health`, `Degraded` pools are included because they technically are healthy, but may contain 1 or more critical origins.
+
+* When adding the request header name for a monitor, use `Host`. Using lower-case `host` for a monitor fails.
