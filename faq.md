@@ -31,7 +31,7 @@ No. This is not allowed.
 To avoid any data loss you must upgrade from Free Trial to Standard prior to the expiration date. Once the Free Trial expires, your data may be deleted at any time. We may not clean up expired Free Trials immediately. However, we will not provide any guarantees or support for expired trial plans.
 
 ## How do I delete my CIS Instance?
-To delete a CIS instance, you must first delete the domain (zone) associated with it. Go to the Overview page and select **Delete Domain** under the Service Details section.
+To delete a CIS instance, you must first delete the domain (zone) associated with it. Go to the **Overview** page and click the trash can icon next to the domain name located in the **Service Details** section to start the deletion process.
 
 ## I added a user to my account and gave that user permission to manage Internet Services instance(s). Why is that user facing authentication issues?
 It is possible that you did not assign "service access roles" to the user. Note that there are two separate sets of roles: "platform access" and "service access". Platform access roles are required to create and manage service instances, but service access roles are required to perform service-specific operations on service instances. In the console, these settings can be updated by selecting **Manage > Security > Identity and Access**.
