@@ -24,10 +24,10 @@ lastupdated: "2018-08-10"
 ## Global Load Balancer
  * Cloud Internet Services allows you to use the character `_` in load balancer hostnames, however, Kubernetes clusters cannot use `_`. 
 
- * The Standard plan permits a maximum of 5 load balancers, pools, and monitors. Each pool can have a total of 6 origins, but only 6 unique origins are permitted throughout each CIS instance.
+ * The Standard plan permits a maximum of 5 load balancers, pools, and health checks. Each pool can have a total of 6 origins, but only 6 unique origins are permitted throughout each CIS instance.
 
 * Health check events for deleted pools and origins cannot be filtered, but they still appear in the table.
 
 * If you filter Health check events by `Pool Health`, `Degraded` pools are included because they technically are healthy, but may contain 1 or more critical origins.
 
-* When adding the request header name for a monitor, use `Host`. Using lower-case `host` for a monitor fails.
+* When adding the request header name for a health check, use `Host`. Using lower-case `host` for a health check fails.
