@@ -28,7 +28,7 @@ No. Each account is entitled to only one free instance. Both the Early Access Pl
 No. This is not allowed.
 
 ## My Free Trial has expired. What are my options?
-To avoid any data loss you must upgrade from Free Trial to Standard prior to the expiration date. After the Free Trial expires, your data can be actively managed for 30 days. After that, we only support upgrading the Plan or Deleting the CIS instance. If the instance is not deleted or upgraded after 45 days (from the initiation of the instance) the configuration domain, GLB, pools, and health checks are deleted automatically.
+To avoid any data loss you must upgrade from Free Trial to Standard prior to the expiration date. After that, we only support upgrading the Plan or Deleting the CIS instance. If the instance is not deleted or upgraded after 45 days (from the initiation of the instance) the configuration domain, GLB, pools, and health checks are deleted automatically.
 
 ## How do I delete my CIS Instance?
 To delete a CIS instance, you must first delete all GLBs, pools, and health checks. Then delete the associated domain (zone). Go to the **Overview** page and click the trash can icon next to the domain name located in the **Service Details** section to start the deletion process.
