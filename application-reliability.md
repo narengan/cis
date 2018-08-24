@@ -31,8 +31,7 @@ In this example, the application resources are deployed in two data center locat
 
 Task  | Description
 ------------- | -------------
-[Create a CIS instance](create-cis.html) | Begin by Creating your IBM Cloud Internet Services (CIS) instance using the IBM
-Customer Portal.
+[Create a CIS instance](create-cis.html) | Begin by Creating your IBM Cloud Internet Services (CIS) instance using the IBM Customer Portal.|
 [Input information about your domain](input-domain.html) | Input information about the domain you wish to protect and provide global load balancing for.
 [Begin Global Load Balancer configuration](begin-config.html) | Start configuring your Global Load Balancer.
 [Identify your application resources](identify-app-resources.html) | Identify the your application's resources, such as origin pools and health check mechanisms.
