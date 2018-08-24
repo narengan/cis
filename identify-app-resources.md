@@ -30,15 +30,15 @@ Identify the your application's resources, such as origin pools and health check
    
 3. Click **Provision Resource** to complete the creation of your Origin Pool.  
 
-   <img src="images/Reliability6.png" alt="drawing" style="width: 300px;"/>
+   <img src="images/reliability8.png" alt="drawing" style="width: 300px;"/>
    
    The Origin Pool will initially show up as **Unhealthy**. Its state will change to **Healthy** after a successful health check by the system. You may need to refresh your browser to see the state change. 
    
-   <img src="images/Reliability9.png" alt="drawing" style="width: 300px;"/>
+   <img src="images/reliability9.png" alt="drawing" style="width: 300px;"/>
    
    **NOTE:** If you have multiple origins within your Origin Pool, then use the healthy origin threshold to specify the minimum number of origins that must be healthy before declaring the pool healthy. 
    
 4. Define as many origin pools as the number of application farms you have. These farms may be within the same or different
 geographic regions. In our example, we’ll create two origin pools representing an application farm in the United States west and east coasts. 
 
-   <img src="images/Reliability10.png" alt="drawing" style="width: 300px;"/>
+   <img src="images/reliability10.png" alt="drawing" style="width: 300px;"/>
