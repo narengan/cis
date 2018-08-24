@@ -33,4 +33,4 @@ Input information about the domain you wish to protect and provide global load b
 
 You may have to wait up to 24 hours for your information to replicate in the DNS database. Once it does, your domain state will change to Active. 
 
-<img src="images/Reliabilityr.png" alt="drawing" style="width: 300px;"/>    
+<img src="images/reliability5.png" alt="drawing" style="width: 300px;"/>    
