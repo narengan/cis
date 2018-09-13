@@ -21,7 +21,7 @@ lastupdated: "2018-09-13"
  
  * To modify your custom dedicated certificate’s hostnames after ordering, you must order a new certificate and then delete the old one. 
  
- * IP Rules created with two letter country codes can only be made with the 'Challenge' action.
+ * IP Rules created with two letter country codes can only be made with the `Challenge` action.
 
 ## Global Load Balancer
  * Cloud Internet Services allows you to use the character `_` in load balancer hostnames, however, Kubernetes clusters cannot use `_`. 
