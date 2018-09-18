@@ -17,4 +17,4 @@ To add an additional domain to your CIS instance, go to the **Overview** page. U
   * Setup DNS records
   * Delegate domain management
   
-After adding a new domain, use the dropdown menu under the **Domain** section to switch between your domains. The **Domain** section is located on the **Overview** page and at the top of every page. 
+After adding a new domain, use the dropdown menu under the **Domain** section to switch between your domains. The **Domain** section is located on the **Overview** page and at the top of every page. Switching between domains allows you to configure settings for each domain.
