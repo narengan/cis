@@ -34,5 +34,3 @@ lastupdated: "2018-09-13"
 
 * When adding the request header name for a health check, use `Host`. Using lower-case `host` for a health check fails.
 
-## Web Application Firewall
- * For groups that are disabled by default, changing the mode or enablement of an individual rule in that group might result in an error. To work around this issue you can enable and disable the group prior to modifying the rules.
