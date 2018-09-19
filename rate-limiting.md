@@ -27,7 +27,7 @@ Update **HTTP response header**.  You can also **Add response header** to includ
 
 **NOTE:** If you have more than one header under **HTTP response header**, an _AND_ boolean logic applies.  To exclude a header from being matched, use the _Not Equal_ option. Also, each header must be an exact match. However, case sensitivity doesn't apply.
 
-Under **Origin response code**, type the valid numerical value of each HTTP response code to match.  To include 2 or more response codes, separate each value with a comma. For example, you can enter `401, 403` if you only want those two error codes to count. 
+Under **Origin response code**, type the valid numerical value of each HTTP response code to match.  To include two or more response codes, separate each value with a comma. For example, you can enter `401, 403` if you only want those two error codes to count. 
 
 ### Configure response
 Select from the actions listed, and specify the timeout period. In this case, the timeout refers to the ban period that the action takes place. A 60 second timeout means the action is applied for 60 seconds.
@@ -47,7 +47,7 @@ Specify the response type when a rule's threshold is exceeded.
 Bypass lets you create the equivalent of a whitelist or exception for a set of URLs.  No actions trigger for those URLs, even if the Rate Limiting rule is matched.
 
 ## Protect login
-Protect login creates a standard rule that protects login pages against brute force attacks. Clients attempting to log in more than 5 times in 5 minutes will be blocked for 15 minutes. 
+Protect login creates a standard rule that protects login pages against brute-force attacks. Clients attempting to log in more than 5 times in 5 minutes will be blocked for 15 minutes. 
 
 Enter a name for the rule, and the login URL.
 
