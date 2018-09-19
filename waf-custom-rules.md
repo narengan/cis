@@ -23,3 +23,5 @@ Provide as much information as possible, including:
 - Tell us whether you would like the requests to be outright blocked, or to be challenged in case of potential false positives.
 - Specify the domains to which you want these rules applied.
 Whether you want the rules turned on or off by default.
+
+*Note*: After your custom WAF rules are created, you must enable all custom rules for them to take effect.
