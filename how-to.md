@@ -15,7 +15,7 @@ Once you've set up your DNS and configured it, you are ready to go!
 
 ## Using the Overview screen
 
-Using  the Overview screen, you can see the status of all your selections. Each setting links to the section of the user interface where the setting is configured. To modify any selection you can navigate by clicking the link for the setting. For example, to change the load balancer configuration or add a new load balancer, click on the 'Load Balancer' field.
+Using  the Overview screen, you can see the status of all your selections. Each setting links to the section of the user interface where the setting is configured. To modify any selection you can navigate by clicking the link for the setting. For example, to change the load balancer configuration or add a new load balancer, click on the `Load Balancer` field.
 
 On the Overview screen, you may see that your domain name configuration is in **Pending** status, or in **Active** status as shown in the following figure.
 
@@ -24,7 +24,7 @@ On the Overview screen, you may see that your domain name configuration is in **
 
 **Pending** status indicates that your domain is not fully set up, yet. You have to update your DNS provider or registrar with the nameservers that are provided as part of the setup process.
 
-Enterprise only: The **Service Details** section of the Overview also allows you to add additional domains to your instance of CIS, and to switch between multiple domains.
+**Enterprise only**: The **Service Details** section of the Overview also allows you to add additional domains to your instance of CIS, and to switch between multiple domains.
 
 ## Changing the Service Mode
 On the Overview page under the Service Mode section there is a dropdown to select one of two modes:
@@ -49,7 +49,7 @@ Go to your DNS page and add a record (most likely an A record). Type in the info
 
 ![add-DNS](images/dns/create-a-type-record.png)
 
-After creating your records, consider turning on the 'Proxy' setting. Most of the features of CIS require that the internet traffic to your site flow through CIS infrastructure. In other words it only applies to proxied records and load balancers. To really reap the benefit of CIS make sure that your DNS records and load balancers have the proxy setting enabled.
+After creating your records, consider turning on the `Proxy` setting. Most of the features of CIS require that the internet traffic to your site flow through CIS infrastructure. In other words, it only applies to proxied records and load balancers. To really reap the benefit of CIS, make sure that your DNS records and load balancers have the proxy setting enabled.
 
 ## Set up and manage your caching
 
@@ -59,9 +59,9 @@ Next, you can set up caching.
 
 You have the option of 3 types of caching, available from the caching screen dropdown menu: 
 
- * No query string :  Only delivers resources from cache when there is no query string.
- * Query string independent : Delivers the same resource to everyone independent of the query string. (Note: The **Ignore Query String** setting applies only to static file extensions. This setting removes the query string when generating the cache key, so that a request for `style.css?something` is normalized to `style.css` when serving from the cache.)
- * Query string dependent : Delivers a different resource each time the query string changes.
+ * No query string: Only delivers resources from cache when there is no query string.
+ * Query string independent: Delivers the same resource to everyone independent of the query string. (Note: The **Ignore Query String** setting applies only to static file extensions. This setting removes the query string when generating the cache key, so that a request for `style.css?something` is normalized to `style.css` when serving from the cache.)
+ * Query string dependent: Delivers a different resource each time the query string changes.
   
 ## Purge Cache
  
