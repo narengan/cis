@@ -48,9 +48,9 @@ The following table lists the actions that are related to DNS records and genera
 
 |Action|Description|
 |---|---|  
-|internet-svcs.zones.dns_records.create<|Create a DNS record.|
+|internet-svcs.zones.dns_records.create|Create a DNS record.|
 |internet-svcs.zones.dns_records.update|Update a DNS record.|
-|internet-svcs.zones.dns_records.delete<|Delete a DNS record.|
+|internet-svcs.zones.dns_records.delete|Delete a DNS record.|
 
 
 ## List of events: Load balancers
