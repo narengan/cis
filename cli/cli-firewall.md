@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -23,7 +23,7 @@ The following `firewall` commands are available:
 
 **NAME**
 
-   `cloud-internet-services firewall-create` - Create a new firewall rule.
+   `firewall-create` - Create a new firewall rule.
 
 **USAGE**
 
@@ -31,10 +31,10 @@ The following `firewall` commands are available:
 
 **OPTIONS**
 
-`-t value, --type value`  Type of firewall rule to create. Valid values: `access_rules`, `ua_rules`, `lockdowns`.
+`-t value, --type value`  Type of firewall rule to create. Valid values: `access-rules`, `ua-rules`, `lockdowns`.
   
-  * `access_rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
-  * `ua_rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This enables you to customize the access to your site.
+  * `access-rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
+  * `ua-rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This enables you to customize the access to your site.
   * `lockdowns`: Lock access to URLs in this domain to only permitted addresses or address ranges.
     
 `-d value, --domain value`    DNS Domain ID.
@@ -51,7 +51,7 @@ The following `firewall` commands are available:
 
 **NAME**
 
-   `cloud-internet-services firewall-create -t access_rules` - Create a new firewall access rule for a given service instance.
+   `firewall-create -t access-rules` - Create a new firewall access rule for a given service instance.
 
 **USAGE**
 
@@ -102,7 +102,7 @@ The optional field is `configuration`.
 
 **NAME**
 
-   `cloud-internet-services firewall-create -t ua-rules` - Create a new user-agent rule for a given domain under a service instance.
+   `firewall-create -t ua-rules` - Create a new user-agent rule for a given domain under a service instance.
 
 **USAGE**
 
@@ -147,7 +147,7 @@ The optional fields are `paused`, `description`, `configuration`.
 ### Create Firewall with lockdowns
 **NAME**
 
-   `cloud-internet-services firewall-create -t lockdowns` - Create a new lockdown rule for a given zone under a service instance.
+   `firewall-create -t lockdowns` - Create a new lockdown rule for a given zone under a service instance.
 
 **USAGE**
 
@@ -197,7 +197,7 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **NAME**
 
-   `cloud-internet-services firewall-update` - Update a firewall rule.
+   `firewall-update` - Update a firewall rule.
 
 **USAGE**
 
@@ -209,10 +209,10 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **OPTIONS**
 
-`-t value, --type value`  Type of firewall rule to update. Valid values: `access_rules`, `ua_rules`, `lockdowns`.
+`-t value, --type value`  Type of firewall rule to update. Valid values: `access-rules`, `ua-rules`, `lockdowns`.
    
-  * `access_rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
-  * `ua_rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This enables you to customize the access to your site.
+  * `access-rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
+  * `ua-rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This enables you to customize the access to your site.
   * `lockdowns`: Lock access to URLs in this domain to only permitted addresses or address ranges.
    
 `-d value, --domain value`    DNS Domain ID.
@@ -229,7 +229,7 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **NAME**
 
-   `cloud-internet-services firewall-update -t access-rules` - Update a new firewall access rule for a given service instance.
+   `firewall-update -t access-rules` - Update a new firewall access rule for a given service instance.
 
 **USAGE**
 
@@ -273,7 +273,7 @@ The optional field is `configuration`.
 ### Update Firewalls with user agent rules
 **NAME**
 
-   `cloud-internet-services firewall-update -t ua-rules` - Update a new user-agent rule for a given domain under a service instance.
+   `firewall-update -t ua-rules` - Update a new user-agent rule for a given domain under a service instance.
 
 **USAGE**
 
@@ -320,7 +320,7 @@ The optional fields are `paused`, `description`, `configuration`.
 
 **NAME**
 
-   `cloud-internet-services firewall-update -t lockdowns` - Update a new lockdown rule for a given zone under a service instance.
+   `firewall-update -t lockdowns` - Update a new lockdown rule for a given zone under a service instance.
 
 **USAGE**
 
@@ -370,7 +370,7 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **NAME**
 
-   `cloud-internet-services firewalls` - List firewall rules.
+   `firewalls` - List firewall rules.
 
 **USAGE**
 
@@ -378,10 +378,10 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **OPTIONS**
 
-`-t value, --type value`  Type of firewall rule to list. Valid values: `access_rules`, `ua_rules`, `lockdowns`.
+`-t value, --type value`  Type of firewall rule to list. Valid values: `access-rules`, `ua-rules`, `lockdowns`.
   
-  * `access_rules": Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
-  * `ua_rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
+  * `access-rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
+  * `ua-rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
   * `lockdowns`: Lock access to URLs in this domain to only permitted addresses or address ranges.
     
 `-d value, --domain value`    DNS Domain ID.
@@ -399,7 +399,7 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **NAME**
 
-   `cloud-internet-services firewall` - Get details of a firewall rule settings.
+   `firewall` - Get details of a firewall rule settings.
 
 **USAGE**
 
@@ -411,10 +411,10 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **OPTIONS**
 
-`-t value, --type value`  Type of firewall settings to check. Valid values: `access_rules`, `ua_rules`, `lockdowns`.
+`-t value, --type value`  Type of firewall settings to check. Valid values: `access-rules`, `ua-rules`, `lockdowns`.
       
-  * `access_rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
-  * `ua_rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
+  * `access-rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
+  * `ua-rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
   * `lockdowns`: Lock access to URLs in this domain to only permitted addresses or address ranges.
    
 `-d value, --domain value`    DNS Domain ID.
@@ -427,7 +427,7 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **NAME**
 
-   `cloud-internet-services firewall-delete` - Delete  a firewall rule by ID.
+   `firewall-delete` - Delete  a firewall rule by ID.
 
 **USAGE**
 
@@ -439,10 +439,10 @@ The optional fields are `paused`, `description`, `urls`, `configurations`.
 
 **OPTIONS**
 
-`-t value, --type value`  Type of firewall rule to delete. Valid values: `access_rules`, `ua_rules`, `lockdowns`.
+`-t value, --type value`  Type of firewall rule to delete. Valid values: `access-rules`, `ua-rules`, `lockdowns`.
 
-  * `access_rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
-  * `ua_rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
+  * `access-rules`: Access Rules are a way to allow, challenge, or block requests to your website. You can apply access rules to one domain only or all domains in the same service instance.
+  * `ua-rules`: Perform access control when matching the exact UserAgent reported by the client. The access control mechanisms can be defined within a rule to help manage traffic from particular clients. This will enable you to customize the access to your site.
   * `lockdowns`: Lock access to URLs in this domain to only permitted addresses or address ranges.
   
    
