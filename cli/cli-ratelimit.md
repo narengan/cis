@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -24,7 +24,7 @@ The following `ratelimit` commands are available:
 
 **NAME**
 
-    `ratelimit-rule-create` - Create a new rate limiting rule for a given DNS domain.
+    `ratelimit-rule-create` - Create a new rate limiting rule for a given DNS domain. (enterprise plan only)
 
 **USAGE**
 
@@ -53,10 +53,10 @@ The required fields in JSON data are `match`, `threshold`, `period`, `action`:
        * `op`: The operator when matching, eq means equals, ne means not equals. Valid values are `eq` and `ne`.
        * `value`: The value of the header, which is exactly matched.
    * `threshold`: The threshold that triggers the rate limit mitigations, combined with period. For example, threshold per period. Min value: 2, max value: 1000000.                       
-   * `period`: The time, in seconds, to count matching traffic. If the count exceeds threshold within this period the action is performed. Min value:1, max value: 86400.
+   * `period`: The time, in seconds, to count matching traffic. If the count exceeds threshold within this period the action is performed. Min value:1, max value: 3600.
    * `action`: The action performed when the threshold of matched traffic within the period defined is exceeded.
      * `mode`: The type of action performed. Valid values are: `simulate`, `ban`, `challenge`, `js_challenge`.
-     * `timeout`: The time, in seconds, as an integer to perform the mitigation action. Timeout be the same or greater than the period. This field is valid only when mode is `simulate` or `ban`. Min value: 1, mx value: 86400.
+     * `timeout`: The time, in seconds, as an integer to perform the mitigation action. Timeout be the same or greater than the period. This field is valid only when mode is `simulate` or `ban`. Min value: 10, mx value: 86400.
      * `response`: Custom content-type and body to return. This overrides the custom error for the zone. This field is not required. Omission results in the default HTML error page. This field is valid only when mode is `simulate` or `ban`.
        * `content_type`: The content-type of the body, which must be one of the following: `text/plain`, `text/xml`, `application/json`.
        * `body`: The body to return. The content here must conform to the `content_type`. Max length is 10240.
@@ -174,10 +174,10 @@ The required fields in JSON data are `id`, `match`, `threshold`, `period`, `acti
         * `op`: The operator when matching, eq means equals, ne means not equals. Valid values are `eq` and `ne`.
         * `value`: The value of the header, which is exactly matched.
   * `threshold`: The threshold that triggers the rate limit mitigations, combined with period. For example, threshold per period. Min value: 2, max value: 1000000.                       
-  * `period`: The time, in seconds, to count matching traffic. If the count exceeds threshold within this period the action is performed. Min value:1, max value: 86400.
+  * `period`: The time, in seconds, to count matching traffic. If the count exceeds threshold within this period the action is performed. Min value:1, max value: 3600.
   * `action`: The action to be performed when the threshold of matched traffic within defined period is exceeded.
     * `mode`: The type of action performed. Valid values are: `simulate`, `ban`, `challenge`, `js_challenge`.
-    * `timeout`: The time, in seconds as an integer, to perform the mitigation action. Timeout must be the same or greater than the period. This field is only valid when mode is `simulate` or `ban`. Min value: 1, mx value: 86400.
+    * `timeout`: The time, in seconds as an integer, to perform the mitigation action. Timeout must be the same or greater than the period. This field is only valid when mode is `simulate` or `ban`. Min value: 10, mx value: 86400.
     * `response`: Custom content-type and body to return. This overrides the custom error for the zone. This field is not required. Omission results in default HTML error page. This field is only valid when mode is `simulate` or `ban`.
       * `content_type`: The content-type of the body. Must be one of the following: `text/plain`, `text/xml`, `application/json`.
       * `body`: The body to return. The content here must conform to the content_type. Max length is 10240.
