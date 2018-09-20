@@ -31,6 +31,7 @@ The following `routing` commands are available:
    `DNS_DOMAIN_ID` is the ID of DNS domain.
    
 **OPTIONS**
+
    `--smart-routing`  One of Routing features.
 
    `--tiered-caching` One of Routing features.
@@ -59,6 +60,7 @@ The following `routing` commands are available:
    `DNS_DOMAIN_ID` is the ID of DNS domain.
    
 **OPTIONS**
+
    `--smart-routing value`       One of Routing features. Valid values: "on", "off".
 
    `--tiered-caching value`      One of Routing features. Valid values: "on", "off".
