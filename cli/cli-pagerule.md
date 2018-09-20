@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -42,9 +42,16 @@ The following `pagerule` commmands are available:
                        "actions":An array of actions to perform if the targets of this rule match the request. Available actions are:
                            disable_security, always_use_https, ssl, browser_cache_ttl,
                            security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
-                           browser_check, server_side_exclude, always_online, email_obfuscation,
+                           browser_check, server_side_exclude, serve_stale_content, email_obfuscation,
                            automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
                            explicit_cache_control, cache_deception_armor, waf and forwarding_url.
+
+
+                           And some actions are limited to Enterprise plan:
+                               cache_on_cookie, disable_apps, disable_performance, host_header_override,
+                               minify, image_load_optimization, origin_error_page_pass_thru, image_size_optimization,
+                               resolve_override, response_buffering, script_load_optimization,
+                               sort_query_string_for_cache, true_client_ip_header.
 
                    The optional fields are priority, status:
 
@@ -65,7 +72,7 @@ The following `pagerule` commmands are available:
                        ],
                        "actions": [
                            {
-                               "id": "always_online",
+                               "id": "serve_stale_content",
                                "value": "on"
                            },
                            {
@@ -138,9 +145,15 @@ The following `pagerule` commmands are available:
                        "actions":An array of actions to perform if the targets of this rule match the request. Available actions are:
                            disable_security, always_use_https, ssl, browser_cache_ttl,
                            security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
-                           browser_check, server_side_exclude, always_online, email_obfuscation,
+                           browser_check, server_side_exclude, serve_stale_content, email_obfuscation,
                            automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
                            explicit_cache_control, cache_deception_armor, waf and forwarding_url.
+
+                           And some actions are limited to Enterprise plan:
+                               cache_on_cookie, disable_apps, disable_performance, host_header_override,
+                               minify, image_load_optimization, origin_error_page_pass_thru, image_size_optimization,
+                               resolve_override, response_buffering, script_load_optimization,
+                               sort_query_string_for_cache, true_client_ip_header.
 
                    The optional fields are priority, status:
 
@@ -161,7 +174,7 @@ The following `pagerule` commmands are available:
                        ],
                        "actions": [
                            {
-                               "id": "always_online",
+                               "id": "serve_stale_content",
                                "value": "on"
                            },
                            {
