@@ -31,6 +31,10 @@ Cloud Internet Services (CIS)
     glb-setup.md
     using-page-rules.md
     caching-with-page-rules.md
+    waf-custom-rules.md
+    routing.md
+    rate-limiting.md
+    multi-domain.md
     helpful-tools.md
     
     {: .topicgroup}
@@ -56,6 +60,7 @@ Cloud Internet Services (CIS)
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
+    plan-comparison.md
     api-resource.md
     at_events.md
     cis-cli-overview.md
