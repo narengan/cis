@@ -22,6 +22,7 @@ The following families of commands are available from the command line interface
   * [Pagerule](cli/cli-pagerule.html)
   * [Firewall](cli/cli-firewall.html)
   * [Metrics](cli/cli-metrics.html)
+  * [Routing](cli/cli-routing.html)
   * [RateLimit](cli/cli-ratelimit.html)
   * [Overview](#the-overview-command-definition)
 
