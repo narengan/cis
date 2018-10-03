@@ -26,6 +26,7 @@ Scroll to the right to view the rest of the table!
 |**Page Rules**|50 Page Rules|50 Page Rules|<ul><li>100 Page Rules</li><li>Additional settings for fine-grained control</li></ul> |
 |**Rate Limiting**|No|No|Yes|
 |**IP Firewall**|Challenge Only|Challenge Only|<ul><li>Challenge</li><li>Block</li><li>JS Challenge</li><li>Simulate</li></ul>|
+|**Caching**|Browser cache minimum TTL 30 minutes|Browser cache minimum TTL 30 minutes|Browser cache minimum TTL 30 seconds|
 
 
 
