@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-02-12"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,8 +16,9 @@ TLS Encryption modes:
 
  * Off (not recommended)
  * Client-to-Edge (edge to origin not encrypted, self-signed certificates are not supported) 
- * End-to-End flexible (edge to origin Certs can be self-signed) 
+ * End-to-End flexible (edge to origin certificates can be self-signed) 
  * End-to-End CA signed (recommended)
+ * HTTPS only origin pull (Enterprise only)
 
 ## Off 
 No secure connection between your visitor and CIS, and no secure connection between CIS and your web server. Visitors can only view your website over HTTP, and any visitor attempting to connect using HTTPS will receive an `HTTP 301 Redirect` to the plain HTTP version of your website.
@@ -30,3 +31,6 @@ A secure connection between your visitor and CIS, and secure connection (but not
 
 ## End-to-End CA Signed
 Recommended. A secure connection between the visitor and CIS, and secure and authenticated connection between CIS and your web server. You will need to have your server configured to answer HTTPS connections, with a valid TLS certificate. This certificate must be signed by a certificate authority, have an expiration date in the future, and respond for the request domain name (hostname).
+
+## HTTPS Only Origin Pull
+*Enterprise only.* This mode has the same certificate requirements as End-to-End CA Signed and will also upgrade all connections between CIS and your origin websever from HTTP to HTTPS, even if the original content requested is over HTTP.
