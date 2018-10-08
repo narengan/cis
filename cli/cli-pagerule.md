@@ -44,14 +44,15 @@ The following `pagerule` commmands are available:
                            security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
                            browser_check, server_side_exclude, serve_stale_content, email_obfuscation,
                            automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
-                           explicit_cache_control, cache_deception_armor, waf and forwarding_url.
+                           explicit_cache_control, cache_deception_armor, waf, forwarding_url,
+                           host_header_override, resolve_override.
 
 
                            And some actions are limited to Enterprise plan:
-                               cache_on_cookie, disable_apps, disable_performance, host_header_override,
-                               minify, image_load_optimization, origin_error_page_pass_thru, image_size_optimization,
-                               resolve_override, response_buffering, script_load_optimization,
-                               sort_query_string_for_cache, true_client_ip_header.
+                               cache_on_cookie, disable_apps, disable_performance, minify,
+                               image_load_optimization, origin_error_page_pass_thru, response_buffering,
+                               image_size_optimization, script_load_optimization, true_client_ip_header,
+                               sort_query_string_for_cache.
 
                    The optional fields are priority, status:
 
@@ -147,13 +148,14 @@ The following `pagerule` commmands are available:
                            security_level, cache_level, edge_cache_ttl, bypass_cache_on_cookie,
                            browser_check, server_side_exclude, serve_stale_content, email_obfuscation,
                            automatic_https_rewrites, opportunistic_encryption, ip_geolocation,
-                           explicit_cache_control, cache_deception_armor, waf and forwarding_url.
+                           explicit_cache_control, cache_deception_armor, waf, forwarding_url,
+                           host_header_override, resolve_override.
 
                            And some actions are limited to Enterprise plan:
-                               cache_on_cookie, disable_apps, disable_performance, host_header_override,
-                               minify, image_load_optimization, origin_error_page_pass_thru, image_size_optimization,
-                               resolve_override, response_buffering, script_load_optimization,
-                               sort_query_string_for_cache, true_client_ip_header.
+                               cache_on_cookie, disable_apps, disable_performance, minify,
+                               image_load_optimization, origin_error_page_pass_thru, response_buffering,
+                               image_size_optimization, script_load_optimization, true_client_ip_header,
+                               sort_query_string_for_cache.
 
                    The optional fields are priority, status:
 
