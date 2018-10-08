@@ -15,7 +15,7 @@ lastupdated: "2018-09-13"
 
  * For this service, we support subdomain delegation only using NS records from another provider. CNAME delegation is not supported.
   
- * Wildcard A, AAAA, and CNAME records (*) cannot be proxied.
+ * A, AAAA, and CNAME wildcard records (*) cannot be proxied.
 
  * When you delete a dedicated certificate, it may reappear in the list for a short time before the deletion is complete.
  
