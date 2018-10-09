@@ -60,6 +60,7 @@ Cloud Internet Services (CIS)
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
+    hipaa-advisory.md
     plan-comparison.md
     api-resource.md
     at_events.md
