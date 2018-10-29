@@ -101,7 +101,7 @@ The following `domain-settings` commands are available:
    
    `-i value, --instance value`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-   `-o value, --output value`    Output the result as JSON style to a file. If not set, outputs the result to terminal.
+   `-o value, --output value`    Specify output format, only JSON is supported now.
 
 
 **Output**
