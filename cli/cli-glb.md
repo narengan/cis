@@ -393,7 +393,8 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-pool-update GLB_POOL_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
+   ibmcloud cis glb-pool-update GLB_POOL_ID [-s, --json-str JSON_STR | -j, --json-file JSON_FILE] [--enable-origin ORIGIN_NAME --enable-origin ORIGIN_NAME ...] [--disable-origin ORIGIN_NAME --disable-origin ORIGIN_NAME ...] [--add-origin ORIGIN_PARAMETER --add-origin ORIGIN_PARAMETER ...] [--remove-origin ORIGIN_NAME --remove-origin ORIGIN_NAME ...] [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
+
 
 **ARGUMENTS**
 
@@ -436,6 +437,15 @@ The following `glb` commands are available:
                        "notification_email": "someone@example.com"
                    }
    -j, --json-file  A file contains input JSON data.
+   
+   --enable-origin value        Enable the origin within the Pool. The value can be ORIGIN_NAME or ORIGIN_ADDRESS.
+   
+   --disable-origin value       Disable the origin within the Pool. The value can be ORIGIN_NAME or ORIGIN_ADDRESS.
+   
+   --add-origin value           Add an origin into the Pool. ORIGIN_NAME and ORIGIN_ADDRESS are required.
+                                Eg: --add-origin name=us-app-dal01,address=1.1.1.1,enabled=true,weight=0.5
+                                
+   --remove-origin value       Remove an origin from the Pool. The value can be ORIGIN_NAME or ORIGIN_ADDRESS.
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
