@@ -36,7 +36,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-create DNS_DOMAIN_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-create DNS_DOMAIN_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -84,7 +84,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
 
 
 **Output Table Columns**
@@ -105,7 +105,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-update DNS_DOMAIN_ID GLB_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-update DNS_DOMAIN_ID GLB_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **OPTIONS**
 
@@ -149,7 +149,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud  cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -169,7 +169,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb DNS_DOMAIN_ID GLB_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb DNS_DOMAIN_ID GLB_ID [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -180,7 +180,7 @@ The following `glb` commands are available:
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -222,7 +222,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glbs DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glbs DNS_DOMAIN_ID [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -232,7 +232,7 @@ The following `glb` commands are available:
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -250,13 +250,13 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-pools [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-pools [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **OPTIONS**
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 
 **Output Table Columns**
@@ -276,7 +276,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-pool-create (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-pool-create (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **OPTIONS**
 
@@ -318,7 +318,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
    
   **Output Table Columns**
 
@@ -342,7 +342,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-pool GLB_POOL_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-pool GLB_POOL_ID [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -352,7 +352,7 @@ The following `glb` commands are available:
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -393,7 +393,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-pool-update GLB_POOL_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-pool-update GLB_POOL_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -439,7 +439,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -463,13 +463,13 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-monitors [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-monitors [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **OPTIONS**
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -487,7 +487,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-monitor-create (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-monitor-create (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **OPTIONS**
 
@@ -565,7 +565,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -590,7 +590,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-monitor GLB_MON_ID [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-monitor GLB_MON_ID [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -600,7 +600,7 @@ The following `glb` commands are available:
 
    -i, --instance  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used. 
    
-   -o, --output    Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output    Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
@@ -644,7 +644,7 @@ The following `glb` commands are available:
 
 **USAGE**
 
-   ibmcloud cis glb-monitor-update GLB_MON_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output OUTPUT_FILE]
+   ibmcloud cis glb-monitor-update GLB_MON_ID (-s, --json-str JSON_STR | -j, --json-file JSON_FILE) [-i, --instance INSTANCE_NAME] [-o, --output FORMAT]
 
 **ARGUMENTS**
 
@@ -725,7 +725,7 @@ The following `glb` commands are available:
    
    -i, --instance   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
    
-   -o, --output     Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output     Specify output format, only JSON is supported now.
 
 **Output Table Columns**
 
