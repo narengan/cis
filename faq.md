@@ -58,6 +58,9 @@ The TLS certificates issued by IBM Cloud CIS cover the root domain (`example.com
 
 Also, please allow up to 15 minutes for one of our partner Certificates Authorities (CAs) to issue a new certificate. You’ll see a privacy warning in your browser if your new certificate has not yet been issued.
 
+## Why do I see invalid SSL certificate error?
+The default TLS option was changed from `end-to-end flexible` to `end-to-end CA signed` for best security practice, which might affect the domains created earlier. As we mentioned [here](ssl-option.html), The `end-to-end CA signed` TLS option requires your server configured with valid TLS certificate. If you see `Error 526, Invalid SSL Certificate` error when visiting your web site, you have to update your web server with a valid TLS certificate. We don't recommend changing the TLS option to less strict mode to circumvent this error because potential security threats may be introduced to your web site.
+
 ## What is DDoS?
 A distributed denial-of-service (DDoS) attack is an attempt to make an online service unavailable by overwhelming it with traffic from multiple sources. In a DDoS attack, multiple compromised computer systems attack a target such as a server, website, or other network resource, and which affects users of the targeted resource.
 
