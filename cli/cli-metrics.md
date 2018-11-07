@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-7"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -32,7 +32,7 @@ The following `metrics` commands are available:
 
 **OPTIONS**
 
-   `--recent`  The beginning of the requested time frame.Valid vaules are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 2m, 3m. (default: "1w")
+   `--recent`  The beginning of the requested time frame. Valid vaules are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 2m, 3m. (default: `1w`)
 
    `-t, --table`     Output table. Valid values are `requests`, `bandwidth`, `uniques`, `threats` and `status_code`. If not set, it outputs all the tables.
 
@@ -117,9 +117,9 @@ The following `metrics` commands are available:
    `DNS_DOMAIN_ID` is the ID of DNS domain.
 
 **OPTIONS**
-   `--recent`             The beginning of the requested time frame.Valid vaules are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 2m, 3m. (default: "1w")
+   `--recent`             The beginning of the requested time frame. Valid vaules are: 6h (6 hours ago), 12h, 1d (1 day ago), 1w (1 week ago), 1m (1 month ago), 2m, 3m. (default: `1w`)
 
-   `--time-delta`  The time interval (seconds) of each analytic's record. Valid values: "60", "3600", "86400", "2592000". (default: 3600)
+   `--time-delta`  The time interval (seconds) of each analytic's record. Valid values: `60`, `3600`, `86400`, `2592000`. (default: 3600)
 
    `-i, --instance` Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
 
