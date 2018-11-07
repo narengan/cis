@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -157,9 +157,9 @@ The following `waf` commands are available:
 
 **OPTIONS**
 
-   `--sensitivity`   The sensitivity of the firewall package. Valid values: "high", "medium", "low", "off".
+   `--sensitivity`   The sensitivity of the firewall package. Valid values: `high`, `medium`, `low`, `off`.
    
-   `--action-mode`   The default action that will be taken for rules under the firewall package. Valid values: "simulate", "block", "challenge".
+   `--action-mode`   The default action that will be taken for rules under the firewall package. Valid values: `simulate`, `block`, `challenge`.
 
    `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
@@ -200,7 +200,8 @@ The following `waf` commands are available:
 
    `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-`-o, --output`    Specify output format, only JSON is supported now.
+   `-o, --output`    Specify output format, only JSON is supported now.
+   
 **Output Message**
    * ID
    * Name
@@ -303,7 +304,7 @@ The following `waf` commands are available:
 
    `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
    
-  `-o, --output`    Specify output format, only JSON is supported now.
+   `-o, --output`    Specify output format, only JSON is supported now.
 
 **Output Message**
 
@@ -336,7 +337,7 @@ The following `waf` commands are available:
 
    `-i, --instance`  Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
 
-  `-o, --output`    Specify output format, only JSON is supported now.
+   `-o, --output`    Specify output format, only JSON is supported now.
 
 
 **Output Message**
