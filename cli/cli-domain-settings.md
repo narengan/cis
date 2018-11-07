@@ -30,7 +30,9 @@ The following `domain-settings` commands are available:
    `DNS_DOMAIN_ID` is the id of DNS domain.
 
 **OPTIONS**
+
    `-g value, --group value`    Display features in a same group.Valid values for "group" are "all", "domain", "reliability", "performance", "security".
+
    `-f value, --feature value`  Feature of domain settings to check. Valid values are as follow: 
    
                                "always_use_https": 
