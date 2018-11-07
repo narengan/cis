@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -536,7 +536,7 @@ The optional fields are `type`, `name`, `content`, `page`, `per_page`, `order`, 
 
   `--file`                BIND config to upload.
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance`   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
 
    `-o, --output`    Specify output format, only JSON is supported now.
 
@@ -559,4 +559,4 @@ The optional fields are `type`, `name`, `content`, `page`, `per_page`, `order`, 
 
   `--file`                The BIND config saves exported DNS records..
 
-   `-i, --instance`   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' will be used.
+   `-i, --instance`   Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
