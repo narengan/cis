@@ -6,6 +6,7 @@ lastupdated: "2018-08-14"
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:faq: data-hd-content-type='faq'}
 
 
 # FAQ
