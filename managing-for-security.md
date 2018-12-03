@@ -68,7 +68,7 @@ Our Security Level settings are aligned with threat scores that certain IP addre
 * **LOW**: Threat scores greater than 24 are challenged.
 * **ESSENTIALLY OFF**: Threat scores greater than 49 are challenged.
 * **OFF**: *Enterprise Only* 
-* **UNDER ATTACK**: Should only be used when your website is under a DDoS attack. Visitors will receive an interstitial page for about five seconds while CIS analyzes the traffic and behavior to make sure it is a legitimate visitor trying to access your website. **UNDER ATTACK** may affect some actions on your domain, such as using an API. You are able to set a custom security level for your API or any other part of your domain by creating a page rule for that section.
+* **UNDER ATTACK**: Should only be used when your website is under a DDoS attack. Visitors receive an interstitial page for about five seconds while CIS analyzes the traffic and behavior to make sure it is a legitimate visitor trying to access your website. **UNDER ATTACK** may affect some actions on your domain, such as using an API. You are able to set a custom security level for your API or any other part of your domain by creating a page rule for that section.
 
 We recommend that you review your Security level settings periodically, and you can find instructions in our [Best Practices for CIS Setup document](best-practices.html)
 
