@@ -20,42 +20,92 @@ IBM Cloud Internet Services (CIS) leverages IAM to perform authorization and Aut
 If you do not wish to add anyone to your CIS instance, you may disregard this page.
 {:note}
 
-Restrict access to CIS by three types, based on the navigation tree: reliability, security, and performance. This section walks through how to provide fine-grained access control of your instance.
+Restrict access to CIS by three types, based on the navigation tree: 
+* reliability - e.g DNS, GLB
+* security - e.g Certificate, firewall rules and rate limiting
+* performance - Page rules, caching and routing
+
+This section walks through how to provide fine-grained access control of your instance.
 
 ## Roles
 
 Use the following three roles to leverage IAM
-* Reader - GET calls
-* Writer - PATCH and PUT calls
-* Manager - POST and DELETE calls
+* Reader - Ability to get information of instance/domain
+* Writer - Ability to make changes to existing configuration
+* Manager - Ability to create or delete instance/domain/configuration
 
 ## Access groups and users
 
 A policy can be assigned to a User directly or to an Access Group.
 We recommend assigning it to an access group to minimize the number of policies created and to reduce the effort of managing these policies.
 
+## Best Practices
+
+1. Instead of modifying a policy, delete the existing policy and then create a new one
 
 ## Scenarios
-This section walks through the different kinds of access allowed, from most restrictive to least.
+This section walks through the different examples of access policies created through CIS 
 
 ### Domain level with `config` type
 
-#### Access to single domain with `security config` - Manage and Writer
+#### Access to single domain with `security config` on an Access Group
+##### Writer Role:
 
-User A has a CIS instance A, and has two domains, Domain 1 and Domain 2.
-User A wants to provide all security engineers (User B) in the company access to manage and edit only the *security actions* of *Domain 1*.
+Bob has a CIS instance - cis-test-instance, and has two domains, bob.com and bob-ibm.com.
+Bob wants to provide all security engineers (sec-group) in the company access to Writer role only the *security configuration* of *bob.com*.
 
 These steps show how to create an IAM policy to make this scenario possible.
 
-After User A logs into Instance A, they:
+After Bob logs into cis-test-instance:
 1. Click on **Account > Access** tab in the nav bar
-1. Select the **access group/ user B** you want to provide access
-1. Select **Domain 1**
-1. Select **Manage Role/ Writer** role
-1. Select the **Security config** option
-1. Click **create policy**
+2. Select the **access group** - **sec-group** you want to provide access
+3. Select **bob.com**
+4. Select **Writer** role
+5. Select the **Security config** option
+6. Click **create policy**
 
-Now User B has access to see only Domain 1, and can modify values pertaining to security. 
+On the Manage Tab:
+The following policies are created for **sec-group** :
+```
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 4b23ec772965f672f96f05670e36827e	
+Viewer	Resource	Only service instance cis-instance-instance of CIS 	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
+
+Service Instance 
+    name: cis-test-instance  
+    id: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9 
+Domain 
+    name: bob.com
+    id: 4b23ec772965f672f96f05670e36827e 
+```
+
+
+Now sec-group has access to see only bob.com, and can modify values pertaining to security. 
+
+##### Update from Writer to Manager Role for an Access group:
+
+If Bob wants to update the role of sec-group from Writer to Manager:
+1. Go tot he Manage IAM tab > Access groups > sec-group > access policies
+2. Delete Policy 
+```
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
+```
+1. Click on **Account > Access** tab in the nav bar
+2. Select the **access group** - **sec-group** you want to provide access
+3. Select **bob.com**
+4. Select **Manager** role
+5. Select the **Security config** option
+6. Click **create policy**
+
+##### Update the configuration to include Performance along with Security
+
+If Bob wants to give Manager sec-group access to performance configuration on bob.com along with security.
+1. Click on **Account > Access** tab in the nav bar
+2. Select the **access group** - **sec-group** you want to provide access
+3. Select **bob.com**
+4. Select **Manager** role
+5. Select the **Performance config** option
+6. Click **create policy**
 
 
 #### Access to all domains with `security config`
@@ -63,39 +113,39 @@ Now User B has access to see only Domain 1, and can modify values pertaining to 
 If you want to provide security actions for Domain 1 and Domain 2 from the previous example, you must create a new policy by repeating the steps for each domain. The only difference is selecting the respective domain for each policy.
 
 
-#### Access to single domain with `security config` and `performance config`
+#### Access to single domain with `security config` and `reliability config`
 
-User A has a CIS instance A, and has 2 domains, Domain 1 and Domain 2.
-User A wants to provide all with User B access to edit only the *security and performance actions* of *Domain 1*.
+Bob has a CIS instance cis-test-instance, and has 2 domains, bob.com and bob-ibm.com.
+Bob wants to provide Tony access to Writer role only the *security and reliability actions* of *bob-ibm.com*.
 
-After User A logs into Instance A, they:
+After Bob logs into cis-test-instance, they:
 1. Click on **Account > Access** tab in the nav bar
-1. Select the **access group/ user B** you want to provide access
-1. Select **Domain 1**
-1. Select **Writer Role**
-1. Select the checkbox for **Security and performance** option 
+1. Select the **Tony** you want to provide access
+1. Select **bob-ibm.com**
+1. Select **Writer** Role
+1. Select the checkbox for **Security and reliability** option 
 1. Click **create policy**
 
 This creates two policies on the backend for each config type.
 
 ### Domain level without config 
 
-A user A wants to grant read/write/mange at a domain level to User B
+Bob wants to grant read/write/mange at a domain level to Tony
 
 #### Write/manage
-After User A logs into Instance A, they:
+After Bob logs into cis-test-instance, they:
 1. Click on **Account > Access** tab in the nav bar
-1. Select the **access group/ user B** you want to provide access
+1. Select the **Tony** you want to provide access
 1. Select **Domain 1**
-1. Select **Writer Role**
+1. Select **Writer** Role
 1. Click **create policy**
 
 #### Reader
-After User A logs into Instance A, they:
+After Bob logs into cis-test-instance, they:
 1. Click on **Account > Access** tab in the nav bar
-1. Select the **access group/ user B** you want to provide access
+1. Select the **Tony** you want to provide access
 1. Select **Domain 1**
-1. Select **Reader Role**
+1. Select **Reader** Role
 1. All check boxes are pre-ticked to show that the user needs *min* read access to the whole domain, and cannot give partial access to a domain
 1. Click **create policy**
 
@@ -104,8 +154,17 @@ After User A logs into Instance A, they:
 
 This policy must be created and managed through the IAM manage page.
 
-Instance level access means that User A can give User B permission to Instance 1 out of the 10 instances present.
+Instance level access means that Bob can give Tony permission to Instance 1 out of the 10 instances present.
 User B is able to view all the domains in this instance. 
+
+If Bob wants to give Writer or Manager to access the following, he needs to give instance level access:
+1. Load balancer - pools and monitors
+2. Firewall access rules
+2. Workers etc
+
+steps:
+In the manage IAM page:
+Create a writer/manger policy on the service instance cis-test-instance
 
 
 ## Manage IAM policies 
@@ -117,5 +176,15 @@ https://cloud.ibm.com/iam#/overview).
 For every policy created on the Access page in the CIS instance, 2-3 policies will be created in turn.
 
 1. The service instance Platform viewer role allows the added user to view the instance on the dashboard.
-1. The domain level read access is the min requirement for fine grained access to work.
-1. The policy you created with config type present.
+example:
+```
+Viewer	Resource	Only service instance cis-instance-instance of CIS 	
+```
+2. The domain level read access is the min requirement for fine grained access to work.
+```
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 4b23ec772965f672f96f05670e36827e	
+```
+3. The policy you created with config type present.
+```
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
+```
