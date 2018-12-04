@@ -13,13 +13,12 @@ lastupdated: "2018-12-03"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
-{:DomainName: data-hd-keyref="DomainName"} 
 
 # API Specs
 
 Here's how to view the CIS API specifications: 
 
-1. To view the CIS APIs, navigate to the [API Docs]({DomainName}/apidocs) page. 
+1. To view the CIS APIs, navigate to the [API Docs](/apidocs/) page. 
 
 2. From the left navigation menu, check the Networking box to filter the APIs.
 
