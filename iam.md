@@ -213,10 +213,10 @@ Viewer	Resource	Only service instance cis-test-instance of CIS
 This policy must be created and managed through the IAM manage page.
 
 Instance level access means that Bob can give Tony permission to Instance 1 out of the 10 instances present.
-User B is able to view all the domains in this instance. 
+Tony is able to view all the domains in this instance. 
 
 If Bob wants to give Writer or Manager to access the following, he needs to give instance level access:
-1. Load balancer - pools and monitors
+1. Load balancer - pools and healthchecks
 2. Firewall access rules
 2. Workers etc
 
@@ -251,3 +251,16 @@ Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-
 ```
 Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
 ```
+
+FAQ
+1. How do I get my service instance id?
+
+   Copy the CRN on the over view page
+   ```
+   crn:v1:bluemix:public:internet-svcs:global:a/2c38d9a9913332006a27665dab3d26e8:836f33a5-d3e1-4bc6-876a-982a8668b1bb::
+   ```
+   The last part of the CRN is your service instance - 836f33a5-d3e1-4bc6-876a-982a8668b1bb
+   
+   or
+   
+   click the row of the CIS instance on the resource list main page and copy the GUID for the service instance id
