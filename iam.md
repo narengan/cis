@@ -39,6 +39,10 @@ Use the following three roles to leverage IAM
 A policy can be assigned to a User directly or to an Access Group.
 We recommend assigning it to an access group to minimize the number of policies created and to reduce the effort of managing these policies.
 
+## Cache
+
+We cache the authorization results and using the cache to make a decision next time around the same request arrives. Once the cache reaches its time to live ( 10 min) it expires.
+
 ## Best Practices
 
 1. Instead of modifying a policy, delete the existing policy and then create a new one.
@@ -261,4 +265,21 @@ FAQ
    
    or
    
-   Click the row of the CIS instance on the resource list main page and copy the GUID for the service instance ID.
+   Click the row of the CIS instance on the resource list main page and copy the GUID for the service instance ID
+
+2. I deleted a policy but the user I gave the policy to can still perform that action!
+
+   We do caching of authorization results and the TTL for the cache is 10 mins. 
+   
+   Also, When IAM authorizes, it uses the access policies from the access group and the users own policies before making a decision.
+
+3. What permissions are needed to provision Internet Services?
+
+    https://cloud.ibm.com/docs/resources/faqs.html#create-add-resource
+    
+4. Why can't I create a resource and add it to a resource group?
+
+   Most likely you're dealing with an access issue. You must have at least the Viewer role on the resource group itself and at least the Editor role on the service in the account. You can contact the account administrator to verify your assigned access in the account.
+   https://console.cloud.ibm.com/docs/resources/bestpractice_rgs.html#assigning-access-to-resource-groups-and-the-resources-within-them
+   
+ 
