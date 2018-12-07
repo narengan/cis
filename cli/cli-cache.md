@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-12-07"
 
 ---
 
@@ -52,11 +52,11 @@ Result of cache purging.
 
 **ARGUMENTS**
 
-   * `DNS_DOMAIN_ID` The id of DNS domain.
+   * `DNS_DOMAIN_ID` The ID of DNS domain.
 
 **OPTIONS**
 
-   * `-i, --instance INSTANCE_NAME` Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` will be used.
+   * `-i, --instance INSTANCE_NAME` Instance name. If not set, the context instance specified by `ibmcloud cis instance-set` is used.
   
    * `-o, --output FORMAT`   Specify output format, only JSON is supported now.
 
@@ -81,7 +81,7 @@ Result of cache purging.
 
 **ARGUMENTS**
 
-   * `DNS_DOMAIN_ID`  The id of DNS domain.
+   * `DNS_DOMAIN_ID`  The ID of DNS domain.
 
 **OPTIONS**
 
