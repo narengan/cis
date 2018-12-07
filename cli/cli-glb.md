@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-12-07"
 
 ---
 
@@ -28,6 +28,7 @@ The following `glb` commands are available:
 * Show GLB monitor
 * Delete GLB monitor
 * Update GLB monitor
+* Get GLB events
 
 ## Create GLB
 **NAME**
@@ -758,7 +759,7 @@ The following `glb` commands are available:
 
 **NAME**
 
-   glb-events - List status changes from origins connected to a glb monitor.
+   glb-events - List status changes from origins connected to a GLB monitor.
 
 **USAGE**
 
@@ -770,23 +771,23 @@ The following `glb` commands are available:
   
 **OPTIONS**
 
-   -s, --since       Start date requesting data period in the ISO8601 format. For example "2018-11-26".
+   -s, --since       Start date requesting data period in the ISO8601 format. For example `2018-11-26`.
 
-   -u, --until       End date requesting data period in the ISO8601 format.For example "2018-11-28".
+   -u, --until       End date requesting data period in the ISO8601 format. For example `2018-11-28`.
 
    --origin-name     The name for the origin to filter for.
 
    --pool-name       The name for the pool to filter for.
 
    --origin-healthy  If true, filter events where the origin status is healthy, if false, filter events where the origin status is unhealthy. 
-                     Default value is "true",  valid values are "true" and "false".
+                     Default value is `true`,  valid values are `true` and `false`.
 
    --pool-healthy    If true, filter events where the pool status is healthy, if false, filter events where the pool status is unhealthy. 
-                     Default value is "true",  valid values are "true" and "false".
+                     Default value is `true`,  valid values are `true` and `false`.
 
-   -i, --instance    Instance name. If not set, the context instance specified by 'ibmcloudcis instance-set' will be used.
+   -i, --instance    Instance name. If not set, the context instance specified by 'ibmcloudcis instance-set' is used.
    
-   -o, --output      Output the result as JSON style to a file. If not set, will output the result to terminal.
+   -o, --output      Output the result as JSON style to a file. If not set, outputs the result to terminal.
 
 **Output Table Columns**
 
