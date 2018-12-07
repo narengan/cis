@@ -752,3 +752,47 @@ The following `glb` commands are available:
    * Interval
    * Expected Body
    * Expected Codes
+
+
+## Get GLB events
+
+**NAME**
+
+   glb-events - List status changes from origins connected to a glb monitor.
+
+**USAGE**
+
+   ibmcloud cis glb-events [-s, --since START_DATE] [-u, --until END_DATE] [--origin-name ORIGIN_NAME] [--pool-name POOL_NAME] 
+                           [--origin-healthy (true | false)] [--pool-healthy (true | false)]
+                           [-i, --instance INSTANCE_NAME]  [-o, --output FORMAT]
+
+**ARGUMENTS**
+  
+**OPTIONS**
+
+   -s, --since       Start date requesting data period in the ISO8601 format. For example "2018-11-26".
+
+   -u, --until       End date requesting data period in the ISO8601 format.For example "2018-11-28".
+
+   --origin-name     The name for the origin to filter for.
+
+   --pool-name       The name for the pool to filter for.
+
+   --origin-healthy  If true, filter events where the origin status is healthy, if false, filter events where the origin status is unhealthy. 
+                     Default value is "true",  valid values are "true" and "false".
+
+   --pool-healthy    If true, filter events where the pool status is healthy, if false, filter events where the pool status is unhealthy. 
+                     Default value is "true",  valid values are "true" and "false".
+
+   -i, --instance    Instance name. If not set, the context instance specified by 'ibmcloudcis instance-set' will be used.
+   
+   -o, --output      Output the result as JSON style to a file. If not set, will output the result to terminal.
+
+**Output Table Columns**
+
+   * Date(UTC)
+   * Origin Health
+   * Affected Origin
+   * Event Description
+   * Pool Health
+   * Pool Name
