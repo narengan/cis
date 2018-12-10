@@ -11,7 +11,7 @@ lastupdated: "2018-11-05"
 The TLS options let you control whether visitors can browse your website over a secure connection, and when they do, how CIS will connect to your origin server.
 
 ## Automatic HTTPS rewrite
-Automatic HTTPS rewrites help fix mixed content by changing “http” to “https” for all resources or links on your web site that can be served with HTTPS.
+Automatic HTTPS rewrites help fix mixed content by changing “http” to “https” for all resources or links on your web site that can be served with HTTPS. This setting is located in the **Advanced** security configuration page.
 
 ## TLS encryption modes
 
