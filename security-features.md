@@ -67,3 +67,5 @@ Domain Lockdown allows you whitelist specific IP addresses and IP ranges such th
   * Specific URLs. For example, you can allow IP `1.2.3.4` access to directory `example.com/foo/*` and allow IP `5.6.7.8`  access to directory `example.com/bar/*`, but not necessarily allow the reverse.
 This capability is useful when you need more granularity in your access rules because, with the IP Rules, you can either apply the block to all sub-domains of the current domain, or all domains on your account, and you cannot specify URIs.
 
+### Challenge Passage
+Located in the **Advanced** security settings, this setting allows you to control how long a visitor that passed a challenge or JavaScript challenge will gain access to your site before being challenged again. This is based on the visitor's IP and therefore does not apply to challenges presented by WAF rules as they are based on an action the user performs on your site.
