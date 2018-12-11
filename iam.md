@@ -194,19 +194,19 @@ Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
-#### Manage
+#### Manager
 After Bob logs into cis-test-instance, he:
 1. Clicks on **Account > Access** tab in the nav bar
 2. Selects **Tony** to whom he wants to provide access
 3. Selects **`bob.com`**
-4. Selects **Manage** role
+4. Selects **Manager** role
 5. Check all boxes for CIS Functional Scope
 1. Clicks **create policy**
 
 ```
-Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
-Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
-Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
