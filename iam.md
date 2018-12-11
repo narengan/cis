@@ -22,7 +22,7 @@ If you do not wish to add anyone to your CIS instance, you may disregard this pa
 
 Restrict access to CIS by three types, based on the navigation tree: 
 * reliability - such as DNS, GLB
-* security - such as Certificate, firewall rules and rate limiting
+* security - such as Certificate, IP Firewall rules and rate limiting
 * performance - such as Page rules, caching and routing
 
 This section walks through how to provide fine-grained access control of your instance.
@@ -174,20 +174,39 @@ After Bob logs into cis-test-instance, he:
 
 This creates two policies on the backend for each config type.
 
-### Domain level without config 
+### Domain level with all config types
 
 Bob wants to grant read/write/mange at a the domain level to Tony.
 
-#### Write/manage
+#### Write
 After Bob logs into cis-test-instance, he:
 1. Clicks on **Account > Access** tab in the nav bar
-1. Selects **Tony** to whom he wants to provide access
-1. Selects **`bob.com`**
-1. Selects **Writer** role
+2. Selects **Tony** to whom he wants to provide access
+3. Selects **`bob.com`**
+4. Selects **Writer** role
+5. Check all boxes for CIS Functional Scope
 1. Clicks **create policy**
 
 ```
-Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Viewer	Resource	Only service instance cis-test-instance of CIS 	
+```
+
+#### Manage
+After Bob logs into cis-test-instance, he:
+1. Clicks on **Account > Access** tab in the nav bar
+2. Selects **Tony** to whom he wants to provide access
+3. Selects **`bob.com`**
+4. Selects **Manage** role
+5. Check all boxes for CIS Functional Scope
+1. Clicks **create policy**
+
+```
+Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
+Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
+Manage	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
