@@ -50,7 +50,7 @@ Once the IBM CIS application starts up, you'll see the IBM CIS **Overview** scre
 
 **What plan do I choose?**
 
-There are 2 plans to choose from, the **Standard Plan** and the **Free Trial**. The **Free Trial** expires after 30 days, at which point you would need to upgrade to the **Standard Plan**. Select the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
+There are 4 plans to choose from, **Enterprise Usage**, **Enterprise Package**, the **Standard Plan** and the **Free Trial**. The **Free Trial** expires after 30 days, at which point you would need to upgrade to the **Standard Plan** or an **Enterprise Plan**. A single **Standard** instance can manage one domain. But you can create as many **Standard** service instances as you want within a single account, each managing a single domain. The **Enterprise Plans** allow you to manage multiple domains in a single service instance. Select the **Create** button at the lower left of your **Overview** screen to begin provisioning your account.
 
 **Note:** The **Free Trial** is limited to one instance per account. 
 
