@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-12-12"
+lastupdated: "2018-12-13"
 ---
 
 {:shortdesc: .shortdesc}
@@ -300,11 +300,6 @@ FAQ
 
 3. What permissions are needed to provision Internet Services?
 
-    https://cloud.ibm.com/docs/resources/faqs.html#create-add-resource
-    
-4. Why can't I create a resource and add it to a resource group?
-
-   Most likely you're dealing with an access issue. You must have at least the Viewer role on the resource group itself and at least the Editor role on the service in the account. You can contact the account administrator to verify your assigned access in the account.
-   https://console.cloud.ibm.com/docs/resources/bestpractice_rgs.html#assigning-access-to-resource-groups-and-the-resources-within-them
+   If you are unable to create a resource and add it to a resource group, you're most likely dealing with an access issue. You must have at least the Viewer role on the resource group itself and at least the Editor role on the service in the account. You can contact the account administrator to verify your assigned access in the account. See [Managing access to resources](https://cloud.ibm.com/docs/iam/mngiam.html#assignaccess) for more information.
    
  
