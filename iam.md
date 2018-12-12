@@ -20,7 +20,7 @@ IBM Cloud Internet Services (CIS) leverages IAM to perform authorization and Aut
 If you do not wish to add anyone to your CIS instance, you may disregard this page.
 {:note}
 
-Restrict access to CIS by three types, based on the navigation tree: 
+Restrict access by three CIS Functional Scopes, based on the navigation tree: 
 * reliability - such as DNS, GLB
 * security - such as Certificate, IP Firewall rules and rate limiting
 * performance - such as Page rules, caching and routing
@@ -82,6 +82,8 @@ Service Instance
 Domain 
     name: bob.com
     id: 4b23ec772965f672f96f05670e36827e 
+Config Type
+    cfgType: security
 ```
 
 Now sec-group has access to see only `bob.com`, and can modify values pertaining to security. 
@@ -108,6 +110,8 @@ Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
 ```
+
+if the existing policy(writer) is not deleted then attempting to create policy for Manager  will fail
 
 ##### Update the configuration to include Performance along with Security
 
@@ -191,6 +195,7 @@ After Bob logs into cis-test-instance, he:
 Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
 Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
 Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
@@ -207,6 +212,7 @@ After Bob logs into cis-test-instance, he:
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
