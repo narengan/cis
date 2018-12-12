@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -41,7 +41,7 @@ We recommend assigning it to an access group to minimize the number of policies 
 
 ## Cache
 
-We cache the authorization results and using the cache to make a decision next time around the same request arrives. Once the cache reaches its time to live ( 10 min) it expires.
+We cache the authorization results and use the cache to make a decision when the same request arrives again. After the cache reaches its time to live ( 10 min), it expires.
 
 ## Best Practices
 
@@ -111,7 +111,7 @@ Viewer	Resource	Only service instance cis-test-instance of CIS
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
 ```
 
-if the existing policy(writer) is not deleted then attempting to create policy for Manager  will fail
+If the existing policy (writer) is not deleted, then attempting to create policy for Manager fails.
 
 ##### Update the configuration to include Performance along with Security
 
@@ -185,10 +185,10 @@ Bob wants to grant read/write/mange at a the domain level to Tony.
 #### Write
 After Bob logs into cis-test-instance, he:
 1. Clicks on **Account > Access** tab in the nav bar
-2. Selects **Tony** to whom he wants to provide access
-3. Selects **`bob.com`**
-4. Selects **Writer** role
-5. Check all boxes for CIS Functional Scope
+1. Selects **Tony** to whom he wants to provide access
+1. Selects **`bob.com`**
+1. Selects **Writer** role
+1. Check all boxes for CIS Functional Scope
 1. Clicks **create policy**
 
 ```
@@ -202,10 +202,10 @@ Viewer	Resource	Only service instance cis-test-instance of CIS
 #### Manager
 After Bob logs into cis-test-instance, he:
 1. Clicks on **Account > Access** tab in the nav bar
-2. Selects **Tony** to whom he wants to provide access
-3. Selects **`bob.com`**
-4. Selects **Manager** role
-5. Check all boxes for CIS Functional Scope
+1. Selects **Tony** to whom he wants to provide access
+1. Selects **`bob.com`**
+1. Selects **Manager** role
+1. Check all boxes for CIS Functional Scope
 1. Clicks **create policy**
 
 ```
@@ -286,17 +286,17 @@ FAQ
    ```
    crn:v1:bluemix:public:internet-svcs:global:a/2c38d9a9913332006a27665dab3d26e8:836f33a5-d3e1-4bc6-876a-982a8668b1bb::
    ```
-   The last part of the CRN is your service instance - 836f33a5-d3e1-4bc6-876a-982a8668b1bb
+   The last part of the CRN is your service instance: `836f33a5-d3e1-4bc6-876a-982a8668b1bb`.
    
    or
    
-   Click the row of the CIS instance on the resource list main page and copy the GUID for the service instance ID
+   Click the row containing the CIS instance on the resource list main page and copy the GUID for the service instance ID.
 
 2. I deleted a policy but the user I gave the policy to can still perform that action!
 
-   We do caching of authorization results and the TTL for the cache is 10 mins. 
+   CIS caches authorization results, and the TTL for the cache is 10 minutes.  
    
-   Also, When IAM authorizes, it uses the access policies from the access group and the users own policies before making a decision.
+   When IAM authorizes, it uses the access policies from the access group and the user's own policies before making a decision.
 
 3. What permissions are needed to provision Internet Services?
 
