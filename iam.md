@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-13"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,9 +20,9 @@ IBM Cloud Internet Services (CIS) leverages IAM to perform authorization and Aut
 If you do not wish to add anyone to your CIS instance, you may disregard this page.
 {:note}
 
-Restrict access to CIS by three types, based on the navigation tree: 
+Restrict access by three CIS Functional Scopes, based on the navigation tree: 
 * reliability - such as DNS, GLB
-* security - such as Certificate, firewall rules and rate limiting
+* security - such as Certificate, IP Firewall rules and rate limiting
 * performance - such as Page rules, caching and routing
 
 This section walks through how to provide fine-grained access control of your instance.
@@ -38,6 +38,10 @@ Use the following three roles to leverage IAM
 
 A policy can be assigned to a User directly or to an Access Group.
 We recommend assigning it to an access group to minimize the number of policies created and to reduce the effort of managing these policies.
+
+## Cache
+
+We cache the authorization results and use the cache to make a decision when the same request arrives again. After the cache reaches its time to live ( 10 min), it expires.
 
 ## Best Practices
 
@@ -78,6 +82,8 @@ Service Instance
 Domain 
     name: bob.com
     id: 4b23ec772965f672f96f05670e36827e 
+Config Type
+    cfgType: security
 ```
 
 Now sec-group has access to see only `bob.com`, and can modify values pertaining to security. 
@@ -104,6 +110,8 @@ Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, cfgType: security, domainId: 4b23ec772965f672f96f05670e36827e
 ```
+
+If the existing policy (writer) is not deleted, then attempting to create policy for Manager fails.
 
 ##### Update the configuration to include Performance along with Security
 
@@ -170,20 +178,41 @@ After Bob logs into cis-test-instance, he:
 
 This creates two policies on the backend for each config type.
 
-### Domain level without config 
+### Domain level with all config types
 
 Bob wants to grant read/write/mange at a the domain level to Tony.
 
-#### Write/manage
+#### Write
 After Bob logs into cis-test-instance, he:
 1. Clicks on **Account > Access** tab in the nav bar
 1. Selects **Tony** to whom he wants to provide access
 1. Selects **`bob.com`**
 1. Selects **Writer** role
+1. Check all boxes for CIS Functional Scope
 1. Clicks **create policy**
 
 ```
-Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
+Writer	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
+Viewer	Resource	Only service instance cis-test-instance of CIS 	
+```
+
+#### Manager
+After Bob logs into cis-test-instance, he:
+1. Clicks on **Account > Access** tab in the nav bar
+1. Selects **Tony** to whom he wants to provide access
+1. Selects **`bob.com`**
+1. Selects **Manager** role
+1. Check all boxes for CIS Functional Scope
+1. Clicks **create policy**
+
+```
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: security	
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: performance	
+Manager	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a, cfgType: reliability	
+Reader	Resource	serviceName: internet-svcs, serviceInstance: 8571763b-a0c2-40f4-af5e-e87f9b1e16b9, domainId: 7ad7341865246f5df482ad9f76aafb5a	
 Viewer	Resource	Only service instance cis-test-instance of CIS 	
 ```
 
@@ -257,8 +286,20 @@ FAQ
    ```
    crn:v1:bluemix:public:internet-svcs:global:a/2c38d9a9913332006a27665dab3d26e8:836f33a5-d3e1-4bc6-876a-982a8668b1bb::
    ```
-   The last part of the CRN is your service instance - 836f33a5-d3e1-4bc6-876a-982a8668b1bb
+   The last part of the CRN is your service instance: `836f33a5-d3e1-4bc6-876a-982a8668b1bb`.
    
    or
    
-   Click the row of the CIS instance on the resource list main page and copy the GUID for the service instance ID.
+   Click the row containing the CIS instance on the resource list main page and copy the GUID for the service instance ID.
+
+2. I deleted a policy but the user I gave the policy to can still perform that action!
+
+   CIS caches authorization results, and the TTL for the cache is 10 minutes.  
+   
+   When IAM authorizes, it uses the access policies from the access group and the user's own policies before making a decision.
+
+3. What permissions are needed to provision Internet Services?
+
+   If you are unable to create a resource and add it to a resource group, you're most likely dealing with an access issue. You must have at least the Viewer role on the resource group itself and at least the Editor role on the service in the account. You can contact the account administrator to verify your assigned access in the account. See [Managing access to resources](https://cloud.ibm.com/docs/iam/mngiam.html#assignaccess) for more information.
+   
+ 
