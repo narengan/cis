@@ -374,7 +374,7 @@ affect price.
   `DNS_DOMAIN_ID`  The id of DNS domain.
 
 **OPTIONS**
-   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
    
    `-o, --output FORMAT`    Specify output format, only JSON is supported now.
 
@@ -428,7 +428,7 @@ affect price.
    `-j, --json-file JSON_FILE`  A file contains input JSON data.
 
 
-   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
    
    `-o, --output FORMAT`    Specify output format, only JSON is supported now.
 
@@ -451,7 +451,7 @@ affect price.
 
 
 **OPTIONS**
-   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
    
    `-o, --output FORMAT`    Specify output format, only JSON is supported now.
 
@@ -473,4 +473,4 @@ affect price.
 
 
 **OPTIONS**
-   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'bx cis instance-set' will be used.
+   `-i, --instance INSTANCE_NAME`  Instance name. If not set, the context instance specified by 'ibmcloud cis instance-set' is used.
